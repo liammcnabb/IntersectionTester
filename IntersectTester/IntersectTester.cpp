@@ -10,11 +10,8 @@ bool IntersectTester::isIntersecting(Point a, Point b)
 
 bool IntersectTester::isPointOnLineSegment( Point p, LineSegment ls)
 {
-
-
     double crossproduct = crossProduct(p, ls.getStart(), ls.getEnd());
 
-    qDebug() << fabs( crossproduct ) << std::numeric_limits<float>::epsilon();
     if ( fabs( crossproduct ) >
             std::numeric_limits<float>::epsilon() )
         return false;
@@ -25,12 +22,12 @@ bool IntersectTester::isPointOnLineSegment( Point p, LineSegment ls)
 //                        ( p.getY() - ls.getStart().getY() ) *
 //                        ( ls.getEnd().getY() - ls.getStart().getY() );
 
-    if((p.getX() == ls.getStart().getX() && ls.getStart().getX() == ls.getEnd().getX()) ||
-        p.getY() == ls.getStart().getY() && ls.getStart().getY() == ls.getEnd().getY())
-        if((distanceBetweenPoints(p,ls.getStart()) + distanceBetweenPoints(p,ls.getEnd())) -
-                distanceBetweenPoints(ls.getStart(),ls.getEnd()) >=
-           std::numeric_limits<float>::epsilon() )
-            return true;
+//    if((p.getX() == ls.getStart().getX() && ls.getStart().getX() == ls.getEnd().getX()) ||
+//        p.getY() == ls.getStart().getY() && ls.getStart().getY() == ls.getEnd().getY())
+//        if((distanceBetweenPoints(p,ls.getStart()) + distanceBetweenPoints(p,ls.getEnd())) -
+//                distanceBetweenPoints(ls.getStart(),ls.getEnd()) >=
+//           std::numeric_limits<float>::epsilon() )
+//            return true;
 
 
     if ( dotproduct < 0 )
@@ -95,60 +92,71 @@ bool IntersectTester::isPointOnAABB( Point p, AABB a )
 
 bool IntersectTester::areLineSegmentsIntersecting(LineSegment a, LineSegment b)
 {
-    if( a.getStart().getZ() != a.getEnd().getZ() ||
-         b.getStart().getZ() != b.getEnd().getZ() ) // 3D Plane Check
-    {
+    int or1, or2, or3, or4;
+    or1 = direction( a.getStart(), a.getEnd(), b.getStart() );
+    or2 = direction( a.getStart(), a.getEnd(), b.getEnd() );
+    or3 = direction( b.getStart(), b.getEnd(), a.getStart() );
+    or4 = direction( b.getStart(), b.getEnd(), a.getEnd() );
 
-    }
-    else if ( a.getStart().getZ() == b.getStart().getZ())// 2D Plane Check
-    {
-        Point p1 = a.getStart(); Point p2 = a.getEnd();
-        Point p3 = b.getStart(); Point p4 = b.getEnd();
+    qDebug() << or1 << or2 << or3 << or4;
+    if (or1 != or2 && or3 != or4 )
+        return true;
+    if( or1 == 0 && isIntersecting( b.getStart(), a ) )
+        return true;
+    if( or2 == 0 && isIntersecting( a.getStart(), b ) )
+        return true;
+    if( or3 == 0 && isIntersecting( b.getEnd(), a ) )
+        return true;
+    if( or4 == 0 && isIntersecting( a.getEnd(), b ) )
+        return true;
 
-        int or1, or2, or3, or4;
-        or1 = direction( p1, p3, p2 );
-        or2 = direction( p1, p3, p4 );
-        or3 = direction( p2, p4, p1 );
-        or4 = direction( p2, p4, p3 );
-
-        if (or1 != or2 && or3 != or4 )
-            return true;
-        if( or1 == 0 && isIntersecting( p3, a ) )
-            return true;
-        if( or2 == 0 && isIntersecting( p1, b ) )
-            return true;
-        if( or3 == 0 && isIntersecting( p4, a ) )
-            return true;
-        if( or4 == 0 && isIntersecting( p2, b ) )
-            return true;
-
-        return false;
-    }
-    // else 2D Planes do not align
-        return false;
+    return false;
 }
 
 bool IntersectTester::areLineSegmentAndCircleIntersecting(LineSegment a, Circle c)
 {
-    if( isIntersecting( a.getStart(), c.getCenter()) || isIntersecting(a.getEnd(), c) )
+    if( isIntersecting( a.getStart(), c) || isIntersecting(a.getEnd(), c) )
         return true;
 
     Point p1 = a.getStart();
     Point p2 = a.getEnd();
 
-    float distX = p1.getX() - p2.getX();
-    float distY = p1.getY() - p2.getY();
+    float distX = (p1.getX() - p2.getX());
+    float distY = (p1.getY() - p2.getY());
+//    float cY = ( p2.getY() - p1.getY() ) * p1.getX() +
+//               ( p1.getX() - p2.getX() )* p1.getY();
+//    float cX = ( distX * c.getCenter().getX() ) +
+//               ( distY * c.getCenter().getY() );
+//    float determinant = ( (distX * distX ) + (distY * distY ) );
+//    if (determinant < std::numeric_limits<float>::epsilon())
+//        return true;
+
+//    float closestX = (distY * cY - distX * cX) / determinant;
+//    float closestY = (distY * cX - -distX * cX) / determinant;
+
+
+
+
     float len = sqrt( (distX * distX ) + (distY * distY ) );
-    float dot = dotProduct( c.getCenter(), p1, p2 ) / (len*len);
+    float dot = (dotProduct( c.getCenter(), p1, p2 )) / (len*len);
 
     float closestX = p1.getX() + ( dot * ( p2.getX() - p1.getX() ) );
     float closestY = p1.getY() + ( dot * ( p2.getY() - p1.getY() ) );
+    qDebug() << closestX << closestY;
+//    if( !isIntersecting( Point( closestX, closestY ), a ) )
+//        return false;
 
-    if( !isIntersecting( Point( closestX, closestY ), a ) )
+    Point closest(closestX, closestY);
+    float distLs = distanceBetweenPoints(p1, p2);
+    float distAC = distanceBetweenPoints(p1, closest);
+    float distBC = distanceBetweenPoints(p2, closest);
+
+    if (distAC > distLs || distBC > distLs)
         return false;
 
     float distTest = distanceBetweenPoints( c.getCenter(),
-                                            Point( closestX, closestY ) );
+                                             closest );
+
 
     if( distTest <= c.getRadius() )
         return true;
@@ -167,13 +175,21 @@ bool IntersectTester::doesLineSegmentIntersectTriangle( LineSegment ls, Triangle
 
 bool IntersectTester::doesLineSegmentIntersectAABB(LineSegment ls, AABB a )
 {
-    float minX, maxX, minY, maxY;
-    minX = std::min( ls.getStart().getX(), ls.getEnd().getX() );
-    minY = std::min( ls.getStart().getY(), ls.getEnd().getY() );
-    maxX = std::max( ls.getStart().getX(), ls.getEnd().getX() );
-    maxY = std::max( ls.getStart().getY(), ls.getEnd().getY() );
-    AABB b( minX, maxX, minY, maxY );
-    return a.intersects(b);
+    if(isIntersecting(ls.getStart(), a) || isIntersecting(ls.getEnd(), a))
+        return true;
+
+    Point A(a.minimums[AABB::XDIM], a.minimums[AABB::YDIM]);
+    Point B(a.minimums[AABB::XDIM], a.maximums[AABB::YDIM]);
+    Point C(a.maximums[AABB::XDIM], a.minimums[AABB::YDIM]);
+    Point D(a.maximums[AABB::XDIM], a.maximums[AABB::YDIM]);
+
+    if(!isIntersecting( LineSegment( A, B ), ls )&&
+       !isIntersecting( LineSegment( B, C ), ls )&&
+       !isIntersecting( LineSegment( C, D ), ls )&&
+       !isIntersecting( LineSegment( D, A ), ls ) )
+        return false;
+
+    return true;
 }
 
 
@@ -189,13 +205,13 @@ bool IntersectTester::doesCircleIntersectTriangle(Circle c, Triangle t)
     Point B = t.getVertexTwo();
     Point C = t.getVertexThree();
 
-    if(!isIntersecting( c.getCenter(), t ) &&
-       !isIntersecting( LineSegment( A, B ), c )&&
-       !isIntersecting( LineSegment( B, C ), c )&&
-       !isIntersecting( LineSegment( C, A ), c ) )
-        return false;
+    if(isIntersecting( c.getCenter(), t ) ||
+       isIntersecting( LineSegment( A, B ), c ) ||
+       isIntersecting( LineSegment( B, C ), c ) ||
+       isIntersecting( LineSegment( C, A ), c ) )
+        return true;
 
-    return true;
+    return false;
 }
 
 bool IntersectTester::doCircleandAABBIntersect(Circle c, AABB a)

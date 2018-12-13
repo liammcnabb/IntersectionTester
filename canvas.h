@@ -46,11 +46,26 @@ private:
     void mouseMoveEvent(QMouseEvent *event);
     float convertedX(float windowX);
     float convertedY(float windowY);
-    void drawSquare(float left, float right, float bottom, float top, QColor color);
+    void drawSquare(AABB sq, QColor color);
     void drawPoint(Point p, QColor color);
     void drawLine(LineSegment line, QColor color);
     void drawCircle(Circle circle, QColor color);
     void drawTriangle(Triangle t, QColor color);
+    void pointPointTest(Point mv, Point st);
+    void pointLineTest(Point p, LineSegment ls);
+    void pointCircleTest(Point p, Circle cir);
+    void pointTriangleTest(Point p, Triangle t);
+    void pointSquareTest(Point p, AABB b);
+    void lineLineTest(LineSegment a, LineSegment b);
+    void lineCircleTest(LineSegment ls, Circle cir);
+    void lineTriangleTest(LineSegment ls, Triangle t);
+    void lineSquareTest(LineSegment ls, AABB sq);
+    void circleCircleTest(Circle a, Circle b);
+    void circleTriangleTest(Circle cir, Triangle t);
+    void circleSquareTest(Circle cir, AABB sq);
+    void triangleTriangleTest(Triangle a, Triangle b);
+    void triangleSquareTest(Triangle t, AABB sq);
+    void squareSquareTest(AABB a, AABB b);
 };
 
 #endif // CANVAS_H

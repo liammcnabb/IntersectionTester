@@ -18,6 +18,8 @@ public:
 private slots:
     void on_cmbStatic_currentIndexChanged();
 
+    void on_cmbMove_currentIndexChanged(int index);
+
 private:
     Ui::MainInterfaceWindow *ui;
 };

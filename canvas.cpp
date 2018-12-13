@@ -27,64 +27,326 @@ void Canvas::paintGL()
     drawGridlines(20, 0.8f);
 
 
-    if(staticState() == POINT && movingState() == POINT)
+    if( movingState() == POINT && staticState() == POINT )
     {
-        drawPoint(mouse(),Qt::red);
-        QColor c = Qt::black;
-        if(IntersectTester::isIntersecting(mouse(), Point(0,0)))
-        {
-            c = Qt::green;
-            drawPoint(mouse(),c);
-        }
-        drawPoint(Point(0,0),c);
+        Point set(0,0);
+        pointPointTest(mouse(), set);
     }
-    if(staticState() == LINE && movingState() == POINT)
+    else if( movingState() == POINT && staticState() == LINE )
     {
-        drawPoint(mouse(),Qt::red);
         LineSegment line(Point(-50,-40),Point(80,10));
-        QColor c = Qt::black;
-        if(IntersectTester::isIntersecting(mouse(), line))
-        {
-            c = Qt::green;
-            drawPoint(mouse(),c);
-        }
-        drawLine(line,c);
+        pointLineTest(mouse(), line);
     }
-    if(staticState() == CIRCLE && movingState() == POINT)
+    else if( movingState() == POINT && staticState() == CIRCLE )
     {
-        drawPoint(mouse(),Qt::red);
         Circle circle(Point(30,30),20);
-        QColor c = Qt::black;
-        if(IntersectTester::isIntersecting(mouse(), circle))
-        {
-            c = Qt::green;
-            drawPoint(mouse(),c);
-        }
-        drawCircle(circle,c);
+        pointCircleTest(mouse(), circle);
     }
-    if(staticState() == TRIANGLE && movingState() == POINT)
+    else if( movingState() == POINT && staticState() == TRIANGLE )
     {
-        drawPoint(mouse(),Qt::red);
         Triangle t(Point(-10,-10), Point(-30,-10), Point(-20,10));
-        QColor c = Qt::black;
-        if(IntersectTester::isIntersecting(mouse(), t))
-        {
-            c = Qt::green;
-            drawPoint(mouse(),c);
-        }
-        drawTriangle(t,c);
+        pointTriangleTest(mouse(), t);
     }
-    else if(staticState() == SQUARE && movingState() == POINT)
+    else if( movingState() == POINT && staticState() == SQUARE )
     {
-        drawPoint(mouse(),Qt::red);
-        QColor c = Qt::black;
-        if(IntersectTester::isIntersecting(mouse(), AABB(-20,20,-20,20)))
-        {
-            c = Qt::green;
-            drawPoint(mouse(),c);
-        }
-        drawSquare(-20,20,-20,20,c);
+        AABB box(-20,20,-20,20);
+        pointSquareTest(mouse(), box);
     }
+    else if ( movingState() == LINE && staticState() == POINT )
+    {
+        Point set(0,0);
+        LineSegment line(Point( mouse().getX()-24, mouse().getY()-18 ),
+                         Point( mouse().getX()+24, mouse().getY()+18 ) );
+        pointLineTest(set, line);
+    }
+    else if ( movingState() == LINE && staticState() == LINE)
+    {
+        LineSegment line(Point( mouse().getX()-24, mouse().getY()-18 ),
+                         Point( mouse().getX()+24, mouse().getY()+18 ) );
+        LineSegment line2(Point(-50,-40),Point(80,10));
+        lineLineTest(line, line2);
+    }
+    else if ( movingState() == LINE && staticState() == CIRCLE)
+    {
+        LineSegment line(Point( mouse().getX()-24, mouse().getY()-18 ),
+                         Point( mouse().getX()+24, mouse().getY()+18 ) );
+        Circle circle(Point(30,30),20);
+        lineCircleTest(line, circle);
+    }
+    else if ( movingState() == LINE && staticState() == TRIANGLE)
+    {
+        LineSegment line(Point( mouse().getX()-24, mouse().getY()-18 ),
+                         Point( mouse().getX()+24, mouse().getY()+18 ) );
+        Triangle t(Point(-10,-10), Point(-30,-10), Point(-20,10));
+        lineTriangleTest(line, t);
+    }
+    else if ( movingState() == LINE && staticState() == SQUARE)
+    {
+        LineSegment line(Point( mouse().getX()-24, mouse().getY()-18 ),
+                         Point( mouse().getX()+24, mouse().getY()+18 ) );
+        AABB box(-20,20,-20,20);
+        lineSquareTest(line, box);
+    }
+    else if ( movingState() == CIRCLE && staticState() == POINT)
+    {
+        Circle cir(mouse(), 10 );
+        Point set(0,0);
+        pointCircleTest(set, cir);
+    }
+    else if ( movingState() == CIRCLE && staticState() == LINE)
+    {
+        LineSegment line(Point(-50,-40),Point(80,10));
+        Circle cir(mouse(), 10 );
+        lineCircleTest(line, cir);
+    }
+    else if ( movingState() == CIRCLE && staticState() == CIRCLE)
+    {
+        Circle circle(Point(30,30),20);
+        Circle cir(mouse(), 10 );
+        circleCircleTest(circle, cir);
+    }
+    else if ( movingState() == CIRCLE && staticState() == TRIANGLE)
+    {
+        Triangle t(Point(-10,-10), Point(-30,-10), Point(-20,10));
+        Circle cir(mouse(), 10 );
+        circleTriangleTest(cir, t);
+    }
+    else if ( movingState() == CIRCLE && staticState() == SQUARE)
+    {
+        AABB box(-20,20,-20,20);
+        Circle cir(mouse(), 10 );
+        circleSquareTest(cir, box);
+    }
+    else if ( movingState() == TRIANGLE && staticState() == POINT)
+    {
+        Triangle t(Point(mouse().getX()-11,mouse().getY()-11),
+                   Point(mouse().getX()+11,mouse().getY()-11),
+                   Point(mouse().getX(),mouse().getY()+11));
+        Point set(0,0);
+        pointTriangleTest(set, t);
+    }
+    else if ( movingState() == TRIANGLE && staticState() == LINE)
+    {
+        LineSegment line(Point(-50,-40),Point(80,10));
+        Triangle t(Point(mouse().getX()-11,mouse().getY()-11),
+                   Point(mouse().getX()+11,mouse().getY()-11),
+                   Point(mouse().getX(),mouse().getY()+11));
+        lineTriangleTest(line, t);
+    }
+    else if ( movingState() == TRIANGLE && staticState() == CIRCLE)
+    {
+        Circle circle(Point(30,30),20);
+        Triangle t(Point(mouse().getX()-11,mouse().getY()-11),
+                   Point(mouse().getX()+11,mouse().getY()-11),
+                   Point(mouse().getX(),mouse().getY()+11));
+        circleTriangleTest(circle, t);
+    }
+    else if ( movingState() == TRIANGLE && staticState() == TRIANGLE)
+    {
+        Triangle t(Point(-10,-10), Point(-30,-10), Point(-20,10));
+        Triangle t2(Point(mouse().getX()-11,mouse().getY()-11),
+                   Point(mouse().getX()+11,mouse().getY()-11),
+                   Point(mouse().getX(),mouse().getY()+11));
+        triangleTriangleTest(t, t2);
+    }
+    else if ( movingState() == TRIANGLE && staticState() == SQUARE)
+    {
+        AABB box(-20,20,-20,20);
+        Triangle t(Point(mouse().getX()-11,mouse().getY()-11),
+                   Point(mouse().getX()+11,mouse().getY()-11),
+                   Point(mouse().getX(),mouse().getY()+11));
+        triangleSquareTest(t, box);
+    }
+    else if ( movingState() == SQUARE && staticState() == POINT)
+    {
+        AABB box(mouse().getX()-20,mouse().getX()+20,mouse().getY()-10,mouse().getY()+10);
+        Point set(0,0);
+        pointSquareTest(set, box);
+    }
+    else if ( movingState() == SQUARE && staticState() == LINE)
+    {
+        LineSegment line(Point(-50,-40),Point(80,10));
+        AABB box(mouse().getX()-20,mouse().getX()+20,mouse().getY()-10,mouse().getY()+10);
+        lineSquareTest(line, box);
+    }
+    else if ( movingState() == SQUARE && staticState() == CIRCLE)
+    {
+        Circle circle(Point(30,30),20);
+        AABB box(mouse().getX()-20,mouse().getX()+20,mouse().getY()-10,mouse().getY()+10);
+        circleSquareTest(circle, box);
+    }
+    else if ( movingState() == SQUARE && staticState() == TRIANGLE)
+    {
+        Triangle t(Point(-10,-10), Point(-30,-10), Point(-20,10));
+        AABB box(mouse().getX()-20,mouse().getX()+20,mouse().getY()-10,mouse().getY()+10);
+        triangleSquareTest(t, box);
+    }
+    else if ( movingState() == SQUARE && staticState() == SQUARE)
+    {
+        AABB a(-20,20,-20,20);
+        AABB b(mouse().getX()-20,mouse().getX()+20,mouse().getY()-10,mouse().getY()+10);
+        squareSquareTest(a, b);
+    }
+}
+
+void Canvas::pointPointTest(Point mv, Point st)
+{
+    drawPoint(mv,Qt::red);
+    QColor c = Qt::black;
+    if(IntersectTester::isIntersecting(mv, st))
+    {
+        c = Qt::green;
+        drawPoint(mv,c);
+    }
+    drawPoint(st,c);
+}
+
+void Canvas::pointLineTest(Point p, LineSegment ls)
+{
+    drawPoint(p,Qt::red);
+    QColor c = Qt::black;
+    if(IntersectTester::isIntersecting(p, ls))
+    {
+        c = Qt::green;
+        drawPoint(p,c);
+    }
+    drawLine(ls,c);
+}
+
+void Canvas::pointCircleTest(Point p, Circle cir)
+{
+    drawPoint(p,Qt::red);
+    QColor c = Qt::black;
+    if(IntersectTester::isIntersecting(p, cir))
+    {
+        c = Qt::green;
+        drawPoint(p,c);
+    }
+    drawCircle(cir,c);
+}
+
+void Canvas::pointTriangleTest(Point p, Triangle t)
+{
+    drawPoint(p,Qt::red);
+    QColor c = Qt::black;
+    if(IntersectTester::isIntersecting(p, t))
+    {
+        c = Qt::green;
+        drawPoint(p,c);
+    }
+    drawTriangle(t,c);
+}
+
+void Canvas::pointSquareTest(Point p, AABB b)
+{
+    drawPoint(p,Qt::red);
+    QColor c = Qt::black;
+    if(IntersectTester::isIntersecting(p, b))
+    {
+        c = Qt::green;
+        drawPoint(p,c);
+    }
+    drawSquare(b,c);
+}
+
+void Canvas::lineLineTest(LineSegment a, LineSegment b)
+{
+    QColor c = Qt::black;
+    if(IntersectTester::isIntersecting(a, b))
+        c = Qt::green;
+
+    drawLine(a,c);
+    drawLine(b,c);
+}
+
+void Canvas::lineCircleTest(LineSegment ls, Circle cir)
+{
+    QColor c = Qt::black;
+    if(IntersectTester::isIntersecting(ls, cir))
+        c = Qt::green;
+
+    drawLine(ls,c);
+    drawCircle(cir,c);
+}
+
+void Canvas::lineTriangleTest(LineSegment ls, Triangle t)
+{
+    QColor c = Qt::black;
+    if(IntersectTester::isIntersecting(ls, t))
+        c = Qt::green;
+
+    drawLine(ls,c);
+    drawTriangle(t,c);
+}
+
+void Canvas::lineSquareTest(LineSegment ls, AABB sq)
+{
+    QColor c = Qt::black;
+    if(IntersectTester::isIntersecting(ls, sq))
+        c = Qt::green;
+
+    drawLine(ls,c);
+    drawSquare(sq,c);
+}
+
+void Canvas::circleCircleTest(Circle a, Circle b)
+{
+    QColor c = Qt::black;
+    if(IntersectTester::isIntersecting(a, b))
+        c = Qt::green;
+
+    drawCircle(a,c);
+    drawCircle(b,c);
+}
+
+void Canvas::circleTriangleTest(Circle cir, Triangle t)
+{
+    QColor c = Qt::black;
+    if(IntersectTester::isIntersecting(cir, t))
+        c = Qt::green;
+
+    drawCircle(cir,c);
+    drawTriangle(t,c);
+}
+
+void Canvas::circleSquareTest(Circle cir, AABB sq)
+{
+    QColor c = Qt::black;
+    if(IntersectTester::isIntersecting(cir, sq))
+        c = Qt::green;
+
+    drawCircle(cir,c);
+    drawSquare(sq,c);
+}
+
+void Canvas::triangleTriangleTest(Triangle a, Triangle b)
+{
+    QColor c = Qt::black;
+    if(IntersectTester::isIntersecting(a, b))
+        c = Qt::green;
+
+    drawTriangle(a,c);
+    drawTriangle(b,c);
+}
+
+void Canvas::triangleSquareTest(Triangle t, AABB sq)
+{
+    QColor c = Qt::black;
+    if(IntersectTester::isIntersecting(t, sq))
+        c = Qt::green;
+
+    drawTriangle(t,c);
+    drawSquare(sq,c);
+}
+
+void Canvas::squareSquareTest(AABB a, AABB b)
+{
+    QColor c = Qt::black;
+    if(IntersectTester::isIntersecting(a, b))
+        c = Qt::green;
+
+    drawSquare(a,c);
+    drawSquare(b,c);
 }
 
 void Canvas::drawPoint( Point p, QColor color )
@@ -160,22 +422,22 @@ void Canvas::drawTriangle(Triangle t, QColor color)
     glEnd();
 }
 
-void Canvas::drawSquare(float left, float right, float bottom, float top, QColor color)
+void Canvas::drawSquare(AABB sq, QColor color)
 {
     glColor3f(color.redF(),color.greenF(),color.blueF());
     glBegin(GL_LINE_LOOP);
-    glVertex2f(-20,-20);
-    glVertex2f(-20,20);
-    glVertex2f(20,20);
-    glVertex2f(20,-20);
+    glVertex2f(sq.minimums[AABB::XDIM],sq.minimums[AABB::YDIM]);
+    glVertex2f(sq.minimums[AABB::XDIM],sq.maximums[AABB::YDIM]);
+    glVertex2f(sq.maximums[AABB::XDIM],sq.maximums[AABB::YDIM]);
+    glVertex2f(sq.maximums[AABB::XDIM],sq.minimums[AABB::YDIM]);
     glEnd();
 
     glColor4f(color.redF(),color.greenF(),color.blueF(), 0.2);
     glBegin(GL_QUADS);
-    glVertex2f(-20,-20);
-    glVertex2f(-20,20);
-    glVertex2f(20,20);
-    glVertex2f(20,-20);
+    glVertex2f(sq.minimums[AABB::XDIM],sq.minimums[AABB::YDIM]);
+    glVertex2f(sq.minimums[AABB::XDIM],sq.maximums[AABB::YDIM]);
+    glVertex2f(sq.maximums[AABB::XDIM],sq.maximums[AABB::YDIM]);
+    glVertex2f(sq.maximums[AABB::XDIM],sq.minimums[AABB::YDIM]);
     glEnd();
 }
 
