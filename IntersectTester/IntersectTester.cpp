@@ -17,18 +17,6 @@ bool IntersectTester::isPointOnLineSegment( Point p, LineSegment ls)
         return false;
 
     double dotproduct = dotProduct( p, ls.getStart(), ls.getEnd() );
-//            ( p.getX() - ls.getStart().getX() ) *
-//                        ( ls.getEnd().getX() - ls.getStart().getX() ) +
-//                        ( p.getY() - ls.getStart().getY() ) *
-//                        ( ls.getEnd().getY() - ls.getStart().getY() );
-
-//    if((p.getX() == ls.getStart().getX() && ls.getStart().getX() == ls.getEnd().getX()) ||
-//        p.getY() == ls.getStart().getY() && ls.getStart().getY() == ls.getEnd().getY())
-//        if((distanceBetweenPoints(p,ls.getStart()) + distanceBetweenPoints(p,ls.getEnd())) -
-//                distanceBetweenPoints(ls.getStart(),ls.getEnd()) >=
-//           std::numeric_limits<float>::epsilon() )
-//            return true;
-
 
     if ( dotproduct < 0 )
         return false;
@@ -98,7 +86,6 @@ bool IntersectTester::areLineSegmentsIntersecting(LineSegment a, LineSegment b)
     or3 = direction( b.getStart(), b.getEnd(), a.getStart() );
     or4 = direction( b.getStart(), b.getEnd(), a.getEnd() );
 
-    qDebug() << or1 << or2 << or3 << or4;
     if (or1 != or2 && or3 != or4 )
         return true;
     if( or1 == 0 && isIntersecting( b.getStart(), a ) )
@@ -123,28 +110,12 @@ bool IntersectTester::areLineSegmentAndCircleIntersecting(LineSegment a, Circle 
 
     float distX = (p1.getX() - p2.getX());
     float distY = (p1.getY() - p2.getY());
-//    float cY = ( p2.getY() - p1.getY() ) * p1.getX() +
-//               ( p1.getX() - p2.getX() )* p1.getY();
-//    float cX = ( distX * c.getCenter().getX() ) +
-//               ( distY * c.getCenter().getY() );
-//    float determinant = ( (distX * distX ) + (distY * distY ) );
-//    if (determinant < std::numeric_limits<float>::epsilon())
-//        return true;
-
-//    float closestX = (distY * cY - distX * cX) / determinant;
-//    float closestY = (distY * cX - -distX * cX) / determinant;
-
-
-
 
     float len = sqrt( (distX * distX ) + (distY * distY ) );
     float dot = (dotProduct( c.getCenter(), p1, p2 )) / (len*len);
 
     float closestX = p1.getX() + ( dot * ( p2.getX() - p1.getX() ) );
     float closestY = p1.getY() + ( dot * ( p2.getY() - p1.getY() ) );
-    qDebug() << closestX << closestY;
-//    if( !isIntersecting( Point( closestX, closestY ), a ) )
-//        return false;
 
     Point closest(closestX, closestY);
     float distLs = distanceBetweenPoints(p1, p2);
@@ -156,7 +127,6 @@ bool IntersectTester::areLineSegmentAndCircleIntersecting(LineSegment a, Circle 
 
     float distTest = distanceBetweenPoints( c.getCenter(),
                                              closest );
-
 
     if( distTest <= c.getRadius() )
         return true;
