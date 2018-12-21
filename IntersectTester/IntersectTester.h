@@ -161,18 +161,108 @@ private:
     * true, otherwise return false.
     */
     static bool isPointOnLineSegment(Point p, LineSegment ls);
+    /**
+     * @brief isPointOnCircle Tested by checking the distance
+     * between the point, and the center of the circle, if the
+     * distance is less than or equal to the radius, the point is
+     * within the circle.
+     * @param p Point
+     * @param c Circle
+     * @return if point is in the circle, return true,
+     * otherwise return false
+     */
     static bool isPointOnCircle(Point p, Circle c);
+    /**
+     * @brief isPointOnTriangle
+     * @param p
+     * @param t
+     * @return
+     */
     static bool isPointOnTriangle(Point p, Triangle t);
+    /**
+     * @brief isPointOnAABB We test the null hypothesis.
+     * If the X axis, or the Y axis fall outside of the axes
+     * range of the bounding box, the we know this is false.
+     * Otherwise it is true.
+     * @param p Point
+     * @param a AABB
+     * @return if point is within AABB, return true,
+     * otherwise return false.
+     */
     static bool isPointOnAABB(Point p, AABB a);
+    /**
+     * @brief areLineSegmentsIntersecting
+     * @param a
+     * @param b
+     * @return
+     */
     static bool areLineSegmentsIntersecting(LineSegment a, LineSegment b);
+    /**
+     * @brief areLineSegmentAndCircleIntersecting
+     * @param a
+     * @param c
+     * @return
+     */
     static bool areLineSegmentAndCircleIntersecting( LineSegment a, Circle c );
+    /**
+     * @brief doesLineSegmentIntersectTriangle
+     * @param a
+     * @param t
+     * @return
+     */
     static bool doesLineSegmentIntersectTriangle( LineSegment a, Triangle t);
+    /**
+     * @brief doesLineSegmentIntersectAABB
+     * @param ls
+     * @param a
+     * @return
+     */
     static bool doesLineSegmentIntersectAABB(LineSegment ls, AABB a );
+    /**
+     * @brief doCirclesIntersect
+     * @param a
+     * @param b
+     * @return
+     */
     static bool doCirclesIntersect(Circle a, Circle b);
+    /**
+     * @brief doesCircleIntersectTriangle
+     * @param c
+     * @param t
+     * @return
+     */
     static bool doesCircleIntersectTriangle(Circle c, Triangle t);
+    /**
+     * @brief doCircleandAABBIntersect
+     * @param c
+     * @param a
+     * @return
+     */
     static bool doCircleandAABBIntersect(Circle c, AABB a);
+    /**
+     * @brief doTrianglesIntersect
+     * @param a
+     * @param b
+     * @return
+     */
     static bool doTrianglesIntersect(Triangle a, Triangle b);
+    /**
+     * @brief doTriangleAndAABBIntersect
+     * @param t
+     * @param a
+     * @return
+     */
     static bool doTriangleAndAABBIntersect(Triangle t, AABB a);
+    /**
+     * @brief areBoxesIntersecting the axis-aligned box test is similar to the point test.
+     * We use the null hypothesis. If the X dimension extents of AABB 2 do not fall into
+     * the extents of AABB 1, then we know that it is not possible for the boxes to
+     * intersect. We can make the same assumption for the Y axis. If both the X and Y axes
+     * of AABB 2 can be found in AABB 1, then we know that they intersect.
+     * @param a AABB 1
+     * @param b AABB 2
+     * @return
+     */
     static bool areBoxesIntersecting(AABB a, AABB b);
 
 
