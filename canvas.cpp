@@ -1,7 +1,9 @@
 #include "canvas.h"
 
 Canvas::Canvas( QWidget* parent ) : QOpenGLWidget( parent )
-{}
+{
+    IntersectTester::setTolerance( 1.0f );
+}
 
 void Canvas::initializeGL()
 {
@@ -16,6 +18,7 @@ void Canvas::initializeGL()
     //    timer.start( 1000 );
     QWidget::setMouseTracking(true);
     setMouse(Point(-100,100));
+
 }
 
 
@@ -23,8 +26,10 @@ void Canvas::initializeGL()
 void Canvas::paintGL()
 {
     prepareDraw();
+
     drawGridlines(100, 0.95f);
     drawGridlines(20, 0.8f);
+    drawGridlines(2,0.6f);
 
 
     if( movingState() == POINT && staticState() == POINT )
@@ -210,6 +215,7 @@ void Canvas::pointLineTest(Point p, LineSegment ls)
         c = Qt::green;
         drawPoint(p,c);
     }
+    drawPoint(IntersectTester::closestPoint(ls,p), Qt::black);
     drawLine(ls,c);
 }
 
@@ -265,6 +271,7 @@ void Canvas::lineCircleTest(LineSegment ls, Circle cir)
     if(IntersectTester::isIntersecting(ls, cir))
         c = Qt::green;
 
+    drawPoint(IntersectTester::closestPoint( ls, cir.getCenter() ),Qt::black);
     drawLine(ls,c);
     drawCircle(cir,c);
 }
@@ -311,10 +318,19 @@ void Canvas::circleTriangleTest(Circle cir, Triangle t)
 
 void Canvas::circleSquareTest(Circle cir, AABB sq)
 {
+    Point A(sq.minimums[AABB::XDIM], sq.minimums[AABB::YDIM]);
+    Point B(sq.minimums[AABB::XDIM], sq.maximums[AABB::YDIM]);
+    Point C(sq.maximums[AABB::XDIM], sq.maximums[AABB::YDIM]);
+    Point D(sq.maximums[AABB::XDIM], sq.minimums[AABB::YDIM]);
+
     QColor c = Qt::black;
     if(IntersectTester::isIntersecting(cir, sq))
         c = Qt::green;
 
+    drawPoint(IntersectTester::closestPoint( LineSegment(A,B), cir.getCenter() ),Qt::black);
+    drawPoint(IntersectTester::closestPoint( LineSegment(B,C), cir.getCenter() ),Qt::black);
+    drawPoint(IntersectTester::closestPoint( LineSegment(D,C), cir.getCenter() ),Qt::black);
+    drawPoint(IntersectTester::closestPoint( LineSegment(A,D), cir.getCenter() ),Qt::black);
     drawCircle(cir,c);
     drawSquare(sq,c);
 }

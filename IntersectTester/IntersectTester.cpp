@@ -1,41 +1,58 @@
 #include "IntersectTester.h"
+#include "IntersectTester.h"
 
-bool IntersectTester::isIntersecting(Point a, Point b)
-{
-    return a.getX() == b.getX() &&
-            a.getY() == b.getY() &&
-            a.getZ() == b.getZ();
-}
+float IntersectTester::tolerance = std::numeric_limits<float>::epsilon();
+
+
 
 
 bool IntersectTester::isPointOnLineSegment( Point p, LineSegment ls)
 {
-    double crossproduct = crossProduct(p, ls.getStart(), ls.getEnd());
+ if(isIntersecting(p,ls.getStart()) || isIntersecting(p,ls.getEnd()))
+     return true;
 
-    if ( fabs( crossproduct ) >
-            std::numeric_limits<float>::epsilon() )
-        return false;
+ Point closest = closestPoint(ls, p);
+ float distance = distanceBetweenPoints(closest, p);
+ AABB box(std::min(ls.getStart().getX(), ls.getEnd().getX()),
+      std::max(ls.getStart().getX(), ls.getEnd().getX()),
+      std::min(ls.getStart().getY(), ls.getEnd().getY()),
+      std::max(ls.getStart().getY(), ls.getEnd().getY()));
+ if( distance < tolerance &&
+     isIntersecting(closest, box) )
+     return true;
 
-    double dotproduct = dotProduct( p, ls.getStart(), ls.getEnd() );
-
-    if ( dotproduct < 0 )
-        return false;
-
-    double squaredlengthba = ( ls.getEnd().getX() - ls.getStart().getX() ) *
-                             ( ls.getEnd().getX() - ls.getStart().getX() ) +
-                             ( ls.getEnd().getY() - ls.getStart().getY() ) *
-                             ( ls.getEnd().getY() - ls.getStart().getY() );
-
-    if ( dotproduct > squaredlengthba )
-        return false;
-
-    return true;
-
-    float a = ls.getEnd().getY() - ls.getStart().getY() / ls.getEnd().getX() - ls.getEnd().getX();
-    float b = ls.getStart().getY() - a * ls.getStart().getX();
-    if( fabs(p.getY() - (a*p.getX()+b)) < std::numeric_limits<float>::epsilon() )
-        return true;
     return false;
+}
+
+bool IntersectTester::isPointOnLineSegmentOld(Point p, LineSegment ls)
+{
+
+        double crossproduct = crossProduct(p, ls.getStart(), ls.getEnd());
+
+        if ( fabs( crossproduct ) >
+                std::numeric_limits<float>::epsilon() )
+            return false;
+
+        double dotproduct = dotProduct( p, ls.getStart(), ls.getEnd() );
+
+        if ( dotproduct < 0 )
+            return false;
+
+        double squaredlengthba = ( ls.getEnd().getX() - ls.getStart().getX() ) *
+                                 ( ls.getEnd().getX() - ls.getStart().getX() ) +
+                                 ( ls.getEnd().getY() - ls.getStart().getY() ) *
+                                 ( ls.getEnd().getY() - ls.getStart().getY() );
+
+        if ( dotproduct > squaredlengthba )
+            return false;
+
+        return true;
+
+        float a = ls.getEnd().getY() - ls.getStart().getY() /
+                  ls.getEnd().getX() - ls.getEnd().getX();
+        float b = ls.getStart().getY() - a * ls.getStart().getX();
+        if( fabs(p.getY() - (a*p.getX()+b)) < tolerance )
+            return true;
 }
 
 bool IntersectTester::isPointOnCircle(Point p, Circle c)
@@ -65,7 +82,9 @@ bool IntersectTester::isPointOnTriangle(Point p, Triangle t)
     if(crossP1 < 0 && crossP2 < 0 && crossP3 < 0)
         return true;
 
-    if( !isIntersecting( p, LineSegment(t1,t2) ) && !isIntersecting( p, LineSegment(t2,t3) ) && !isIntersecting( p, LineSegment(t3,t1) ) )
+    if( !isIntersecting( p, LineSegment(t1,t2) ) &&
+        !isIntersecting( p, LineSegment(t2,t3) ) &&
+        !isIntersecting( p, LineSegment(t3,t1) ) )
         return false;
 
     return true;
@@ -105,32 +124,14 @@ bool IntersectTester::areLineSegmentAndCircleIntersecting(LineSegment a, Circle 
     if( isIntersecting( a.getStart(), c) || isIntersecting(a.getEnd(), c) )
         return true;
 
-    Point p1 = a.getStart();
-    Point p2 = a.getEnd();
+    Point closest = closestPoint(a, c.getCenter());
 
-    float distX = (p1.getX() - p2.getX());
-    float distY = (p1.getY() - p2.getY());
-
-    float len = sqrt( (distX * distX ) + (distY * distY ) );
-    float dot = (dotProduct( c.getCenter(), p1, p2 )) / (len*len);
-
-    float closestX = p1.getX() + ( dot * ( p2.getX() - p1.getX() ) );
-    float closestY = p1.getY() + ( dot * ( p2.getY() - p1.getY() ) );
-
-    Point closest(closestX, closestY);
-    float distLs = distanceBetweenPoints(p1, p2);
-    float distAC = distanceBetweenPoints(p1, closest);
-    float distBC = distanceBetweenPoints(p2, closest);
-
-    if (distAC > distLs || distBC > distLs)
+    if (!isIntersecting(closest,a))
         return false;
 
-    float distTest = distanceBetweenPoints( c.getCenter(),
-                                             closest );
-
+    float distTest = distanceBetweenPoints( closest, c.getCenter() );
     if( distTest <= c.getRadius() )
         return true;
-
     return false;
 }
 
@@ -150,13 +151,13 @@ bool IntersectTester::doesLineSegmentIntersectAABB(LineSegment ls, AABB a )
 
     Point A(a.minimums[AABB::XDIM], a.minimums[AABB::YDIM]);
     Point B(a.minimums[AABB::XDIM], a.maximums[AABB::YDIM]);
-    Point C(a.maximums[AABB::XDIM], a.minimums[AABB::YDIM]);
-    Point D(a.maximums[AABB::XDIM], a.maximums[AABB::YDIM]);
+    Point C(a.maximums[AABB::XDIM], a.maximums[AABB::YDIM]);
+    Point D(a.maximums[AABB::XDIM], a.minimums[AABB::YDIM]);
 
     if(!isIntersecting( LineSegment( A, B ), ls )&&
        !isIntersecting( LineSegment( B, C ), ls )&&
-       !isIntersecting( LineSegment( C, D ), ls )&&
-       !isIntersecting( LineSegment( D, A ), ls ) )
+       !isIntersecting( LineSegment( D, C ), ls )&&
+       !isIntersecting( LineSegment( A, D ), ls ) )
         return false;
 
     return true;
@@ -188,17 +189,17 @@ bool IntersectTester::doCircleandAABBIntersect(Circle c, AABB a)
 {
     Point A(a.minimums[AABB::XDIM], a.minimums[AABB::YDIM]);
     Point B(a.minimums[AABB::XDIM], a.maximums[AABB::YDIM]);
-    Point C(a.maximums[AABB::XDIM], a.minimums[AABB::YDIM]);
-    Point D(a.maximums[AABB::XDIM], a.maximums[AABB::YDIM]);
+    Point C(a.maximums[AABB::XDIM], a.maximums[AABB::YDIM]);
+    Point D(a.maximums[AABB::XDIM], a.minimums[AABB::YDIM]);
 
-    if(!isIntersecting( c.getCenter(), a ) &&
-       !isIntersecting( LineSegment( A, B ), c )&&
-       !isIntersecting( LineSegment( B, C ), c )&&
-       !isIntersecting( LineSegment( C, D ), c )&&
-       !isIntersecting( LineSegment( D, A ), c ) )
-        return false;
+    if(isIntersecting( c.getCenter(), a ) ||
+       isIntersecting( LineSegment( A, B ), c ) ||
+       isIntersecting( LineSegment( B, C ), c ) ||
+       isIntersecting( LineSegment( D, C ), c ) ||
+       isIntersecting( LineSegment( A, D ), c ) )
+        return true;
 
-    return true;
+    return false;
 }
 
 
@@ -222,10 +223,13 @@ bool IntersectTester::doTriangleAndAABBIntersect(Triangle t, AABB a)
     Point C(a.maximums[AABB::XDIM], a.minimums[AABB::YDIM]);
     Point D(a.maximums[AABB::XDIM], a.maximums[AABB::YDIM]);
 
-    if(isIntersecting( LineSegment( A, B ), t ) ||
-       isIntersecting( LineSegment( B, C ), t ) ||
-       isIntersecting( LineSegment( C, D ), t ) ||
-       isIntersecting( LineSegment( D, A ), t ) )
+    if( isIntersecting( t.getVertexOne(), a ) ||
+        isIntersecting( t.getVertexTwo(), a ) ||
+        isIntersecting( t.getVertexThree(), a ) ||
+        isIntersecting( LineSegment( A, B ), t ) ||
+        isIntersecting( LineSegment( B, C ), t ) ||
+        isIntersecting( LineSegment( C, D ), t ) ||
+        isIntersecting( LineSegment( D, A ), t ) )
         return true;
 
     return false;
@@ -236,6 +240,12 @@ bool IntersectTester::areBoxesIntersecting( AABB a, AABB b )
 {
     return a.intersects(b);
 }
+
+void IntersectTester::setTolerance(float value)
+{
+    tolerance = value;
+}
+
 
 float IntersectTester::distanceBetweenPoints(Point a, Point b)
 {
@@ -260,11 +270,6 @@ float IntersectTester::dotProduct(Point a, Point b, Point c)
            ( ( a.getY() - b.getY() ) * (c.getY() - b.getY() ) );
 }
 
-float IntersectTester::dotProduct(Point a, Point b)
-{
-    float result = a.getX() * b.getX() + a.getY() * b.getY();
-    return result;
-}
 
 int IntersectTester::direction(Point a, Point b, Point c)
 {
@@ -277,5 +282,23 @@ int IntersectTester::direction(Point a, Point b, Point c)
         return 1; //Clockwise
 
     return -1; //Anti-clockwise
+}
+
+
+Point IntersectTester::closestPoint(LineSegment ls, Point c)
+{
+    Point p1 = ls.getStart();
+    Point p2 = ls.getEnd();
+    Point p3 = c;
+
+    float distX = (p1.getX() - p2.getX());
+    float distY = (p1.getY() - p2.getY());
+
+    float len = sqrt( (distX * distX ) + (distY * distY ) );
+    float dot = (dotProduct( p3, p1, p2 )) / (len*len);
+
+    float closestX = p1.getX() + ( dot * fabs( p2.getX() - p1.getX() ) );
+    float closestY = p1.getY() + ( dot * fabs( p2.getY() - p1.getY() ) );
+    return Point(closestX, closestY);
 }
 

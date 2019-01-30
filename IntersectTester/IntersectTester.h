@@ -92,65 +92,166 @@ class IntersectTester
 public:
     IntersectTester();
 
-    static bool isIntersecting(Point a, Point b);
+    /**
+    * @brief IntersectTester::isIntersecting checks if the two points sit on each other
+     */
+    inline static bool isIntersecting(Point a, Point b)
+    { return a.getX() == b.getX() &&
+             a.getY() == b.getY() &&
+             a.getZ() == b.getZ();
+    }
    /**
     * @brief IntersectTester::isIntersecting calls isPointOnLineSegment
     * @refer IntersectTester::isPointOnLineSegment
-    * @param p coordinate set to test
-    * @param ls lineSegment
-    * @return if point is on line segment (ls), return
-    * true, otherwise return false.
     */
     inline static bool isIntersecting(Point p, LineSegment ls) 
     { return isPointOnLineSegment( p, ls ); }
 
+    /**
+     * @brief IntersectTester::isIntersecting calls isPointOnCircle
+     * @refer IntersectTester::isPointOnCircle
+     */
     inline static bool isIntersecting(Point p, Circle c)
     { return isPointOnCircle( p,c ); }
 
+    /**
+     * @brief  IntersectTester::isIntersecting calls isPointOnTriangle
+     * @refer IntersectTester::isPointOnTriangle
+     */
     inline static bool isIntersecting(Point p, Triangle t)
     { return isPointOnTriangle( p,t ); }
 
+    /**
+     * @brief  IntersectTester::isIntersecting calls isPointOnAABB
+     * @refer IntersectTester::isPointOnTriangle
+     */
     inline static bool isIntersecting(Point p, AABB a)
     { return isPointOnAABB( p, a ); }
 
+    /**
+     * @brief  IntersectTester::isIntersecting calls areLineSegmentsIntersecting
+     * @refer IntersectTester::areLineSegmentsIntersecting
+     */
     inline static bool isIntersecting(LineSegment a, LineSegment b) 
     { return areLineSegmentsIntersecting( a, b ); }
 
+    /**
+     * @brief  IntersectTester::isIntersecting calls areLineSegmentAndCircleIntersecting
+     * @refer IntersectTester::areLineSegmentAndCircleIntersecting
+     */
     inline static bool isIntersecting(LineSegment a, Circle c)
     { return areLineSegmentAndCircleIntersecting( a, c ); }
 
+    /**
+     * @brief  IntersectTester::isIntersecting calls doesLineSegmentIntersectTriangle
+     * @refer IntersectTester::doesLineSegmentIntersectTriangle
+     */
     inline static bool isIntersecting(LineSegment ls, Triangle t)
     { return doesLineSegmentIntersectTriangle( ls, t ); }
 
+    /**
+     * @brief  IntersectTester::isIntersecting calls doesLineSegmentIntersectAABB
+     * @refer IntersectTester::doesLineSegmentIntersectAABB
+     */
     inline static bool isIntersecting(LineSegment ls, AABB a)
     { return doesLineSegmentIntersectAABB( ls, a ); }
 
+    /**
+     * @brief  IntersectTester::isIntersecting calls doCirclesIntersect
+     * @refer IntersectTester::doCirclesIntersect
+     */
     inline static bool isIntersecting(Circle a, Circle b)
     { return doCirclesIntersect(a,b); }
 
+    /**
+     * @brief  IntersectTester::isIntersecting calls doesCircleIntersectTriangle
+     * @refer IntersectTester::doesCircleIntersectTriangle
+     */
     inline static bool isIntersecting(Circle c, Triangle t)
     { return doesCircleIntersectTriangle(c,t); }
 
+    /**
+     * @brief  IntersectTester::isIntersecting calls doCircleandAABBIntersect
+     * @refer IntersectTester::doCircleandAABBIntersect
+     */
     inline static bool isIntersecting(Circle c, AABB a)
     { return doCircleandAABBIntersect(c, a); }
 
+    /**
+     * @brief  IntersectTester::isIntersecting calls doTrianglesIntersect
+     * @refer IntersectTester::doTrianglesIntersect
+     */
     inline static bool isIntersecting(Triangle a, Triangle b)
     { return doTrianglesIntersect(a,b); }
 
+    /**
+     * @brief  IntersectTester::isIntersecting calls doTriangleAndAABBIntersect
+     * @refer IntersectTester::doTriangleAndAABBIntersect
+     */
     inline static bool isIntersecting(Triangle t, AABB a)
     { return doTriangleAndAABBIntersect(t,a); }
 
+    /**
+     * @brief  IntersectTester::isIntersecting calls areBoxesIntersecting
+     * @refer IntersectTester::areBoxesIntersecting
+     */
     inline static bool isIntersecting(AABB a, AABB b) 
     { return areBoxesIntersecting( a, b ); }
     
 
 
-
+    /**
+     * @brief distanceBetweenPoints calculates the distance between
+     * two points.
+     * @param a Point
+     * @param b Point
+     * @return a floating point that depicts the distance
+     *  between two points
+     */
     static float distanceBetweenPoints(Point a, Point b);
+    /**
+     * @brief crossProduct calculates the cross product of
+     * three points
+     * @param a Point
+     * @param b Point
+     * @param c Point
+     * @return
+     */
     static float crossProduct(Point a, Point b, Point c);
-    static float dotProduct(Point a, Point b);
+    /**
+     * @brief dotProduct calculates the dot product of
+     * three points
+     * @param a
+     * @param b
+     * @param c
+     * @return
+     */
     static float dotProduct(Point a, Point b, Point c);
+    /**
+     * @brief direction return the sign of the vector
+     * of points.
+     * @param a Point
+     * @param b Point
+     * @param c Point
+     * @return returns 1 if positive, -1 if negative,
+     * and 0 if colinear.
+     */
     static int direction(Point a, Point b, Point c);
+
+    /**
+     * @brief setTolerance set the tolerance value for precision tests.
+     * @param value the new tolerance value
+     */
+    static void setTolerance(float value);
+
+    /**
+     * @brief closestPoint returns the closest point on a line segment
+     * to Point c.
+     * @param ls LineSegment
+     * @param c Point
+     * @return
+     */
+    static Point closestPoint(LineSegment ls, Point c);
 private:
     /**
     * @brief IntersectTester::isPointOnLineSegment used to check
@@ -173,10 +274,15 @@ private:
      */
     static bool isPointOnCircle(Point p, Circle c);
     /**
-     * @brief isPointOnTriangle
-     * @param p
-     * @param t
-     * @return
+     * @brief isPointOnTriangle In order for a point to sit inside
+     * a triangle we must check the crossproduct for a direction.
+     * if all crossproducts move in the same direction, then the
+     * point sits in the triangle. We also check edge cases using
+     * previous tests point-to-line, and point-to-point.
+     * @param p Point
+     * @param t Triangle
+     * @return if point is in triangle, return true,
+     * otherwise return false
      */
     static bool isPointOnTriangle(Point p, Triangle t);
     /**
@@ -191,66 +297,97 @@ private:
      */
     static bool isPointOnAABB(Point p, AABB a);
     /**
-     * @brief areLineSegmentsIntersecting
-     * @param a
-     * @param b
-     * @return
+     * @brief areLineSegmentsIntersecting we check the vector direction
+     * between the points. If the both ends of the line segment sit on
+     * seperate sides of the opposing line,than they intersect. Otherwise
+     * we also check if the lines sit on top of each other.
+     * @param a LineSegment a
+     * @param b LineSegment b
+     * @return if line segments intersect, return true,
+     * otherwise return false
      */
     static bool areLineSegmentsIntersecting(LineSegment a, LineSegment b);
     /**
-     * @brief areLineSegmentAndCircleIntersecting
-     * @param a
-     * @param c
-     * @return
+     * @brief areLineSegmentAndCircleIntersecting We calculate the
+     * closest point between the line and the circle's center. If the
+     * closest point falls on the line segment and the distance is less than
+     * the radius, the two intersect.
+     * @param a LineSegment
+     * @param c Circle
+     * @return if linesegment and circle intersect, return true,
+     * otherwise return false.
      */
     static bool areLineSegmentAndCircleIntersecting( LineSegment a, Circle c );
     /**
-     * @brief doesLineSegmentIntersectTriangle
-     * @param a
-     * @param t
-     * @return
+     * @brief doesLineSegmentIntersectTriangle we test the line segment
+     * against each edge of the triangle. If any of the lines intersect,
+     * than we know the line and triangle intersect.
+     * @param a LineSegment
+     * @param t Triangle
+     * @return if linesegment and triangle intersect, return true,
+     * otherwise return false.
      */
     static bool doesLineSegmentIntersectTriangle( LineSegment a, Triangle t);
     /**
-     * @brief doesLineSegmentIntersectAABB
-     * @param ls
-     * @param a
-     * @return
+     * @brief doesLineSegmentIntersectAABB We first check if either point lies of
+     * the line segment fall inside the box, if not, we test every line-to-line
+     * intersection. If any return true, we know the LineSegment and
+     * AABB intersect
+     * @param ls LineSegment
+     * @param a AABB
+     * @return if linesegment and AABB intersect, return true,
+     * otherwise return false.
      */
     static bool doesLineSegmentIntersectAABB(LineSegment ls, AABB a );
     /**
-     * @brief doCirclesIntersect
-     * @param a
-     * @param b
-     * @return
+     * @brief doCirclesIntersect we calculate the distance between points.
+     * If the distance is less than the combined radius, the two circles
+     * intersect.
+     * @param a Circle a
+     * @param b Circle b
+     * @return if the circles intersect, return true, otherwise
+     * return false.
      */
     static bool doCirclesIntersect(Circle a, Circle b);
     /**
-     * @brief doesCircleIntersectTriangle
-     * @param c
-     * @param t
-     * @return
+     * @brief doesCircleIntersectTriangle we test if the circle's center
+     * point sits in the triangle, if not we also check if any triangle
+     * edge intersects with the circle. If any of these are true, we
+     * know the two objects intersect.
+     * @param c Circle
+     * @param t Triangle
+     * @return if the circle and triangle intersect, return true,
+     * otherwise return false.
      */
     static bool doesCircleIntersectTriangle(Circle c, Triangle t);
     /**
-     * @brief doCircleandAABBIntersect
-     * @param c
-     * @param a
-     * @return
+     * @brief doCircleandAABBIntersect we test the circle's center,
+     * using a point-to-box, and point-to-line tests. If any are
+     * true, we know the two intersect.
+     * @param c Circle
+     * @param a AABB
+     * @return if the circle and AABB intersect, return true,
+     * otherwise return false.
      */
     static bool doCircleandAABBIntersect(Circle c, AABB a);
     /**
-     * @brief doTrianglesIntersect
-     * @param a
-     * @param b
-     * @return
+     * @brief doTrianglesIntersect we test the edges of the triangles
+     * against each other. If any are true, we know the triangles
+     * intersect
+     * @param a Triangle a
+     * @param b Triangle b
+     * @return if the triangles intersect. return true,
+     * otherwise return false.
      */
     static bool doTrianglesIntersect(Triangle a, Triangle b);
     /**
-     * @brief doTriangleAndAABBIntersect
-     * @param t
-     * @param a
-     * @return
+     * @brief doTriangleAndAABBIntersect we test the edges of the
+     * triangle and AABB against each other. If any are true,
+     * we know the two intersect
+     * @param t Triangle
+     * @param a AABB
+     * @return if the triangle and AABB intersect, return true,
+     * otherwise return false.
      */
     static bool doTriangleAndAABBIntersect(Triangle t, AABB a);
     /**
@@ -265,8 +402,10 @@ private:
      */
     static bool areBoxesIntersecting(AABB a, AABB b);
 
+    static float tolerance;
 
 
+    bool isPointOnLineSegmentOld(Point p, LineSegment ls);
 };
 
 
