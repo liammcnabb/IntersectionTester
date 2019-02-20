@@ -33,8 +33,7 @@ Makefile*
 *.qmlproject.user
 *.qmlproject.user.*
 
-Doxygen/
-
-html/
 
 latex/
+html/
+Doxygen/
