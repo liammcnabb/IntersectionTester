@@ -33,6 +33,5 @@ Makefile*
 *.qmlproject.user
 *.qmlproject.user.*
 
-html/
 
 latex/
