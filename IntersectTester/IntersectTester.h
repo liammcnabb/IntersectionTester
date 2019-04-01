@@ -10,24 +10,43 @@
 class Point {
 public:
         float x, y, z;
+        /**
+         * @brief Point Default Constructor
+         */
         Point() 
         {
             this->x = 0;
             this->y = 0;
             this->z = 0;
         }
+        /**
+         * @brief Point Constructor for a 2D Point
+         * @param x
+         * @param y
+         */
         Point( float x, float y )
         {
             this->x = x;
             this->y = y;
             this->z = 0;
         }
+        /**
+         * @brief Point Constructor for a 3D Point
+         * @param x
+         * @param y
+         * @param z
+         */
         Point( float x, float y, float z)
         {
             this->x = x;
             this->y = y;
             this->z = z;
         }
+        /**
+          * @brief operator= assignment operator
+          * @param other the point to assign to this object
+          * @return return this object
+          */
          Point& operator= (const Point& other)
          {
              x = other.getX();
@@ -35,11 +54,35 @@ public:
              z = other.getZ();
              return *this;
          }
+        /**
+        * @brief getX getter method for the x axis coordinate reference
+        * @return float depicting x axis coordinate reference
+        */
         float getX() const { return x; }
+        /**
+        * @brief getY getter method for the y axis coordinate reference
+        * @return float depicting y axis coordinate reference
+        */
         float getY() const { return y; }
+        /**
+        * @brief getZ getter method for the z axis coordinate reference
+        * @return float depicting z axis coordinate reference
+        */
         float getZ() const { return z; }
+        /**
+         * @brief setX setter method for the x axis coordinate reference
+         * @param newX new value for the x axis coordinate reference
+         */
         void setX( float newX ) { x = newX; }
+        /**
+         * @brief setY setter method for the y axis coordinate reference
+         * @param newY new value for the y axis coordinate reference
+         */
         void setY( float newY ) { y = newY; }
+        /**
+         * @brief setZ setter method for the z axis coordinate reference
+         * @param newZ new value for the z axis coordinate reference
+         */
         void setZ( float newZ ) { z = newZ; }
 };
 
@@ -47,12 +90,25 @@ class LineSegment {
 public:
         Point start;
         Point end;
+        /**
+         * @brief LineSegment Default Constructor, a line between 2 points
+         * @param x starting point
+         * @param y ending point
+         */
         LineSegment(Point x, Point y)
         {
              start = Point(x.getX(), x.getY(), x.getZ());
              end = Point(y.getX(), y.getY(), y.getZ());
         }
-        Point getStart() const { return start; } 
+        /**
+         * @brief getStart getter method for starting point
+         * @return starting point of line segment
+         */
+        Point getStart() const { return start; }
+        /**
+         * @brief getEnd getter method for end of line segment
+         * @return end point of line segment
+         */
         Point getEnd() const { return end; } 
 };
 
@@ -60,14 +116,32 @@ public:
 class Triangle {
 public:
         Point v1, v2 ,v3;
+        /**
+         * @brief Triangle Default consructor for triangle
+         * @param x vertex one
+         * @param y vertex two
+         * @param z vertex three
+         */
         Triangle(Point x, Point y, Point z)
         {
              v1 = Point(x.getX(), x.getY(), x.getZ());
              v2 = Point(y.getX(), y.getY(), y.getZ());
              v3 = Point(z.getX(), z.getY(), z.getZ());
         }
+        /**
+         * @brief getVertexOne getter method for the first vertex
+         * @return  vertex one
+         */
         Point getVertexOne() const { return v1; } 
+        /**
+         * @brief getVertexTwo getter method for the second vertex
+         * @return  vertex two
+         */
         Point getVertexTwo() const { return v2; } 
+        /**
+         * @brief getVertexThree getter method for the third vertex
+         * @return vertex three
+         */
         Point getVertexThree() const { return v3; } 
 };
 
@@ -75,12 +149,25 @@ class Circle {
 public:
     Point center;
     float radius;
+    /**
+     * @brief Circle Default constructor for circle
+     * @param center center point of the circle
+     * @param radius the radius of the circle (distance from center to edge)
+     */
     Circle(Point center, float radius)
     {
         this->center = center;
         this->radius = radius;
     }
+    /**
+     * @brief getCenter getter method for center point
+     * @return center
+     */
     Point getCenter() const { return center; }
+    /**
+     * @brief getRadius getter method for radius of circle
+     * @return radius
+     */
     float getRadius() const { return radius; }
 };
 

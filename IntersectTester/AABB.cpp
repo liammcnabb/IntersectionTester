@@ -101,10 +101,6 @@ bool AABB::intersects( AABB comparitor ) const
     return true;
 }
 
-AABB::~AABB()
-{
-
-}
 
 /**
  * @brief AABB::unify
