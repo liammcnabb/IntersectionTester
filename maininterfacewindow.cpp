@@ -24,7 +24,7 @@ void MainInterfaceWindow::on_cmbStatic_currentIndexChanged()
     ui->openGLWidget->update();
 }
 
-void MainInterfaceWindow::on_cmbMove_currentIndexChanged(int index)
+void MainInterfaceWindow::on_cmbMove_currentIndexChanged()
 {
     ui->openGLWidget->setMovingState(ui->cmbMove->currentIndex());
     ui->openGLWidget->update();
