@@ -1,0 +1,334 @@
+\hypertarget{class_point}{}\section{Point Class Reference}
+\label{class_point}\index{Point@{Point}}
+
+
+{\ttfamily \#include $<$Intersect\+Tester.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_point_ad92f2337b839a94ce97dcdb439b4325a}{Point} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_point}{Point} Default Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_point_a30bc8409287de4f43e160664be834636}{Point} (float \hyperlink{class_point_a05dfe2dfbde813ad234b514f30e662f1}{x}, float \hyperlink{class_point_a6101960c8d2d4e8ea1d32c9234bbeb8d}{y})
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_point}{Point} Constructor for a 2D \hyperlink{class_point}{Point}. \end{DoxyCompactList}\item 
+\hyperlink{class_point_a405838cb39b8fb6119633d9ba7e6b4fb}{Point} (float \hyperlink{class_point_a05dfe2dfbde813ad234b514f30e662f1}{x}, float \hyperlink{class_point_a6101960c8d2d4e8ea1d32c9234bbeb8d}{y}, float \hyperlink{class_point_a9a666531e0e99adff132be93d2407d0c}{z})
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_point}{Point} Constructor for a 3D \hyperlink{class_point}{Point}. \end{DoxyCompactList}\item 
+\hyperlink{class_point}{Point} \& \hyperlink{class_point_a0e75bb40a406c615b5632f36fa035a47}{operator=} (const \hyperlink{class_point}{Point} \&other)
+\begin{DoxyCompactList}\small\item\em operator= assignment operator \end{DoxyCompactList}\item 
+float \hyperlink{class_point_a29c44ec7c7279e02629645a06cdaf7d5}{getX} () const
+\begin{DoxyCompactList}\small\item\em getX getter method for the x axis coordinate reference \end{DoxyCompactList}\item 
+float \hyperlink{class_point_a2371ffadbe245d12a8f556d0a976521b}{getY} () const
+\begin{DoxyCompactList}\small\item\em getY getter method for the y axis coordinate reference \end{DoxyCompactList}\item 
+float \hyperlink{class_point_a9bb9987e32b7dd8dec81ead5d428446c}{getZ} () const
+\begin{DoxyCompactList}\small\item\em getZ getter method for the z axis coordinate reference \end{DoxyCompactList}\item 
+void \hyperlink{class_point_a337d4410acd500f972f87f4fc73a43fe}{setX} (float newX)
+\begin{DoxyCompactList}\small\item\em setX setter method for the x axis coordinate reference \end{DoxyCompactList}\item 
+void \hyperlink{class_point_ad77207403cf0e51641b7bc500d351e3f}{setY} (float newY)
+\begin{DoxyCompactList}\small\item\em setY setter method for the y axis coordinate reference \end{DoxyCompactList}\item 
+void \hyperlink{class_point_a82621ca550dece2b002d8fb5d7b17221}{setZ} (float newZ)
+\begin{DoxyCompactList}\small\item\em setZ setter method for the z axis coordinate reference \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{class_point_a05dfe2dfbde813ad234b514f30e662f1}{x}
+\item 
+float \hyperlink{class_point_a6101960c8d2d4e8ea1d32c9234bbeb8d}{y}
+\item 
+float \hyperlink{class_point_a9a666531e0e99adff132be93d2407d0c}{z}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Intersection Tester -\/ v1.\+0.\+0 Original Author\+: Liam Mc\+Nabb Proceeding Author(s)\+: N/A Copyright (c) 2019 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (Intersection\+Tester), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions\+: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. T\+HE S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED \char`\"{}\+A\+S I\+S\char`\"{}, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+TY OF A\+NY K\+I\+ND, E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED, I\+N\+C\+L\+U\+D\+I\+NG B\+UT N\+OT L\+I\+M\+I\+T\+ED TO T\+HE W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY, F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+ND N\+O\+N\+I\+N\+F\+R\+I\+N\+G\+E\+M\+E\+NT. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE A\+U\+T\+H\+O\+RS OR C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY C\+L\+A\+IM, D\+A\+M\+A\+G\+ES OR O\+T\+H\+ER L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN AN A\+C\+T\+I\+ON OF C\+O\+N\+T\+R\+A\+CT, T\+O\+RT OR O\+T\+H\+E\+R\+W\+I\+SE, A\+R\+I\+S\+I\+NG F\+R\+OM, O\+UT OF OR IN C\+O\+N\+N\+E\+C\+T\+I\+ON W\+I\+TH T\+HE S\+O\+F\+T\+W\+A\+RE OR T\+HE U\+SE OR O\+T\+H\+ER D\+E\+A\+L\+I\+N\+GS IN T\+HE S\+O\+F\+T\+W\+A\+RE. 
+
+Definition at line 33 of file Intersect\+Tester.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_point_ad92f2337b839a94ce97dcdb439b4325a}\label{class_point_ad92f2337b839a94ce97dcdb439b4325a}} 
+\index{Point@{Point}!Point@{Point}}
+\index{Point@{Point}!Point@{Point}}
+\subsubsection{\texorpdfstring{Point()}{Point()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Point\+::\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\hyperlink{class_point}{Point} Default Constructor. 
+
+
+
+Definition at line 39 of file Intersect\+Tester.\+h.
+
+
+\begin{DoxyCode}
+40         \{
+41             this->\hyperlink{class_point_a05dfe2dfbde813ad234b514f30e662f1}{x} = 0;
+42             this->\hyperlink{class_point_a6101960c8d2d4e8ea1d32c9234bbeb8d}{y} = 0;
+43             this->\hyperlink{class_point_a9a666531e0e99adff132be93d2407d0c}{z} = 0;
+44         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_point_a30bc8409287de4f43e160664be834636}\label{class_point_a30bc8409287de4f43e160664be834636}} 
+\index{Point@{Point}!Point@{Point}}
+\index{Point@{Point}!Point@{Point}}
+\subsubsection{\texorpdfstring{Point()}{Point()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Point\+::\+Point (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\hyperlink{class_point}{Point} Constructor for a 2D \hyperlink{class_point}{Point}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 50 of file Intersect\+Tester.\+h.
+
+
+\begin{DoxyCode}
+51         \{
+52             this->\hyperlink{class_point_a05dfe2dfbde813ad234b514f30e662f1}{x} = \hyperlink{class_point_a05dfe2dfbde813ad234b514f30e662f1}{x};
+53             this->\hyperlink{class_point_a6101960c8d2d4e8ea1d32c9234bbeb8d}{y} = \hyperlink{class_point_a6101960c8d2d4e8ea1d32c9234bbeb8d}{y};
+54             this->\hyperlink{class_point_a9a666531e0e99adff132be93d2407d0c}{z} = 0;
+55         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_point_a405838cb39b8fb6119633d9ba7e6b4fb}\label{class_point_a405838cb39b8fb6119633d9ba7e6b4fb}} 
+\index{Point@{Point}!Point@{Point}}
+\index{Point@{Point}!Point@{Point}}
+\subsubsection{\texorpdfstring{Point()}{Point()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Point\+::\+Point (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\hyperlink{class_point}{Point} Constructor for a 3D \hyperlink{class_point}{Point}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em z} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 62 of file Intersect\+Tester.\+h.
+
+
+\begin{DoxyCode}
+63         \{
+64             this->\hyperlink{class_point_a05dfe2dfbde813ad234b514f30e662f1}{x} = \hyperlink{class_point_a05dfe2dfbde813ad234b514f30e662f1}{x};
+65             this->\hyperlink{class_point_a6101960c8d2d4e8ea1d32c9234bbeb8d}{y} = \hyperlink{class_point_a6101960c8d2d4e8ea1d32c9234bbeb8d}{y};
+66             this->\hyperlink{class_point_a9a666531e0e99adff132be93d2407d0c}{z} = \hyperlink{class_point_a9a666531e0e99adff132be93d2407d0c}{z};
+67         \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_point_a29c44ec7c7279e02629645a06cdaf7d5}\label{class_point_a29c44ec7c7279e02629645a06cdaf7d5}} 
+\index{Point@{Point}!getX@{getX}}
+\index{getX@{getX}!Point@{Point}}
+\subsubsection{\texorpdfstring{get\+X()}{getX()}}
+{\footnotesize\ttfamily float Point\+::getX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+getX getter method for the x axis coordinate reference 
+
+\begin{DoxyReturn}{Returns}
+float depicting x axis coordinate reference 
+\end{DoxyReturn}
+
+
+Definition at line 84 of file Intersect\+Tester.\+h.
+
+
+\begin{DoxyCode}
+84 \{ \textcolor{keywordflow}{return} \hyperlink{class_point_a05dfe2dfbde813ad234b514f30e662f1}{x}; \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_point_a2371ffadbe245d12a8f556d0a976521b}\label{class_point_a2371ffadbe245d12a8f556d0a976521b}} 
+\index{Point@{Point}!getY@{getY}}
+\index{getY@{getY}!Point@{Point}}
+\subsubsection{\texorpdfstring{get\+Y()}{getY()}}
+{\footnotesize\ttfamily float Point\+::getY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+getY getter method for the y axis coordinate reference 
+
+\begin{DoxyReturn}{Returns}
+float depicting y axis coordinate reference 
+\end{DoxyReturn}
+
+
+Definition at line 89 of file Intersect\+Tester.\+h.
+
+
+\begin{DoxyCode}
+89 \{ \textcolor{keywordflow}{return} \hyperlink{class_point_a6101960c8d2d4e8ea1d32c9234bbeb8d}{y}; \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_point_a9bb9987e32b7dd8dec81ead5d428446c}\label{class_point_a9bb9987e32b7dd8dec81ead5d428446c}} 
+\index{Point@{Point}!getZ@{getZ}}
+\index{getZ@{getZ}!Point@{Point}}
+\subsubsection{\texorpdfstring{get\+Z()}{getZ()}}
+{\footnotesize\ttfamily float Point\+::getZ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+getZ getter method for the z axis coordinate reference 
+
+\begin{DoxyReturn}{Returns}
+float depicting z axis coordinate reference 
+\end{DoxyReturn}
+
+
+Definition at line 94 of file Intersect\+Tester.\+h.
+
+
+\begin{DoxyCode}
+94 \{ \textcolor{keywordflow}{return} \hyperlink{class_point_a9a666531e0e99adff132be93d2407d0c}{z}; \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_point_a0e75bb40a406c615b5632f36fa035a47}\label{class_point_a0e75bb40a406c615b5632f36fa035a47}} 
+\index{Point@{Point}!operator=@{operator=}}
+\index{operator=@{operator=}!Point@{Point}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_point}{Point}\& Point\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_point}{Point} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+operator= assignment operator 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & the point to assign to this object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return this object 
+\end{DoxyReturn}
+
+
+Definition at line 73 of file Intersect\+Tester.\+h.
+
+
+\begin{DoxyCode}
+74          \{
+75              \hyperlink{class_point_a05dfe2dfbde813ad234b514f30e662f1}{x} = other.\hyperlink{class_point_a29c44ec7c7279e02629645a06cdaf7d5}{getX}();
+76              \hyperlink{class_point_a6101960c8d2d4e8ea1d32c9234bbeb8d}{y} = other.\hyperlink{class_point_a2371ffadbe245d12a8f556d0a976521b}{getY}();
+77              \hyperlink{class_point_a9a666531e0e99adff132be93d2407d0c}{z} = other.\hyperlink{class_point_a9bb9987e32b7dd8dec81ead5d428446c}{getZ}();
+78              \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+79          \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_point_a337d4410acd500f972f87f4fc73a43fe}\label{class_point_a337d4410acd500f972f87f4fc73a43fe}} 
+\index{Point@{Point}!setX@{setX}}
+\index{setX@{setX}!Point@{Point}}
+\subsubsection{\texorpdfstring{set\+X()}{setX()}}
+{\footnotesize\ttfamily void Point\+::setX (\begin{DoxyParamCaption}\item[{float}]{newX }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+setX setter method for the x axis coordinate reference 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newX} & new value for the x axis coordinate reference \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 99 of file Intersect\+Tester.\+h.
+
+
+\begin{DoxyCode}
+99 \{ \hyperlink{class_point_a05dfe2dfbde813ad234b514f30e662f1}{x} = newX; \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_point_ad77207403cf0e51641b7bc500d351e3f}\label{class_point_ad77207403cf0e51641b7bc500d351e3f}} 
+\index{Point@{Point}!setY@{setY}}
+\index{setY@{setY}!Point@{Point}}
+\subsubsection{\texorpdfstring{set\+Y()}{setY()}}
+{\footnotesize\ttfamily void Point\+::setY (\begin{DoxyParamCaption}\item[{float}]{newY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+setY setter method for the y axis coordinate reference 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newY} & new value for the y axis coordinate reference \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 104 of file Intersect\+Tester.\+h.
+
+
+\begin{DoxyCode}
+104 \{ \hyperlink{class_point_a6101960c8d2d4e8ea1d32c9234bbeb8d}{y} = newY; \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_point_a82621ca550dece2b002d8fb5d7b17221}\label{class_point_a82621ca550dece2b002d8fb5d7b17221}} 
+\index{Point@{Point}!setZ@{setZ}}
+\index{setZ@{setZ}!Point@{Point}}
+\subsubsection{\texorpdfstring{set\+Z()}{setZ()}}
+{\footnotesize\ttfamily void Point\+::setZ (\begin{DoxyParamCaption}\item[{float}]{newZ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+setZ setter method for the z axis coordinate reference 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newZ} & new value for the z axis coordinate reference \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 109 of file Intersect\+Tester.\+h.
+
+
+\begin{DoxyCode}
+109 \{ \hyperlink{class_point_a9a666531e0e99adff132be93d2407d0c}{z} = newZ; \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_point_a05dfe2dfbde813ad234b514f30e662f1}\label{class_point_a05dfe2dfbde813ad234b514f30e662f1}} 
+\index{Point@{Point}!x@{x}}
+\index{x@{x}!Point@{Point}}
+\subsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily float Point\+::x}
+
+
+
+Definition at line 35 of file Intersect\+Tester.\+h.
+
+\mbox{\Hypertarget{class_point_a6101960c8d2d4e8ea1d32c9234bbeb8d}\label{class_point_a6101960c8d2d4e8ea1d32c9234bbeb8d}} 
+\index{Point@{Point}!y@{y}}
+\index{y@{y}!Point@{Point}}
+\subsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily float Point\+::y}
+
+
+
+Definition at line 35 of file Intersect\+Tester.\+h.
+
+\mbox{\Hypertarget{class_point_a9a666531e0e99adff132be93d2407d0c}\label{class_point_a9a666531e0e99adff132be93d2407d0c}} 
+\index{Point@{Point}!z@{z}}
+\index{z@{z}!Point@{Point}}
+\subsubsection{\texorpdfstring{z}{z}}
+{\footnotesize\ttfamily float Point\+::z}
+
+
+
+Definition at line 35 of file Intersect\+Tester.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/liam/\+Projects/\+Intersection\+Tester\+G\+U\+I/\+Intersect\+Tester/\hyperlink{_intersect_tester_8h}{Intersect\+Tester.\+h}\end{DoxyCompactItemize}

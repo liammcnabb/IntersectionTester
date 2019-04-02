@@ -1,0 +1,142 @@
+\hypertarget{class_line_segment}{}\section{Line\+Segment Class Reference}
+\label{class_line_segment}\index{Line\+Segment@{Line\+Segment}}
+
+
+{\ttfamily \#include $<$Intersect\+Tester.\+h$>$}
+
+
+
+Collaboration diagram for Line\+Segment\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{class_line_segment__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_line_segment_ad006d80e0d72c31734ff22d6c9dfed3d}{Line\+Segment} (\hyperlink{class_point}{Point} x, \hyperlink{class_point}{Point} y)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_line_segment}{Line\+Segment} Default Constructor, a line between 2 points. \end{DoxyCompactList}\item 
+\hyperlink{class_point}{Point} \hyperlink{class_line_segment_afcff6bd5f6a3073a44f7b21db0be876f}{get\+Start} () const
+\begin{DoxyCompactList}\small\item\em get\+Start getter method for starting point \end{DoxyCompactList}\item 
+\hyperlink{class_point}{Point} \hyperlink{class_line_segment_a7b05f883c369b950e61009edfafbbd0e}{get\+End} () const
+\begin{DoxyCompactList}\small\item\em get\+End getter method for end of line segment \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_point}{Point} \hyperlink{class_line_segment_a91bddd96ae050a8255e3180c50f071f5}{start}
+\item 
+\hyperlink{class_point}{Point} \hyperlink{class_line_segment_acf33c308064ab9c60f47c11b5d23db06}{end}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 112 of file Intersect\+Tester.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_line_segment_ad006d80e0d72c31734ff22d6c9dfed3d}\label{class_line_segment_ad006d80e0d72c31734ff22d6c9dfed3d}} 
+\index{Line\+Segment@{Line\+Segment}!Line\+Segment@{Line\+Segment}}
+\index{Line\+Segment@{Line\+Segment}!Line\+Segment@{Line\+Segment}}
+\subsubsection{\texorpdfstring{Line\+Segment()}{LineSegment()}}
+{\footnotesize\ttfamily Line\+Segment\+::\+Line\+Segment (\begin{DoxyParamCaption}\item[{\hyperlink{class_point}{Point}}]{x,  }\item[{\hyperlink{class_point}{Point}}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\hyperlink{class_line_segment}{Line\+Segment} Default Constructor, a line between 2 points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & starting point \\
+\hline
+{\em y} & ending point \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 121 of file Intersect\+Tester.\+h.
+
+
+\begin{DoxyCode}
+122         \{
+123              \hyperlink{class_line_segment_a91bddd96ae050a8255e3180c50f071f5}{start} = \hyperlink{class_point}{Point}(x.\hyperlink{class_point_a29c44ec7c7279e02629645a06cdaf7d5}{getX}(), x.\hyperlink{class_point_a2371ffadbe245d12a8f556d0a976521b}{getY}(), x.\hyperlink{class_point_a9bb9987e32b7dd8dec81ead5d428446c}{getZ}());
+124              \hyperlink{class_line_segment_acf33c308064ab9c60f47c11b5d23db06}{end} = \hyperlink{class_point}{Point}(y.\hyperlink{class_point_a29c44ec7c7279e02629645a06cdaf7d5}{getX}(), y.\hyperlink{class_point_a2371ffadbe245d12a8f556d0a976521b}{getY}(), y.\hyperlink{class_point_a9bb9987e32b7dd8dec81ead5d428446c}{getZ}());
+125         \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_line_segment_a7b05f883c369b950e61009edfafbbd0e}\label{class_line_segment_a7b05f883c369b950e61009edfafbbd0e}} 
+\index{Line\+Segment@{Line\+Segment}!get\+End@{get\+End}}
+\index{get\+End@{get\+End}!Line\+Segment@{Line\+Segment}}
+\subsubsection{\texorpdfstring{get\+End()}{getEnd()}}
+{\footnotesize\ttfamily \hyperlink{class_point}{Point} Line\+Segment\+::get\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+End getter method for end of line segment 
+
+\begin{DoxyReturn}{Returns}
+end point of line segment 
+\end{DoxyReturn}
+
+
+Definition at line 135 of file Intersect\+Tester.\+h.
+
+
+\begin{DoxyCode}
+135 \{ \textcolor{keywordflow}{return} \hyperlink{class_line_segment_acf33c308064ab9c60f47c11b5d23db06}{end}; \} 
+\end{DoxyCode}
+\mbox{\Hypertarget{class_line_segment_afcff6bd5f6a3073a44f7b21db0be876f}\label{class_line_segment_afcff6bd5f6a3073a44f7b21db0be876f}} 
+\index{Line\+Segment@{Line\+Segment}!get\+Start@{get\+Start}}
+\index{get\+Start@{get\+Start}!Line\+Segment@{Line\+Segment}}
+\subsubsection{\texorpdfstring{get\+Start()}{getStart()}}
+{\footnotesize\ttfamily \hyperlink{class_point}{Point} Line\+Segment\+::get\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Start getter method for starting point 
+
+\begin{DoxyReturn}{Returns}
+starting point of line segment 
+\end{DoxyReturn}
+
+
+Definition at line 130 of file Intersect\+Tester.\+h.
+
+
+\begin{DoxyCode}
+130 \{ \textcolor{keywordflow}{return} \hyperlink{class_line_segment_a91bddd96ae050a8255e3180c50f071f5}{start}; \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_line_segment_acf33c308064ab9c60f47c11b5d23db06}\label{class_line_segment_acf33c308064ab9c60f47c11b5d23db06}} 
+\index{Line\+Segment@{Line\+Segment}!end@{end}}
+\index{end@{end}!Line\+Segment@{Line\+Segment}}
+\subsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily \hyperlink{class_point}{Point} Line\+Segment\+::end}
+
+
+
+Definition at line 115 of file Intersect\+Tester.\+h.
+
+\mbox{\Hypertarget{class_line_segment_a91bddd96ae050a8255e3180c50f071f5}\label{class_line_segment_a91bddd96ae050a8255e3180c50f071f5}} 
+\index{Line\+Segment@{Line\+Segment}!start@{start}}
+\index{start@{start}!Line\+Segment@{Line\+Segment}}
+\subsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily \hyperlink{class_point}{Point} Line\+Segment\+::start}
+
+
+
+Definition at line 114 of file Intersect\+Tester.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/liam/\+Projects/\+Intersection\+Tester\+G\+U\+I/\+Intersect\+Tester/\hyperlink{_intersect_tester_8h}{Intersect\+Tester.\+h}\end{DoxyCompactItemize}

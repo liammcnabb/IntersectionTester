@@ -1,0 +1,566 @@
+\hypertarget{class_a_a_b_b}{}\section{A\+A\+BB Class Reference}
+\label{class_a_a_b_b}\index{A\+A\+BB@{A\+A\+BB}}
+
+
+{\ttfamily \#include $<$A\+A\+B\+B.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_a_a_b_b_a5f5baf6c533905aa1456b3a3eb57bab2}{A\+A\+BB} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_a_a_b_b}{A\+A\+BB} Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_a_a_b_b_a449705918e5ff246e37d1d2cdac6a404}{A\+A\+BB} (float minX, float maxX, float minY, float maxY)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_a_a_b_b}{A\+A\+BB} 2D Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_a_a_b_b_af123aa160ba288d95c3acb83448b57f4}{A\+A\+BB} (float minX, float maxX, float minY, float maxY, float minZ, float maxZ)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_a_a_b_b}{A\+A\+BB} 3D Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_a_a_b_b_a3f833137a852795f0ab1c9288b775ee6}{A\+A\+BB} (const \hyperlink{class_a_a_b_b}{A\+A\+BB} \&other)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_a_a_b_b}{A\+A\+BB} copy constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_a_a_b_b}{A\+A\+BB} \& \hyperlink{class_a_a_b_b_a672a17a4a8ad2d0ea52ed7e73cd9a6a4}{operator=} (const \hyperlink{class_a_a_b_b}{A\+A\+BB} \&other)
+\begin{DoxyCompactList}\small\item\em operator= assignment operator \end{DoxyCompactList}\item 
+void \hyperlink{class_a_a_b_b_a596eee6cf349fa4c1d95e42925a791e5}{overwrite} (const \hyperlink{class_a_a_b_b}{A\+A\+BB} \&other)
+\begin{DoxyCompactList}\small\item\em overwrite alternative assigment method \end{DoxyCompactList}\item 
+bool \hyperlink{class_a_a_b_b_a11c212defb35c26aa0ffb3d3ae75d93a}{equals} (\hyperlink{class_a_a_b_b}{A\+A\+BB} comparitor) const
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_a_a_b_b_a11c212defb35c26aa0ffb3d3ae75d93a}{A\+A\+B\+B\+::equals}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_a_a_b_b_a62290d3f27644484f2df17c42cd1bfd5}{intersects} (\hyperlink{class_a_a_b_b}{A\+A\+BB} comparitor) const
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_a_a_b_b_a62290d3f27644484f2df17c42cd1bfd5}{A\+A\+B\+B\+::intersects}. \end{DoxyCompactList}\item 
+float \hyperlink{class_a_a_b_b_a5fc1c7199d86d67257d2746cf4ce0bf2}{length} (int dimension)
+\begin{DoxyCompactList}\small\item\em length calculates the distance between the min and max values of the dimension \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_a_a_b_b_af66da47bd15d679936e05af231b45b75}{to\+String} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_a_a_b_b_af66da47bd15d679936e05af231b45b75}{A\+A\+B\+B\+::to\+String}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_a_a_b_b}{A\+A\+BB} \hyperlink{class_a_a_b_b_a30a3b5591ad161fe88f9aaf51cf3da64}{unify} (\hyperlink{class_a_a_b_b}{A\+A\+BB} $\ast$a, \hyperlink{class_a_a_b_b}{A\+A\+BB} $\ast$b)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_a_a_b_b_a30a3b5591ad161fe88f9aaf51cf3da64}{A\+A\+B\+B\+::unify}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ float $>$ \hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}
+\item 
+std\+::vector$<$ float $>$ \hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{X\+D\+IM} = 0
+\item 
+static const int \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{Y\+D\+IM} = 1
+\item 
+static const int \hyperlink{class_a_a_b_b_a3e78cd8baa6ab6199afb2cb014e0db62}{Z\+D\+IM} = 2
+\item 
+static const int \hyperlink{class_a_a_b_b_a7ec2385af789441375335c09cff0709c}{T\+O\+T\+A\+L\+\_\+\+S\+I\+ZE} = 3
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_a_a_b_b_aa2a1a47dc45291be16276dd397bc78fe}{initialize} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_a_a_b_b_aa2a1a47dc45291be16276dd397bc78fe}{A\+A\+B\+B\+::initialize} initialize \hyperlink{class_a_a_b_b}{A\+A\+BB}. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_a_b_b_a7b7d51fd225c32d5a4d2723b1d9e503b}{dimensions\+Default\+Size} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_a_a_b_b_af66da47bd15d679936e05af231b45b75}{A\+A\+B\+B\+::to\+String}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Intersection Tester -\/ v1.\+0.\+0 Original Author\+: Liam Mc\+Nabb Proceeding Author(s)\+: N/A Copyright (c) 2019 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (Intersection\+Tester), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions\+: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. T\+HE S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED \char`\"{}\+A\+S I\+S\char`\"{}, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+TY OF A\+NY K\+I\+ND, E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED, I\+N\+C\+L\+U\+D\+I\+NG B\+UT N\+OT L\+I\+M\+I\+T\+ED TO T\+HE W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY, F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+ND N\+O\+N\+I\+N\+F\+R\+I\+N\+G\+E\+M\+E\+NT. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE A\+U\+T\+H\+O\+RS OR C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY C\+L\+A\+IM, D\+A\+M\+A\+G\+ES OR O\+T\+H\+ER L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN AN A\+C\+T\+I\+ON OF C\+O\+N\+T\+R\+A\+CT, T\+O\+RT OR O\+T\+H\+E\+R\+W\+I\+SE, A\+R\+I\+S\+I\+NG F\+R\+OM, O\+UT OF OR IN C\+O\+N\+N\+E\+C\+T\+I\+ON W\+I\+TH T\+HE S\+O\+F\+T\+W\+A\+RE OR T\+HE U\+SE OR O\+T\+H\+ER D\+E\+A\+L\+I\+N\+GS IN T\+HE S\+O\+F\+T\+W\+A\+RE. 
+
+Definition at line 33 of file A\+A\+B\+B.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_a_a_b_b_a5f5baf6c533905aa1456b3a3eb57bab2}\label{class_a_a_b_b_a5f5baf6c533905aa1456b3a3eb57bab2}} 
+\index{A\+A\+BB@{A\+A\+BB}!A\+A\+BB@{A\+A\+BB}}
+\index{A\+A\+BB@{A\+A\+BB}!A\+A\+BB@{A\+A\+BB}}
+\subsubsection{\texorpdfstring{A\+A\+B\+B()}{AABB()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily A\+A\+B\+B\+::\+A\+A\+BB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_a_a_b_b}{A\+A\+BB} Default constructor. 
+
+
+
+Definition at line 3 of file A\+A\+B\+B.\+cpp.
+
+
+\begin{DoxyCode}
+4 \{
+5     \hyperlink{class_a_a_b_b_aa2a1a47dc45291be16276dd397bc78fe}{initialize}();
+6 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_a_a_b_b_a449705918e5ff246e37d1d2cdac6a404}\label{class_a_a_b_b_a449705918e5ff246e37d1d2cdac6a404}} 
+\index{A\+A\+BB@{A\+A\+BB}!A\+A\+BB@{A\+A\+BB}}
+\index{A\+A\+BB@{A\+A\+BB}!A\+A\+BB@{A\+A\+BB}}
+\subsubsection{\texorpdfstring{A\+A\+B\+B()}{AABB()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily A\+A\+B\+B\+::\+A\+A\+BB (\begin{DoxyParamCaption}\item[{float}]{minX,  }\item[{float}]{maxX,  }\item[{float}]{minY,  }\item[{float}]{maxY }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_a_a_b_b}{A\+A\+BB} 2D Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em minX} & minimum x coordinate \\
+\hline
+{\em maxX} & maximum x coordinate \\
+\hline
+{\em minY} & minimum y coordinate \\
+\hline
+{\em maxY} & maximum y coordinate \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 8 of file A\+A\+B\+B.\+cpp.
+
+
+\begin{DoxyCode}
+9 \{
+10     \hyperlink{class_a_a_b_b_aa2a1a47dc45291be16276dd397bc78fe}{initialize}();
+11 
+12     \hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}.at( \hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{XDIM} ) = minX;
+13     \hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}.at( \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{YDIM} ) = minY;
+14     \hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}.at( \hyperlink{class_a_a_b_b_a3e78cd8baa6ab6199afb2cb014e0db62}{ZDIM} ) = 0;
+15 
+16     \hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}.at( \hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{XDIM} ) = maxX;
+17     \hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}.at( \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{YDIM} ) = maxY ;
+18     \hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}.at( \hyperlink{class_a_a_b_b_a3e78cd8baa6ab6199afb2cb014e0db62}{ZDIM} ) = 0;
+19 
+20 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_a_a_b_b_af123aa160ba288d95c3acb83448b57f4}\label{class_a_a_b_b_af123aa160ba288d95c3acb83448b57f4}} 
+\index{A\+A\+BB@{A\+A\+BB}!A\+A\+BB@{A\+A\+BB}}
+\index{A\+A\+BB@{A\+A\+BB}!A\+A\+BB@{A\+A\+BB}}
+\subsubsection{\texorpdfstring{A\+A\+B\+B()}{AABB()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily A\+A\+B\+B\+::\+A\+A\+BB (\begin{DoxyParamCaption}\item[{float}]{minX,  }\item[{float}]{maxX,  }\item[{float}]{minY,  }\item[{float}]{maxY,  }\item[{float}]{minZ,  }\item[{float}]{maxZ }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_a_a_b_b}{A\+A\+BB} 3D Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em minX} & minimum x coordinate \\
+\hline
+{\em maxX} & maximum x coordinate \\
+\hline
+{\em minY} & minimum y coordinate \\
+\hline
+{\em maxY} & maximum y coordinate \\
+\hline
+{\em minZ} & minimum z coordinate \\
+\hline
+{\em maxZ} & maximum z coordinate \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 22 of file A\+A\+B\+B.\+cpp.
+
+
+\begin{DoxyCode}
+24 \{
+25     \hyperlink{class_a_a_b_b_aa2a1a47dc45291be16276dd397bc78fe}{initialize}();
+26     \hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}.at( \hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{XDIM} ) = minX;
+27     \hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}.at( \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{YDIM} ) = minY;
+28     \hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}.at( \hyperlink{class_a_a_b_b_a3e78cd8baa6ab6199afb2cb014e0db62}{ZDIM} ) = minZ;
+29 
+30     \hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}.at( \hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{XDIM} ) = maxX;
+31     \hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}.at( \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{YDIM} ) = maxY ;
+32     \hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}.at( \hyperlink{class_a_a_b_b_a3e78cd8baa6ab6199afb2cb014e0db62}{ZDIM} ) = maxZ;
+33 
+34 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_a_a_b_b_a3f833137a852795f0ab1c9288b775ee6}\label{class_a_a_b_b_a3f833137a852795f0ab1c9288b775ee6}} 
+\index{A\+A\+BB@{A\+A\+BB}!A\+A\+BB@{A\+A\+BB}}
+\index{A\+A\+BB@{A\+A\+BB}!A\+A\+BB@{A\+A\+BB}}
+\subsubsection{\texorpdfstring{A\+A\+B\+B()}{AABB()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily A\+A\+B\+B\+::\+A\+A\+BB (\begin{DoxyParamCaption}\item[{const \hyperlink{class_a_a_b_b}{A\+A\+BB} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_a_a_b_b}{A\+A\+BB} copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & other \hyperlink{class_a_a_b_b}{A\+A\+BB} to copy data from \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 36 of file A\+A\+B\+B.\+cpp.
+
+
+\begin{DoxyCode}
+37 \{
+38     \hyperlink{class_a_a_b_b_aa2a1a47dc45291be16276dd397bc78fe}{initialize}();
+39     \hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}.at( \hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{XDIM} ) = other.\hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}.at( \hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{XDIM} );
+40     \hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}.at( \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{YDIM} ) = other.\hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}.at( \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{YDIM} );
+41     \hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}.at( \hyperlink{class_a_a_b_b_a3e78cd8baa6ab6199afb2cb014e0db62}{ZDIM} ) = other.\hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}.at( \hyperlink{class_a_a_b_b_a3e78cd8baa6ab6199afb2cb014e0db62}{ZDIM} );
+42 
+43     \hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}.at( \hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{XDIM} ) = other.\hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}.at( \hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{XDIM} );
+44     \hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}.at( \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{YDIM} ) = other.\hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}.at( \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{YDIM} );
+45     \hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}.at( \hyperlink{class_a_a_b_b_a3e78cd8baa6ab6199afb2cb014e0db62}{ZDIM} ) = other.\hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}.at( \hyperlink{class_a_a_b_b_a3e78cd8baa6ab6199afb2cb014e0db62}{ZDIM} );
+46 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_a_a_b_b_a7b7d51fd225c32d5a4d2723b1d9e503b}\label{class_a_a_b_b_a7b7d51fd225c32d5a4d2723b1d9e503b}} 
+\index{A\+A\+BB@{A\+A\+BB}!dimensions\+Default\+Size@{dimensions\+Default\+Size}}
+\index{dimensions\+Default\+Size@{dimensions\+Default\+Size}!A\+A\+BB@{A\+A\+BB}}
+\subsubsection{\texorpdfstring{dimensions\+Default\+Size()}{dimensionsDefaultSize()}}
+{\footnotesize\ttfamily void A\+A\+B\+B\+::dimensions\+Default\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\hyperlink{class_a_a_b_b_af66da47bd15d679936e05af231b45b75}{A\+A\+B\+B\+::to\+String}. 
+
+\begin{DoxyReturn}{Returns}
+string representation of object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_a_a_b_b_a11c212defb35c26aa0ffb3d3ae75d93a}\label{class_a_a_b_b_a11c212defb35c26aa0ffb3d3ae75d93a}} 
+\index{A\+A\+BB@{A\+A\+BB}!equals@{equals}}
+\index{equals@{equals}!A\+A\+BB@{A\+A\+BB}}
+\subsubsection{\texorpdfstring{equals()}{equals()}}
+{\footnotesize\ttfamily bool A\+A\+B\+B\+::equals (\begin{DoxyParamCaption}\item[{\hyperlink{class_a_a_b_b}{A\+A\+BB}}]{comparitor }\end{DoxyParamCaption}) const}
+
+
+
+\hyperlink{class_a_a_b_b_a11c212defb35c26aa0ffb3d3ae75d93a}{A\+A\+B\+B\+::equals}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em comparitor} & comparison \hyperlink{class_a_a_b_b}{A\+A\+BB} to check for variable equality \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if any items are not the same value. 
+\end{DoxyReturn}
+
+
+Definition at line 72 of file A\+A\+B\+B.\+cpp.
+
+
+\begin{DoxyCode}
+73 \{
+74     \textcolor{keywordflow}{for} ( \textcolor{keywordtype}{int} i = 0; i < \hyperlink{class_a_a_b_b_a7ec2385af789441375335c09cff0709c}{TOTAL\_SIZE}; ++i )
+75     \{
+76         \textcolor{keywordflow}{if} ( \hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}.at( i ) != comparitor.\hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}.at( i ) ||
+77                 \hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}.at( i ) != comparitor.\hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}.at( i ) )
+78             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+79     \}
+80 
+81     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+82 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_a_a_b_b_aa2a1a47dc45291be16276dd397bc78fe}\label{class_a_a_b_b_aa2a1a47dc45291be16276dd397bc78fe}} 
+\index{A\+A\+BB@{A\+A\+BB}!initialize@{initialize}}
+\index{initialize@{initialize}!A\+A\+BB@{A\+A\+BB}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void A\+A\+B\+B\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\hyperlink{class_a_a_b_b_aa2a1a47dc45291be16276dd397bc78fe}{A\+A\+B\+B\+::initialize} initialize \hyperlink{class_a_a_b_b}{A\+A\+BB}. 
+
+\hyperlink{class_a_a_b_b_aa2a1a47dc45291be16276dd397bc78fe}{A\+A\+B\+B\+::initialize}. 
+
+Definition at line 154 of file A\+A\+B\+B.\+cpp.
+
+
+\begin{DoxyCode}
+155 \{
+156     \hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums} = std::vector<float>( \hyperlink{class_a_a_b_b_a7ec2385af789441375335c09cff0709c}{TOTAL\_SIZE}, 0.0f );
+157     \hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums} = std::vector<float>( \hyperlink{class_a_a_b_b_a7ec2385af789441375335c09cff0709c}{TOTAL\_SIZE}, 0.0f );
+158 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_a_a_b_b_a62290d3f27644484f2df17c42cd1bfd5}\label{class_a_a_b_b_a62290d3f27644484f2df17c42cd1bfd5}} 
+\index{A\+A\+BB@{A\+A\+BB}!intersects@{intersects}}
+\index{intersects@{intersects}!A\+A\+BB@{A\+A\+BB}}
+\subsubsection{\texorpdfstring{intersects()}{intersects()}}
+{\footnotesize\ttfamily bool A\+A\+B\+B\+::intersects (\begin{DoxyParamCaption}\item[{\hyperlink{class_a_a_b_b}{A\+A\+BB}}]{comparitor }\end{DoxyParamCaption}) const}
+
+
+
+\hyperlink{class_a_a_b_b_a62290d3f27644484f2df17c42cd1bfd5}{A\+A\+B\+B\+::intersects}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em comparitor} & comparison \hyperlink{class_a_a_b_b}{A\+A\+BB} to check for overlap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if does not overlap on any of the axes 
+\end{DoxyReturn}
+
+
+Definition at line 89 of file A\+A\+B\+B.\+cpp.
+
+
+\begin{DoxyCode}
+90 \{
+91     \textcolor{keywordflow}{if} ( \hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}.at( \hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{XDIM} ) < comparitor.\hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}.at( \hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{XDIM} ) ||
+92             \hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}.at( \hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{XDIM} ) > comparitor.\hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}.at( 
+      \hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{XDIM} ) )
+93         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+94     \textcolor{keywordflow}{if} ( \hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}.at( \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{YDIM} ) < comparitor.\hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}.at( \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{YDIM} ) ||
+95             \hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}.at( \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{YDIM} ) > comparitor.\hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}.at( 
+      \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{YDIM} ) )
+96         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+97     \textcolor{keywordflow}{if} ( \hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}.at( \hyperlink{class_a_a_b_b_a3e78cd8baa6ab6199afb2cb014e0db62}{ZDIM} ) < comparitor.\hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}.at( \hyperlink{class_a_a_b_b_a3e78cd8baa6ab6199afb2cb014e0db62}{ZDIM} ) ||
+98             \hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}.at( \hyperlink{class_a_a_b_b_a3e78cd8baa6ab6199afb2cb014e0db62}{ZDIM} ) > comparitor.\hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}.at( 
+      \hyperlink{class_a_a_b_b_a3e78cd8baa6ab6199afb2cb014e0db62}{ZDIM} ) )
+99         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+100 
+101     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+102 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_a_a_b_b_a5fc1c7199d86d67257d2746cf4ce0bf2}\label{class_a_a_b_b_a5fc1c7199d86d67257d2746cf4ce0bf2}} 
+\index{A\+A\+BB@{A\+A\+BB}!length@{length}}
+\index{length@{length}!A\+A\+BB@{A\+A\+BB}}
+\subsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily float A\+A\+B\+B\+::length (\begin{DoxyParamCaption}\item[{int}]{dimension }\end{DoxyParamCaption})}
+
+
+
+length calculates the distance between the min and max values of the dimension 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dimension} & the dimension to test\+: X\+D\+IM, Y\+D\+IM, Z\+D\+IM. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the distance between the min and max values of the dimension 
+\end{DoxyReturn}
+
+
+Definition at line 130 of file A\+A\+B\+B.\+cpp.
+
+
+\begin{DoxyCode}
+131 \{
+132     \textcolor{keywordflow}{switch}( dimension )
+133     \{
+134         \textcolor{keywordflow}{case} \hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{XDIM}:
+135             \textcolor{keywordflow}{return} fabs( \hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}[\hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{XDIM}] - \hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}[\hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{XDIM}] );
+136             \textcolor{keywordflow}{break};
+137         \textcolor{keywordflow}{case} \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{YDIM}:
+138             \textcolor{keywordflow}{return} fabs( \hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}[\hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{YDIM}] - \hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}[\hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{YDIM}] );
+139             \textcolor{keywordflow}{break};
+140         \textcolor{keywordflow}{case} \hyperlink{class_a_a_b_b_a3e78cd8baa6ab6199afb2cb014e0db62}{ZDIM}:
+141             \textcolor{keywordflow}{return} fabs( \hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}[\hyperlink{class_a_a_b_b_a3e78cd8baa6ab6199afb2cb014e0db62}{ZDIM}] - \hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}[\hyperlink{class_a_a_b_b_a3e78cd8baa6ab6199afb2cb014e0db62}{ZDIM}] );
+142             \textcolor{keywordflow}{break};
+143         \textcolor{keywordflow}{default}:
+144             std::cout << \textcolor{stringliteral}{"AABB::length(int dimension) : "} <<
+145                      \textcolor{stringliteral}{"Dimension Doesn't exist."} << std::endl;
+146             \textcolor{keywordflow}{return} 0.0f;
+147             \textcolor{keywordflow}{break};
+148     \}
+149 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_a_a_b_b_a672a17a4a8ad2d0ea52ed7e73cd9a6a4}\label{class_a_a_b_b_a672a17a4a8ad2d0ea52ed7e73cd9a6a4}} 
+\index{A\+A\+BB@{A\+A\+BB}!operator=@{operator=}}
+\index{operator=@{operator=}!A\+A\+BB@{A\+A\+BB}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_a_a_b_b}{A\+A\+BB} \& A\+A\+B\+B\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_a_a_b_b}{A\+A\+BB} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+operator= assignment operator 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & other \hyperlink{class_a_a_b_b}{A\+A\+BB} to assign data from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+this \hyperlink{class_a_a_b_b}{A\+A\+BB} 
+\end{DoxyReturn}
+
+
+Definition at line 49 of file A\+A\+B\+B.\+cpp.
+
+
+\begin{DoxyCode}
+50 \{
+51     \hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums} = other.\hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums};
+52     \hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums} = other.\hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums};
+53     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+54 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_a_a_b_b_a596eee6cf349fa4c1d95e42925a791e5}\label{class_a_a_b_b_a596eee6cf349fa4c1d95e42925a791e5}} 
+\index{A\+A\+BB@{A\+A\+BB}!overwrite@{overwrite}}
+\index{overwrite@{overwrite}!A\+A\+BB@{A\+A\+BB}}
+\subsubsection{\texorpdfstring{overwrite()}{overwrite()}}
+{\footnotesize\ttfamily void A\+A\+B\+B\+::overwrite (\begin{DoxyParamCaption}\item[{const \hyperlink{class_a_a_b_b}{A\+A\+BB} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+overwrite alternative assigment method 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \hyperlink{class_a_a_b_b}{A\+A\+BB} to assign from \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+A\+B\+B\+B\+::operator= 
+\end{DoxySeeAlso}
+
+
+Definition at line 56 of file A\+A\+B\+B.\+cpp.
+
+
+\begin{DoxyCode}
+57 \{
+58     \hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}.at( \hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{XDIM} ) = other.\hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}.at( \hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{XDIM} );
+59     \hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}.at( \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{YDIM} ) = other.\hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}.at( \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{YDIM} );
+60     \hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}.at( \hyperlink{class_a_a_b_b_a3e78cd8baa6ab6199afb2cb014e0db62}{ZDIM} ) = other.\hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}.at( \hyperlink{class_a_a_b_b_a3e78cd8baa6ab6199afb2cb014e0db62}{ZDIM} );
+61 
+62     \hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}.at( \hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{XDIM} ) = other.\hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}.at( \hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{XDIM} );
+63     \hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}.at( \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{YDIM} ) = other.\hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}.at( \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{YDIM} );
+64     \hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}.at( \hyperlink{class_a_a_b_b_a3e78cd8baa6ab6199afb2cb014e0db62}{ZDIM} ) = other.\hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}.at( \hyperlink{class_a_a_b_b_a3e78cd8baa6ab6199afb2cb014e0db62}{ZDIM} );
+65 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_a_a_b_b_af66da47bd15d679936e05af231b45b75}\label{class_a_a_b_b_af66da47bd15d679936e05af231b45b75}} 
+\index{A\+A\+BB@{A\+A\+BB}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!A\+A\+BB@{A\+A\+BB}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily std\+::string A\+A\+B\+B\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_a_a_b_b_af66da47bd15d679936e05af231b45b75}{A\+A\+B\+B\+::to\+String}. 
+
+\begin{DoxyReturn}{Returns}
+string representation of object 
+\end{DoxyReturn}
+
+
+Definition at line 165 of file A\+A\+B\+B.\+cpp.
+
+
+\begin{DoxyCode}
+166 \{
+167 \textcolor{comment}{//    return "Minimums: \{ " +  std::to\_string(minimums[ XDIM ])  + ", " +}
+168 \textcolor{comment}{//            std::to\_string(minimums[ YDIM ])  + ", " +}
+169 \textcolor{comment}{//            std::to\_string(minimums[ ZDIM ])  + " \} Maximums: \{ " +}
+170 \textcolor{comment}{//            std::to\_string(maximums[ XDIM ])  + ", " +}
+171 \textcolor{comment}{//            std::to\_string(maximums[ YDIM ])  + ", " +}
+172 \textcolor{comment}{//            std::to\_string(maximums[ ZDIM ])  + "\}." + std::endl;}
+173 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_a_a_b_b_a30a3b5591ad161fe88f9aaf51cf3da64}\label{class_a_a_b_b_a30a3b5591ad161fe88f9aaf51cf3da64}} 
+\index{A\+A\+BB@{A\+A\+BB}!unify@{unify}}
+\index{unify@{unify}!A\+A\+BB@{A\+A\+BB}}
+\subsubsection{\texorpdfstring{unify()}{unify()}}
+{\footnotesize\ttfamily \hyperlink{class_a_a_b_b}{A\+A\+BB} A\+A\+B\+B\+::unify (\begin{DoxyParamCaption}\item[{\hyperlink{class_a_a_b_b}{A\+A\+BB} $\ast$}]{a,  }\item[{\hyperlink{class_a_a_b_b}{A\+A\+BB} $\ast$}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\hyperlink{class_a_a_b_b_a30a3b5591ad161fe88f9aaf51cf3da64}{A\+A\+B\+B\+::unify}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+{\em b} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 111 of file A\+A\+B\+B.\+cpp.
+
+
+\begin{DoxyCode}
+112 \{
+113     \textcolor{keywordtype}{float} minX = std::min( a->\hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}.at( \hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{XDIM} ),
+114                            b->\hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}.at( \hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{XDIM} ) );
+115     \textcolor{keywordtype}{float} minY = std::min( a->\hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}.at( \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{YDIM} ),
+116                            b->\hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}.at( \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{YDIM} ) );
+117     \textcolor{keywordtype}{float} minZ = std::min( a->\hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}.at( \hyperlink{class_a_a_b_b_a3e78cd8baa6ab6199afb2cb014e0db62}{ZDIM} ),
+118                            b->\hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}.at( \hyperlink{class_a_a_b_b_a3e78cd8baa6ab6199afb2cb014e0db62}{ZDIM} ) );
+119 
+120     \textcolor{keywordtype}{float} maxX = std::max( a->\hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}.at( \hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{XDIM} ),
+121                            b->\hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}.at( \hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{XDIM} ) );
+122     \textcolor{keywordtype}{float} maxY = std::max( a->\hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}.at( \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{YDIM} ),
+123                            b->\hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}.at( \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{YDIM} ) );
+124     \textcolor{keywordtype}{float} maxZ = std::max( a->\hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}.at( \hyperlink{class_a_a_b_b_a3e78cd8baa6ab6199afb2cb014e0db62}{ZDIM} ),
+125                            b->\hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}.at( \hyperlink{class_a_a_b_b_a3e78cd8baa6ab6199afb2cb014e0db62}{ZDIM} ) );
+126 
+127     \textcolor{keywordflow}{return} \hyperlink{class_a_a_b_b_a5f5baf6c533905aa1456b3a3eb57bab2}{AABB}( minX, maxX, minY, maxY, minZ, maxZ );
+128 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}\label{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}} 
+\index{A\+A\+BB@{A\+A\+BB}!maximums@{maximums}}
+\index{maximums@{maximums}!A\+A\+BB@{A\+A\+BB}}
+\subsubsection{\texorpdfstring{maximums}{maximums}}
+{\footnotesize\ttfamily std\+::vector$<$float$>$ A\+A\+B\+B\+::maximums}
+
+
+
+Definition at line 104 of file A\+A\+B\+B.\+h.
+
+\mbox{\Hypertarget{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}\label{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}} 
+\index{A\+A\+BB@{A\+A\+BB}!minimums@{minimums}}
+\index{minimums@{minimums}!A\+A\+BB@{A\+A\+BB}}
+\subsubsection{\texorpdfstring{minimums}{minimums}}
+{\footnotesize\ttfamily std\+::vector$<$float$>$ A\+A\+B\+B\+::minimums}
+
+
+
+Definition at line 103 of file A\+A\+B\+B.\+h.
+
+\mbox{\Hypertarget{class_a_a_b_b_a7ec2385af789441375335c09cff0709c}\label{class_a_a_b_b_a7ec2385af789441375335c09cff0709c}} 
+\index{A\+A\+BB@{A\+A\+BB}!T\+O\+T\+A\+L\+\_\+\+S\+I\+ZE@{T\+O\+T\+A\+L\+\_\+\+S\+I\+ZE}}
+\index{T\+O\+T\+A\+L\+\_\+\+S\+I\+ZE@{T\+O\+T\+A\+L\+\_\+\+S\+I\+ZE}!A\+A\+BB@{A\+A\+BB}}
+\subsubsection{\texorpdfstring{T\+O\+T\+A\+L\+\_\+\+S\+I\+ZE}{TOTAL\_SIZE}}
+{\footnotesize\ttfamily const int A\+A\+B\+B\+::\+T\+O\+T\+A\+L\+\_\+\+S\+I\+ZE = 3\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 110 of file A\+A\+B\+B.\+h.
+
+\mbox{\Hypertarget{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}\label{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}} 
+\index{A\+A\+BB@{A\+A\+BB}!X\+D\+IM@{X\+D\+IM}}
+\index{X\+D\+IM@{X\+D\+IM}!A\+A\+BB@{A\+A\+BB}}
+\subsubsection{\texorpdfstring{X\+D\+IM}{XDIM}}
+{\footnotesize\ttfamily const int A\+A\+B\+B\+::\+X\+D\+IM = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 107 of file A\+A\+B\+B.\+h.
+
+\mbox{\Hypertarget{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}\label{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}} 
+\index{A\+A\+BB@{A\+A\+BB}!Y\+D\+IM@{Y\+D\+IM}}
+\index{Y\+D\+IM@{Y\+D\+IM}!A\+A\+BB@{A\+A\+BB}}
+\subsubsection{\texorpdfstring{Y\+D\+IM}{YDIM}}
+{\footnotesize\ttfamily const int A\+A\+B\+B\+::\+Y\+D\+IM = 1\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 108 of file A\+A\+B\+B.\+h.
+
+\mbox{\Hypertarget{class_a_a_b_b_a3e78cd8baa6ab6199afb2cb014e0db62}\label{class_a_a_b_b_a3e78cd8baa6ab6199afb2cb014e0db62}} 
+\index{A\+A\+BB@{A\+A\+BB}!Z\+D\+IM@{Z\+D\+IM}}
+\index{Z\+D\+IM@{Z\+D\+IM}!A\+A\+BB@{A\+A\+BB}}
+\subsubsection{\texorpdfstring{Z\+D\+IM}{ZDIM}}
+{\footnotesize\ttfamily const int A\+A\+B\+B\+::\+Z\+D\+IM = 2\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 109 of file A\+A\+B\+B.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/liam/\+Projects/\+Intersection\+Tester\+G\+U\+I/\+Intersect\+Tester/\hyperlink{_a_a_b_b_8h}{A\+A\+B\+B.\+h}\item 
+/home/liam/\+Projects/\+Intersection\+Tester\+G\+U\+I/\+Intersect\+Tester/\hyperlink{_a_a_b_b_8cpp}{A\+A\+B\+B.\+cpp}\end{DoxyCompactItemize}

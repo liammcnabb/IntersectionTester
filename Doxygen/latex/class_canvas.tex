@@ -1,0 +1,1617 @@
+\hypertarget{class_canvas}{}\section{Canvas Class Reference}
+\label{class_canvas}\index{Canvas@{Canvas}}
+
+
+{\ttfamily \#include $<$canvas.\+h$>$}
+
+
+
+Inheritance diagram for Canvas\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{class_canvas__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Canvas\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{class_canvas__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_canvas_a8e5bf913d99dcf0511aaa5fd8c294cde}{Canvas} (Q\+Widget $\ast$parent)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_canvas}{Canvas} Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_canvas_a68622ac24f847a47270c4e6f566eec3c}{initialize\+GL} ()
+\begin{DoxyCompactList}\small\item\em initialize\+GL Open\+GL initialization method \end{DoxyCompactList}\item 
+void \hyperlink{class_canvas_a4e9439400dd404eda24cf42ca5ca9972}{paint\+GL} ()
+\begin{DoxyCompactList}\small\item\em paint\+GL method called on Open\+GL window refresh \end{DoxyCompactList}\item 
+\hyperlink{class_point}{Point} \hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse} () const
+\begin{DoxyCompactList}\small\item\em mouse getter method for mouse coordinates \end{DoxyCompactList}\item 
+void \hyperlink{class_canvas_a104679999425d8ffdc27454b71e5e1e3}{set\+Mouse} (const \hyperlink{class_point}{Point} \&\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse})
+\begin{DoxyCompactList}\small\item\em set\+Mouse setter method for mouse coordinates \end{DoxyCompactList}\item 
+int \hyperlink{class_canvas_a63f657b762d08168f52630bc49efbf71}{static\+State} () const
+\begin{DoxyCompactList}\small\item\em static\+State getter method for state of static primitive \end{DoxyCompactList}\item 
+void \hyperlink{class_canvas_a6c42c7c65e5eae64c4fa1839146f0440}{set\+Static\+State} (int \hyperlink{class_canvas_a63f657b762d08168f52630bc49efbf71}{static\+State})
+\begin{DoxyCompactList}\small\item\em set\+Static\+State setter method for state of static primitive \end{DoxyCompactList}\item 
+int \hyperlink{class_canvas_a8097ff7e44fb5fecf0dd0997e13e4c32}{moving\+State} () const
+\begin{DoxyCompactList}\small\item\em moving\+State getter method for state of moving primitive \end{DoxyCompactList}\item 
+void \hyperlink{class_canvas_a3ec03d6ae21250fcc0b0a3164f701933}{set\+Moving\+State} (int \hyperlink{class_canvas_a8097ff7e44fb5fecf0dd0997e13e4c32}{moving\+State})
+\begin{DoxyCompactList}\small\item\em set\+Moving\+State setter method for state of moving primitive \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{class_canvas_a3d5a1c71903689cf817cd92ae7a2ebc9}{T\+OP} = 100
+\begin{DoxyCompactList}\small\item\em T\+OP Top of the canvas. \end{DoxyCompactList}\item 
+static const int \hyperlink{class_canvas_a0630c650c5daea2db5a01ce6c0954457}{B\+O\+T\+T\+OM} = -\/100
+\begin{DoxyCompactList}\small\item\em B\+O\+T\+T\+OM Bottom of the canvas. \end{DoxyCompactList}\item 
+static const int \hyperlink{class_canvas_a7da74603fc4232dfe00be701878d048b}{L\+E\+FT} = -\/100
+\begin{DoxyCompactList}\small\item\em L\+E\+FT Left of the canvas. \end{DoxyCompactList}\item 
+static const int \hyperlink{class_canvas_ab618bb921e1c0ee7c394fe3a83b17271}{R\+I\+G\+HT} = 100
+\begin{DoxyCompactList}\small\item\em R\+I\+G\+HT Right on the canvas. \end{DoxyCompactList}\item 
+static const int \hyperlink{class_canvas_a04b852dd0b2561a20a5e0e9f67a95b64}{P\+O\+I\+NT} = 0
+\begin{DoxyCompactList}\small\item\em P\+O\+I\+NT set primitive to point. \end{DoxyCompactList}\item 
+static const int \hyperlink{class_canvas_a28b792bd16aaf737eab6d697a211183a}{L\+I\+NE} = 1
+\begin{DoxyCompactList}\small\item\em L\+I\+NE set primitive to line segment. \end{DoxyCompactList}\item 
+static const int \hyperlink{class_canvas_a6d5c5da10948c78b6481ac831f32106f}{C\+I\+R\+C\+LE} = 2
+\begin{DoxyCompactList}\small\item\em C\+I\+R\+C\+LE set primitive to circle. \end{DoxyCompactList}\item 
+static const int \hyperlink{class_canvas_a7d54031701bd0ddbe165a6d4350ab9d6}{T\+R\+I\+A\+N\+G\+LE} = 3
+\begin{DoxyCompactList}\small\item\em T\+R\+I\+A\+N\+G\+LE set primitive to triangle. \end{DoxyCompactList}\item 
+static const int \hyperlink{class_canvas_a2d0245c75d7fc30adb8abd303844c10f}{S\+Q\+U\+A\+RE} = 4
+\begin{DoxyCompactList}\small\item\em S\+Q\+U\+A\+RE set primitive to square. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_canvas_a0b546aa7d55d00f82b4db59ab4ab9cee}{prepare\+Draw} ()
+\begin{DoxyCompactList}\small\item\em prepare\+Draw method to intialze canvas options per draw sequence \end{DoxyCompactList}\item 
+void \hyperlink{class_canvas_ad9205f4414565884776edc5f421954a8}{draw\+Gridlines} (int granularity, float shade)
+\begin{DoxyCompactList}\small\item\em draw\+Gridlines Used to draw grid lines across full canvas \end{DoxyCompactList}\item 
+void \hyperlink{class_canvas_a9fb4b83a1067ddc2aa04676f51dc5a47}{mouse\+Move\+Event} (Q\+Mouse\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em mouse\+Move\+Event qt method to catch mouse movement events \end{DoxyCompactList}\item 
+float \hyperlink{class_canvas_afddf8ae4dcfb9557ae557b9f998f5d5a}{convertedX} (float windowX)
+\begin{DoxyCompactList}\small\item\em convertedX converts display x coordinate to canvas x coordinate \end{DoxyCompactList}\item 
+float \hyperlink{class_canvas_a12cbc7e3a2cb3bbb6278052d49a90313}{convertedY} (float windowY)
+\begin{DoxyCompactList}\small\item\em convertedY converts display y coordinate to canvas y coordinate \end{DoxyCompactList}\item 
+void \hyperlink{class_canvas_a78ce810ea0004c4f3fa9ee9d92996875}{draw\+Square} (\hyperlink{class_a_a_b_b}{A\+A\+BB} sq, Q\+Color color)
+\begin{DoxyCompactList}\small\item\em draw\+Square draw a square on the canvas \end{DoxyCompactList}\item 
+void \hyperlink{class_canvas_ad7cf8e6e93765586808ac744d888dbdc}{draw\+Point} (\hyperlink{class_point}{Point} p, Q\+Color color)
+\begin{DoxyCompactList}\small\item\em draw\+Point draw a point on the canvas \end{DoxyCompactList}\item 
+void \hyperlink{class_canvas_ae3ad5d92c9a2868b94a6570914b05366}{draw\+Line} (\hyperlink{class_line_segment}{Line\+Segment} line, Q\+Color color)
+\begin{DoxyCompactList}\small\item\em draw\+Line draw a line on the canvas \end{DoxyCompactList}\item 
+void \hyperlink{class_canvas_ab1413076d90539aea7ac3a06b065afe2}{draw\+Circle} (\hyperlink{class_circle}{Circle} circle, Q\+Color color)
+\begin{DoxyCompactList}\small\item\em draw\+Circle draw a circle on the canvas \end{DoxyCompactList}\item 
+void \hyperlink{class_canvas_a74dd9cf1e8f3b48e2df2b34886770ac6}{draw\+Triangle} (\hyperlink{class_triangle}{Triangle} t, Q\+Color color)
+\begin{DoxyCompactList}\small\item\em draw\+Triangle draw a triangle on the canvas \end{DoxyCompactList}\item 
+void \hyperlink{class_canvas_a33b608940212192e7e0ff86c2301c2fe}{point\+Point\+Test} (\hyperlink{class_point}{Point} mv, \hyperlink{class_point}{Point} st)
+\begin{DoxyCompactList}\small\item\em point\+Point\+Test test to call when two points need to be tested \end{DoxyCompactList}\item 
+void \hyperlink{class_canvas_ad5681f0cada49f0453158155b42c2fb7}{point\+Line\+Test} (\hyperlink{class_point}{Point} p, \hyperlink{class_line_segment}{Line\+Segment} ls)
+\begin{DoxyCompactList}\small\item\em point\+Line\+Test test to call when point and line segment need to be tested \end{DoxyCompactList}\item 
+void \hyperlink{class_canvas_a407d5fea40a48519ab368d39739943c4}{point\+Circle\+Test} (\hyperlink{class_point}{Point} p, \hyperlink{class_circle}{Circle} cir)
+\begin{DoxyCompactList}\small\item\em point\+Circle\+Test test to call when point and cirlce need to be tested \end{DoxyCompactList}\item 
+void \hyperlink{class_canvas_a8c35a24d67af6d8a76be14321c08b7cb}{point\+Triangle\+Test} (\hyperlink{class_point}{Point} p, \hyperlink{class_triangle}{Triangle} t)
+\begin{DoxyCompactList}\small\item\em point\+Triangle\+Test test to call when point and triangle need to be tested \end{DoxyCompactList}\item 
+void \hyperlink{class_canvas_ac9278bae8055ec5b0f047393d2f140b2}{point\+Square\+Test} (\hyperlink{class_point}{Point} p, \hyperlink{class_a_a_b_b}{A\+A\+BB} b)
+\begin{DoxyCompactList}\small\item\em point\+Square\+Test test to call when point and square need to be tested \end{DoxyCompactList}\item 
+void \hyperlink{class_canvas_ac3e9882133dc6c55f8ff3bb119a8ed84}{line\+Line\+Test} (\hyperlink{class_line_segment}{Line\+Segment} a, \hyperlink{class_line_segment}{Line\+Segment} b)
+\begin{DoxyCompactList}\small\item\em line\+Line\+Test test to call when two linesegment need to be tested \end{DoxyCompactList}\item 
+void \hyperlink{class_canvas_a1c17d6af0a8770dc2022986cd27e4de4}{line\+Circle\+Test} (\hyperlink{class_line_segment}{Line\+Segment} ls, \hyperlink{class_circle}{Circle} cir)
+\begin{DoxyCompactList}\small\item\em line\+Circle\+Test test to call when linesegment and circle need to be tested \end{DoxyCompactList}\item 
+void \hyperlink{class_canvas_a39de2e31ab9a27b918fc4f7e78ee2030}{line\+Triangle\+Test} (\hyperlink{class_line_segment}{Line\+Segment} ls, \hyperlink{class_triangle}{Triangle} t)
+\begin{DoxyCompactList}\small\item\em line\+Triangle\+Test test to call when linesegment and triangle need to be tested \end{DoxyCompactList}\item 
+void \hyperlink{class_canvas_a2eaf680341aebbab7792cd136c2be950}{line\+Square\+Test} (\hyperlink{class_line_segment}{Line\+Segment} ls, \hyperlink{class_a_a_b_b}{A\+A\+BB} sq)
+\begin{DoxyCompactList}\small\item\em line\+Square\+Test test to call when linesegment and triangle need to be tested \end{DoxyCompactList}\item 
+void \hyperlink{class_canvas_afefa6855ba41959bd86059c3a243b837}{circle\+Circle\+Test} (\hyperlink{class_circle}{Circle} a, \hyperlink{class_circle}{Circle} b)
+\begin{DoxyCompactList}\small\item\em circle\+Circle\+Test test to call when two circles need to be tested \end{DoxyCompactList}\item 
+void \hyperlink{class_canvas_a528559214b858f9f9cd0a57ca95fb630}{circle\+Triangle\+Test} (\hyperlink{class_circle}{Circle} cir, \hyperlink{class_triangle}{Triangle} t)
+\begin{DoxyCompactList}\small\item\em circle\+Triangle\+Test test to call when circle and triangle need to be tested \end{DoxyCompactList}\item 
+void \hyperlink{class_canvas_ad9d725683b22b2dc7a5974fed63c16bb}{circle\+Square\+Test} (\hyperlink{class_circle}{Circle} cir, \hyperlink{class_a_a_b_b}{A\+A\+BB} sq)
+\begin{DoxyCompactList}\small\item\em circle\+Square\+Test test to call when a circle and square need to be tested \end{DoxyCompactList}\item 
+void \hyperlink{class_canvas_a03c673b6f4e09524d322a8c00c5a49f2}{triangle\+Triangle\+Test} (\hyperlink{class_triangle}{Triangle} a, \hyperlink{class_triangle}{Triangle} b)
+\begin{DoxyCompactList}\small\item\em triangle\+Triangle\+Test test to call when two triangles need to be tested \end{DoxyCompactList}\item 
+void \hyperlink{class_canvas_a8b0b8a040b3e5628a2ec2a89a3025eae}{triangle\+Square\+Test} (\hyperlink{class_triangle}{Triangle} t, \hyperlink{class_a_a_b_b}{A\+A\+BB} sq)
+\begin{DoxyCompactList}\small\item\em triangle\+Square\+Test test to call when triangle and circle need to be tested \end{DoxyCompactList}\item 
+void \hyperlink{class_canvas_a56718ad140b37cabc6b34157903886ee}{square\+Square\+Test} (\hyperlink{class_a_a_b_b}{A\+A\+BB} a, \hyperlink{class_a_a_b_b}{A\+A\+BB} b)
+\begin{DoxyCompactList}\small\item\em square\+Square\+Test test to call when two squares need to be tested \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_point}{Point} \hyperlink{class_canvas_a37d2fd203dc21501aee37001e49789b1}{m\+\_\+mouse}
+\item 
+int \hyperlink{class_canvas_adb29cf13087e13c9d4a1ef04bc53b931}{m\+\_\+static\+State} = 4
+\item 
+int \hyperlink{class_canvas_a0d0f98258b42bd7b40f175baf3f1220a}{m\+\_\+moving\+State} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Intersection Tester -\/ v1.\+0.\+0 Original Author\+: Liam Mc\+Nabb Proceeding Author(s)\+: N/A Copyright (c) 2019 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (Intersection\+Tester), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions\+: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. T\+HE S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED \char`\"{}\+A\+S I\+S\char`\"{}, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+TY OF A\+NY K\+I\+ND, E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED, I\+N\+C\+L\+U\+D\+I\+NG B\+UT N\+OT L\+I\+M\+I\+T\+ED TO T\+HE W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY, F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+ND N\+O\+N\+I\+N\+F\+R\+I\+N\+G\+E\+M\+E\+NT. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE A\+U\+T\+H\+O\+RS OR C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY C\+L\+A\+IM, D\+A\+M\+A\+G\+ES OR O\+T\+H\+ER L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN AN A\+C\+T\+I\+ON OF C\+O\+N\+T\+R\+A\+CT, T\+O\+RT OR O\+T\+H\+E\+R\+W\+I\+SE, A\+R\+I\+S\+I\+NG F\+R\+OM, O\+UT OF OR IN C\+O\+N\+N\+E\+C\+T\+I\+ON W\+I\+TH T\+HE S\+O\+F\+T\+W\+A\+RE OR T\+HE U\+SE OR O\+T\+H\+ER D\+E\+A\+L\+I\+N\+GS IN T\+HE S\+O\+F\+T\+W\+A\+RE. 
+
+Definition at line 35 of file canvas.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_canvas_a8e5bf913d99dcf0511aaa5fd8c294cde}\label{class_canvas_a8e5bf913d99dcf0511aaa5fd8c294cde}} 
+\index{Canvas@{Canvas}!Canvas@{Canvas}}
+\index{Canvas@{Canvas}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{Canvas()}{Canvas()}}
+{\footnotesize\ttfamily Canvas\+::\+Canvas (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_canvas}{Canvas} Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & parent window \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 3 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+3                                 : QOpenGLWidget( parent )
+4 \{
+5     \hyperlink{class_intersect_tester_ac837c3469e328c8bb47d08742c304c9a}{IntersectTester::setTolerance}( 1.0f );
+6 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_canvas_afefa6855ba41959bd86059c3a243b837}\label{class_canvas_afefa6855ba41959bd86059c3a243b837}} 
+\index{Canvas@{Canvas}!circle\+Circle\+Test@{circle\+Circle\+Test}}
+\index{circle\+Circle\+Test@{circle\+Circle\+Test}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{circle\+Circle\+Test()}{circleCircleTest()}}
+{\footnotesize\ttfamily void Canvas\+::circle\+Circle\+Test (\begin{DoxyParamCaption}\item[{\hyperlink{class_circle}{Circle}}]{a,  }\item[{\hyperlink{class_circle}{Circle}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+circle\+Circle\+Test test to call when two circles need to be tested 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & circle 1 \\
+\hline
+{\em b} & circle 2 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 299 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+300 \{
+301     QColor c = Qt::black;
+302     \textcolor{keywordflow}{if}(\hyperlink{class_intersect_tester_a7710e17ff7d2e229059f23b9429213f5}{IntersectTester::isIntersecting}(a, b))
+303         c = Qt::green;
+304 
+305     \hyperlink{class_canvas_ab1413076d90539aea7ac3a06b065afe2}{drawCircle}(a,c);
+306     \hyperlink{class_canvas_ab1413076d90539aea7ac3a06b065afe2}{drawCircle}(b,c);
+307 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_ad9d725683b22b2dc7a5974fed63c16bb}\label{class_canvas_ad9d725683b22b2dc7a5974fed63c16bb}} 
+\index{Canvas@{Canvas}!circle\+Square\+Test@{circle\+Square\+Test}}
+\index{circle\+Square\+Test@{circle\+Square\+Test}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{circle\+Square\+Test()}{circleSquareTest()}}
+{\footnotesize\ttfamily void Canvas\+::circle\+Square\+Test (\begin{DoxyParamCaption}\item[{\hyperlink{class_circle}{Circle}}]{cir,  }\item[{\hyperlink{class_a_a_b_b}{A\+A\+BB}}]{sq }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+circle\+Square\+Test test to call when a circle and square need to be tested 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cir} & circle \\
+\hline
+{\em sq} & square \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 319 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+320 \{
+321     \hyperlink{class_point}{Point} A(sq.\hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}[\hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{AABB::XDIM}], sq.\hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}[
+      \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{AABB::YDIM}]);
+322     \hyperlink{class_point}{Point} B(sq.\hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}[\hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{AABB::XDIM}], sq.\hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}[
+      \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{AABB::YDIM}]);
+323     \hyperlink{class_point}{Point} C(sq.\hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}[\hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{AABB::XDIM}], sq.\hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}[
+      \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{AABB::YDIM}]);
+324     \hyperlink{class_point}{Point} D(sq.\hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}[\hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{AABB::XDIM}], sq.\hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}[
+      \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{AABB::YDIM}]);
+325 
+326     QColor c = Qt::black;
+327     \textcolor{keywordflow}{if}(\hyperlink{class_intersect_tester_a7710e17ff7d2e229059f23b9429213f5}{IntersectTester::isIntersecting}(cir, sq))
+328         c = Qt::green;
+329 
+330     \hyperlink{class_canvas_ad7cf8e6e93765586808ac744d888dbdc}{drawPoint}(\hyperlink{class_intersect_tester_a6bb20d4839643fbfd53a5d4506448a92}{IntersectTester::closestPoint}( 
+      \hyperlink{class_line_segment}{LineSegment}(A,B), cir.\hyperlink{class_circle_a9818ca0bbac64ff447945a8e51ff9319}{getCenter}() ),Qt::black);
+331     \hyperlink{class_canvas_ad7cf8e6e93765586808ac744d888dbdc}{drawPoint}(\hyperlink{class_intersect_tester_a6bb20d4839643fbfd53a5d4506448a92}{IntersectTester::closestPoint}( 
+      \hyperlink{class_line_segment}{LineSegment}(B,C), cir.\hyperlink{class_circle_a9818ca0bbac64ff447945a8e51ff9319}{getCenter}() ),Qt::black);
+332     \hyperlink{class_canvas_ad7cf8e6e93765586808ac744d888dbdc}{drawPoint}(\hyperlink{class_intersect_tester_a6bb20d4839643fbfd53a5d4506448a92}{IntersectTester::closestPoint}( 
+      \hyperlink{class_line_segment}{LineSegment}(D,C), cir.\hyperlink{class_circle_a9818ca0bbac64ff447945a8e51ff9319}{getCenter}() ),Qt::black);
+333     \hyperlink{class_canvas_ad7cf8e6e93765586808ac744d888dbdc}{drawPoint}(\hyperlink{class_intersect_tester_a6bb20d4839643fbfd53a5d4506448a92}{IntersectTester::closestPoint}( 
+      \hyperlink{class_line_segment}{LineSegment}(A,D), cir.\hyperlink{class_circle_a9818ca0bbac64ff447945a8e51ff9319}{getCenter}() ),Qt::black);
+334     \hyperlink{class_canvas_ab1413076d90539aea7ac3a06b065afe2}{drawCircle}(cir,c);
+335     \hyperlink{class_canvas_a78ce810ea0004c4f3fa9ee9d92996875}{drawSquare}(sq,c);
+336 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_a528559214b858f9f9cd0a57ca95fb630}\label{class_canvas_a528559214b858f9f9cd0a57ca95fb630}} 
+\index{Canvas@{Canvas}!circle\+Triangle\+Test@{circle\+Triangle\+Test}}
+\index{circle\+Triangle\+Test@{circle\+Triangle\+Test}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{circle\+Triangle\+Test()}{circleTriangleTest()}}
+{\footnotesize\ttfamily void Canvas\+::circle\+Triangle\+Test (\begin{DoxyParamCaption}\item[{\hyperlink{class_circle}{Circle}}]{cir,  }\item[{\hyperlink{class_triangle}{Triangle}}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+circle\+Triangle\+Test test to call when circle and triangle need to be tested 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cir} & circle \\
+\hline
+{\em t} & triangle \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 309 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+310 \{
+311     QColor c = Qt::black;
+312     \textcolor{keywordflow}{if}(\hyperlink{class_intersect_tester_a7710e17ff7d2e229059f23b9429213f5}{IntersectTester::isIntersecting}(cir, t))
+313         c = Qt::green;
+314 
+315     \hyperlink{class_canvas_ab1413076d90539aea7ac3a06b065afe2}{drawCircle}(cir,c);
+316     \hyperlink{class_canvas_a74dd9cf1e8f3b48e2df2b34886770ac6}{drawTriangle}(t,c);
+317 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_afddf8ae4dcfb9557ae557b9f998f5d5a}\label{class_canvas_afddf8ae4dcfb9557ae557b9f998f5d5a}} 
+\index{Canvas@{Canvas}!convertedX@{convertedX}}
+\index{convertedX@{convertedX}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{converted\+X()}{convertedX()}}
+{\footnotesize\ttfamily float Canvas\+::convertedX (\begin{DoxyParamCaption}\item[{float}]{windowX }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+convertedX converts display x coordinate to canvas x coordinate 
+
+
+\begin{DoxyParams}{Parameters}
+{\em windowX} & display x coordinate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+canvas x coordinate 
+\end{DoxyReturn}
+
+
+Definition at line 496 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+497 \{
+498     \textcolor{keywordtype}{float} newX;
+499     newX = \hyperlink{class_canvas_a7da74603fc4232dfe00be701878d048b}{LEFT} +
+500             ( ( windowX / this->width() ) *
+501               ( \hyperlink{class_canvas_ab618bb921e1c0ee7c394fe3a83b17271}{RIGHT} - \hyperlink{class_canvas_a7da74603fc4232dfe00be701878d048b}{LEFT} ) );
+502     \textcolor{keywordflow}{return} newX;
+503 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_a12cbc7e3a2cb3bbb6278052d49a90313}\label{class_canvas_a12cbc7e3a2cb3bbb6278052d49a90313}} 
+\index{Canvas@{Canvas}!convertedY@{convertedY}}
+\index{convertedY@{convertedY}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{converted\+Y()}{convertedY()}}
+{\footnotesize\ttfamily float Canvas\+::convertedY (\begin{DoxyParamCaption}\item[{float}]{windowY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+convertedY converts display y coordinate to canvas y coordinate 
+
+
+\begin{DoxyParams}{Parameters}
+{\em windowY} & display y coordinate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+canvas y coordinate 
+\end{DoxyReturn}
+
+
+Definition at line 505 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+506 \{
+507     \textcolor{keywordtype}{float} newY,reverseY;
+508     reverseY = -( windowY - 1 - this->height() );
+509 
+510     newY = \hyperlink{class_canvas_a0630c650c5daea2db5a01ce6c0954457}{BOTTOM} +
+511             ( ( reverseY / this->height() ) *
+512               ( \hyperlink{class_canvas_a3d5a1c71903689cf817cd92ae7a2ebc9}{TOP} - \hyperlink{class_canvas_a0630c650c5daea2db5a01ce6c0954457}{BOTTOM} ) ) ;
+513     \textcolor{keywordflow}{return} newY;
+514 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_ab1413076d90539aea7ac3a06b065afe2}\label{class_canvas_ab1413076d90539aea7ac3a06b065afe2}} 
+\index{Canvas@{Canvas}!draw\+Circle@{draw\+Circle}}
+\index{draw\+Circle@{draw\+Circle}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{draw\+Circle()}{drawCircle()}}
+{\footnotesize\ttfamily void Canvas\+::draw\+Circle (\begin{DoxyParamCaption}\item[{\hyperlink{class_circle}{Circle}}]{circle,  }\item[{Q\+Color}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+draw\+Circle draw a circle on the canvas 
+
+
+\begin{DoxyParams}{Parameters}
+{\em circle} & circle to draw \\
+\hline
+{\em color} & the color of the circle \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 385 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+386 \{
+387     glColor3f(color.redF(),color.greenF(),color.blueF());
+388     glBegin(GL\_LINE\_LOOP);
+389     \textcolor{keywordflow}{for} ( \textcolor{keywordtype}{float} angle = 0; angle <= (2*M\_PI); angle += 0.01 )
+390     \{
+391         \textcolor{keywordtype}{float} x = circle.\hyperlink{class_circle_a9818ca0bbac64ff447945a8e51ff9319}{getCenter}().\hyperlink{class_point_a29c44ec7c7279e02629645a06cdaf7d5}{getX}() + sin( angle ) *
+392                     circle.\hyperlink{class_circle_a95b7dc25d2e9b1e40a189cd83386a12e}{getRadius}();
+393 
+394         \textcolor{keywordtype}{float} y = circle.\hyperlink{class_circle_a9818ca0bbac64ff447945a8e51ff9319}{getCenter}().\hyperlink{class_point_a2371ffadbe245d12a8f556d0a976521b}{getY}() + cos( angle ) *
+395                     circle.\hyperlink{class_circle_a95b7dc25d2e9b1e40a189cd83386a12e}{getRadius}();
+396 
+397         glVertex2f( x, y );
+398     \}
+399     glEnd();
+400 
+401     glColor4f(color.redF(),color.greenF(),color.blueF(), 0.2f);
+402     glBegin( GL\_TRIANGLE\_FAN );
+403     glVertex2f( circle.\hyperlink{class_circle_a9818ca0bbac64ff447945a8e51ff9319}{getCenter}().\hyperlink{class_point_a29c44ec7c7279e02629645a06cdaf7d5}{getX}(), circle.\hyperlink{class_circle_a9818ca0bbac64ff447945a8e51ff9319}{getCenter}().
+      \hyperlink{class_point_a2371ffadbe245d12a8f556d0a976521b}{getY}() );
+404     \textcolor{keywordflow}{for} ( \textcolor{keywordtype}{float} angle = 0; angle <= (2*M\_PI); angle += 0.01 )
+405     \{
+406         \textcolor{keywordtype}{float} x = circle.\hyperlink{class_circle_a9818ca0bbac64ff447945a8e51ff9319}{getCenter}().\hyperlink{class_point_a29c44ec7c7279e02629645a06cdaf7d5}{getX}() + sin( angle ) *
+407                     circle.\hyperlink{class_circle_a95b7dc25d2e9b1e40a189cd83386a12e}{getRadius}();
+408 
+409         \textcolor{keywordtype}{float} y = circle.\hyperlink{class_circle_a9818ca0bbac64ff447945a8e51ff9319}{getCenter}().\hyperlink{class_point_a2371ffadbe245d12a8f556d0a976521b}{getY}() + cos( angle ) *
+410                     circle.\hyperlink{class_circle_a95b7dc25d2e9b1e40a189cd83386a12e}{getRadius}();
+411 
+412         glVertex2f( x, y );
+413     \}
+414     \textcolor{keywordtype}{float} x = circle.\hyperlink{class_circle_a9818ca0bbac64ff447945a8e51ff9319}{getCenter}().\hyperlink{class_point_a29c44ec7c7279e02629645a06cdaf7d5}{getX}() + sin( 0 ) *
+415                 circle.\hyperlink{class_circle_a95b7dc25d2e9b1e40a189cd83386a12e}{getRadius}();
+416 
+417     \textcolor{keywordtype}{float} y = circle.\hyperlink{class_circle_a9818ca0bbac64ff447945a8e51ff9319}{getCenter}().\hyperlink{class_point_a2371ffadbe245d12a8f556d0a976521b}{getY}() + cos( 0 ) *
+418                 circle.\hyperlink{class_circle_a95b7dc25d2e9b1e40a189cd83386a12e}{getRadius}() ;
+419 
+420     glVertex2f( x, y );
+421     glEnd();
+422 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_ad9205f4414565884776edc5f421954a8}\label{class_canvas_ad9205f4414565884776edc5f421954a8}} 
+\index{Canvas@{Canvas}!draw\+Gridlines@{draw\+Gridlines}}
+\index{draw\+Gridlines@{draw\+Gridlines}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{draw\+Gridlines()}{drawGridlines()}}
+{\footnotesize\ttfamily void Canvas\+::draw\+Gridlines (\begin{DoxyParamCaption}\item[{int}]{granularity,  }\item[{float}]{shade }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+draw\+Gridlines Used to draw grid lines across full canvas 
+
+
+\begin{DoxyParams}{Parameters}
+{\em granularity} & how many lifes drawn grid segments per dimension \\
+\hline
+{\em shade} & the greyscale shade of the grid \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 460 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+461 \{
+462     \textcolor{keywordtype}{int} gap = ( \hyperlink{class_canvas_a3d5a1c71903689cf817cd92ae7a2ebc9}{TOP} - \hyperlink{class_canvas_a0630c650c5daea2db5a01ce6c0954457}{BOTTOM} ) / granularity;
+463     glColor3f(shade,shade,shade);
+464     glBegin(GL\_LINES);
+465     \textcolor{keywordflow}{for} ( \textcolor{keywordtype}{int} i = 0; i < granularity; ++i )
+466     \{
+467         \textcolor{keywordtype}{int} x = \hyperlink{class_canvas_a7da74603fc4232dfe00be701878d048b}{LEFT} + (gap*i);
+468         glVertex2f(x,\hyperlink{class_canvas_a0630c650c5daea2db5a01ce6c0954457}{BOTTOM});
+469         glVertex2f(x,\hyperlink{class_canvas_a3d5a1c71903689cf817cd92ae7a2ebc9}{TOP});
+470 
+471         \textcolor{keywordtype}{int} y = \hyperlink{class_canvas_a0630c650c5daea2db5a01ce6c0954457}{BOTTOM} + (gap*i);
+472         glVertex2f(\hyperlink{class_canvas_a7da74603fc4232dfe00be701878d048b}{LEFT},y);
+473         glVertex2f(\hyperlink{class_canvas_ab618bb921e1c0ee7c394fe3a83b17271}{RIGHT},y);
+474 
+475     \}
+476     glEnd();
+477 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_ae3ad5d92c9a2868b94a6570914b05366}\label{class_canvas_ae3ad5d92c9a2868b94a6570914b05366}} 
+\index{Canvas@{Canvas}!draw\+Line@{draw\+Line}}
+\index{draw\+Line@{draw\+Line}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{draw\+Line()}{drawLine()}}
+{\footnotesize\ttfamily void Canvas\+::draw\+Line (\begin{DoxyParamCaption}\item[{\hyperlink{class_line_segment}{Line\+Segment}}]{line,  }\item[{Q\+Color}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+draw\+Line draw a line on the canvas 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & line to draw \\
+\hline
+{\em color} & the color of the line \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 376 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+377 \{
+378     glColor3f(color.redF(),color.greenF(),color.blueF());
+379     glBegin(GL\_LINES);
+380     glVertex2f(line.\hyperlink{class_line_segment_afcff6bd5f6a3073a44f7b21db0be876f}{getStart}().\hyperlink{class_point_a29c44ec7c7279e02629645a06cdaf7d5}{getX}(), line.\hyperlink{class_line_segment_afcff6bd5f6a3073a44f7b21db0be876f}{getStart}().\hyperlink{class_point_a2371ffadbe245d12a8f556d0a976521b}{getY}());
+381     glVertex2f(line.\hyperlink{class_line_segment_a7b05f883c369b950e61009edfafbbd0e}{getEnd}().\hyperlink{class_point_a29c44ec7c7279e02629645a06cdaf7d5}{getX}(), line.\hyperlink{class_line_segment_a7b05f883c369b950e61009edfafbbd0e}{getEnd}().\hyperlink{class_point_a2371ffadbe245d12a8f556d0a976521b}{getY}());
+382     glEnd();
+383 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_ad7cf8e6e93765586808ac744d888dbdc}\label{class_canvas_ad7cf8e6e93765586808ac744d888dbdc}} 
+\index{Canvas@{Canvas}!draw\+Point@{draw\+Point}}
+\index{draw\+Point@{draw\+Point}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{draw\+Point()}{drawPoint()}}
+{\footnotesize\ttfamily void Canvas\+::draw\+Point (\begin{DoxyParamCaption}\item[{\hyperlink{class_point}{Point}}]{p,  }\item[{Q\+Color}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+draw\+Point draw a point on the canvas 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & point to draw \\
+\hline
+{\em color} & the color of the point \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 368 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+369 \{
+370     glColor3f(color.redF(),color.greenF(),color.blueF());
+371     glBegin(GL\_POINTS);
+372     glVertex2f(p.\hyperlink{class_point_a29c44ec7c7279e02629645a06cdaf7d5}{getX}(),p.\hyperlink{class_point_a2371ffadbe245d12a8f556d0a976521b}{getY}());
+373     glEnd();
+374 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_a78ce810ea0004c4f3fa9ee9d92996875}\label{class_canvas_a78ce810ea0004c4f3fa9ee9d92996875}} 
+\index{Canvas@{Canvas}!draw\+Square@{draw\+Square}}
+\index{draw\+Square@{draw\+Square}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{draw\+Square()}{drawSquare()}}
+{\footnotesize\ttfamily void Canvas\+::draw\+Square (\begin{DoxyParamCaption}\item[{\hyperlink{class_a_a_b_b}{A\+A\+BB}}]{sq,  }\item[{Q\+Color}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+draw\+Square draw a square on the canvas 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sq} & the square to draw \\
+\hline
+{\em color} & the color of the square \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 441 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+442 \{
+443     glColor3f(color.redF(),color.greenF(),color.blueF());
+444     glBegin(GL\_LINE\_LOOP);
+445     glVertex2f(sq.\hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}[\hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{AABB::XDIM}],sq.\hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}[
+      \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{AABB::YDIM}]);
+446     glVertex2f(sq.\hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}[\hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{AABB::XDIM}],sq.\hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}[
+      \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{AABB::YDIM}]);
+447     glVertex2f(sq.\hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}[\hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{AABB::XDIM}],sq.\hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}[
+      \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{AABB::YDIM}]);
+448     glVertex2f(sq.\hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}[\hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{AABB::XDIM}],sq.\hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}[
+      \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{AABB::YDIM}]);
+449     glEnd();
+450 
+451     glColor4f(color.redF(),color.greenF(),color.blueF(), 0.2);
+452     glBegin(GL\_QUADS);
+453     glVertex2f(sq.\hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}[\hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{AABB::XDIM}],sq.\hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}[
+      \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{AABB::YDIM}]);
+454     glVertex2f(sq.\hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}[\hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{AABB::XDIM}],sq.\hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}[
+      \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{AABB::YDIM}]);
+455     glVertex2f(sq.\hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}[\hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{AABB::XDIM}],sq.\hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}[
+      \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{AABB::YDIM}]);
+456     glVertex2f(sq.\hyperlink{class_a_a_b_b_a1289c3a2e5c7a98f90d5bcdb8251a06f}{maximums}[\hyperlink{class_a_a_b_b_aac753e0248d039329b25b38d0ed9cd4f}{AABB::XDIM}],sq.\hyperlink{class_a_a_b_b_aaf1ec35e5c0258cd57e65429f93c14a2}{minimums}[
+      \hyperlink{class_a_a_b_b_a5192e3bdf0789cdc9e5f643b401e5b10}{AABB::YDIM}]);
+457     glEnd();
+458 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_a74dd9cf1e8f3b48e2df2b34886770ac6}\label{class_canvas_a74dd9cf1e8f3b48e2df2b34886770ac6}} 
+\index{Canvas@{Canvas}!draw\+Triangle@{draw\+Triangle}}
+\index{draw\+Triangle@{draw\+Triangle}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{draw\+Triangle()}{drawTriangle()}}
+{\footnotesize\ttfamily void Canvas\+::draw\+Triangle (\begin{DoxyParamCaption}\item[{\hyperlink{class_triangle}{Triangle}}]{t,  }\item[{Q\+Color}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+draw\+Triangle draw a triangle on the canvas 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & triangle to draw \\
+\hline
+{\em color} & the color of the triangle \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 424 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+425 \{
+426     glColor3f(color.redF(),color.greenF(),color.blueF());
+427     glBegin(GL\_LINE\_LOOP);
+428     glVertex2f(t.\hyperlink{class_triangle_a88a35d0b66c9636a9be88adc88d003aa}{getVertexOne}().\hyperlink{class_point_a29c44ec7c7279e02629645a06cdaf7d5}{getX}(), t.\hyperlink{class_triangle_a88a35d0b66c9636a9be88adc88d003aa}{getVertexOne}().
+      \hyperlink{class_point_a2371ffadbe245d12a8f556d0a976521b}{getY}());
+429     glVertex2f(t.\hyperlink{class_triangle_ac1ae7463f829bcf377fd926b1ad10cac}{getVertexTwo}().\hyperlink{class_point_a29c44ec7c7279e02629645a06cdaf7d5}{getX}(), t.\hyperlink{class_triangle_ac1ae7463f829bcf377fd926b1ad10cac}{getVertexTwo}().
+      \hyperlink{class_point_a2371ffadbe245d12a8f556d0a976521b}{getY}());
+430     glVertex2f(t.\hyperlink{class_triangle_aed6ceca804b35da95d3d3c930de41e91}{getVertexThree}().\hyperlink{class_point_a29c44ec7c7279e02629645a06cdaf7d5}{getX}(), t.\hyperlink{class_triangle_aed6ceca804b35da95d3d3c930de41e91}{getVertexThree}().
+      \hyperlink{class_point_a2371ffadbe245d12a8f556d0a976521b}{getY}());
+431     glEnd();
+432 
+433     glColor4f(color.redF(),color.greenF(),color.blueF(),0.2);
+434     glBegin(GL\_POLYGON);
+435     glVertex2f(t.\hyperlink{class_triangle_a88a35d0b66c9636a9be88adc88d003aa}{getVertexOne}().\hyperlink{class_point_a29c44ec7c7279e02629645a06cdaf7d5}{getX}(), t.\hyperlink{class_triangle_a88a35d0b66c9636a9be88adc88d003aa}{getVertexOne}().
+      \hyperlink{class_point_a2371ffadbe245d12a8f556d0a976521b}{getY}());
+436     glVertex2f(t.\hyperlink{class_triangle_ac1ae7463f829bcf377fd926b1ad10cac}{getVertexTwo}().\hyperlink{class_point_a29c44ec7c7279e02629645a06cdaf7d5}{getX}(), t.\hyperlink{class_triangle_ac1ae7463f829bcf377fd926b1ad10cac}{getVertexTwo}().
+      \hyperlink{class_point_a2371ffadbe245d12a8f556d0a976521b}{getY}());
+437     glVertex2f(t.\hyperlink{class_triangle_aed6ceca804b35da95d3d3c930de41e91}{getVertexThree}().\hyperlink{class_point_a29c44ec7c7279e02629645a06cdaf7d5}{getX}(), t.\hyperlink{class_triangle_aed6ceca804b35da95d3d3c930de41e91}{getVertexThree}().
+      \hyperlink{class_point_a2371ffadbe245d12a8f556d0a976521b}{getY}());
+438     glEnd();
+439 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_a68622ac24f847a47270c4e6f566eec3c}\label{class_canvas_a68622ac24f847a47270c4e6f566eec3c}} 
+\index{Canvas@{Canvas}!initialize\+GL@{initialize\+GL}}
+\index{initialize\+GL@{initialize\+GL}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{initialize\+G\+L()}{initializeGL()}}
+{\footnotesize\ttfamily void Canvas\+::initialize\+GL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+initialize\+GL Open\+GL initialization method 
+
+
+
+Definition at line 8 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+9 \{
+10 
+11     glClear( GL\_COLOR\_BUFFER\_BIT | GL\_DEPTH\_BUFFER\_BIT );
+12     glEnable( GL\_BLEND ); \textcolor{comment}{// Required Blending for alpha blending}
+13     glEnable( GL\_ALPHA ); \textcolor{comment}{// Lets you add alpha values}
+14     \textcolor{comment}{//    glEnable( GL\_LINE\_STIPPLE ); // Enables Dotted Line for use}
+15     glBlendFunc( GL\_SRC\_ALPHA, GL\_ONE\_MINUS\_SRC\_ALPHA );
+16     glClearColor(1,1,1,1);
+17     \textcolor{comment}{//    connect( &timer, SIGNAL( timeout() ), this, SLOT( update() ) );}
+18     \textcolor{comment}{//    timer.start( 1000 );}
+19     QWidget::setMouseTracking(\textcolor{keyword}{true});
+20     \hyperlink{class_canvas_a104679999425d8ffdc27454b71e5e1e3}{setMouse}(\hyperlink{class_point}{Point}(-100,100));
+21 
+22 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_a1c17d6af0a8770dc2022986cd27e4de4}\label{class_canvas_a1c17d6af0a8770dc2022986cd27e4de4}} 
+\index{Canvas@{Canvas}!line\+Circle\+Test@{line\+Circle\+Test}}
+\index{line\+Circle\+Test@{line\+Circle\+Test}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{line\+Circle\+Test()}{lineCircleTest()}}
+{\footnotesize\ttfamily void Canvas\+::line\+Circle\+Test (\begin{DoxyParamCaption}\item[{\hyperlink{class_line_segment}{Line\+Segment}}]{ls,  }\item[{\hyperlink{class_circle}{Circle}}]{cir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+line\+Circle\+Test test to call when linesegment and circle need to be tested 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ls} & linesegment \\
+\hline
+{\em cir} & circle \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 268 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+269 \{
+270     QColor c = Qt::black;
+271     \textcolor{keywordflow}{if}(\hyperlink{class_intersect_tester_a7710e17ff7d2e229059f23b9429213f5}{IntersectTester::isIntersecting}(ls, cir))
+272         c = Qt::green;
+273 
+274     \hyperlink{class_canvas_ad7cf8e6e93765586808ac744d888dbdc}{drawPoint}(\hyperlink{class_intersect_tester_a6bb20d4839643fbfd53a5d4506448a92}{IntersectTester::closestPoint}( ls, cir.
+      \hyperlink{class_circle_a9818ca0bbac64ff447945a8e51ff9319}{getCenter}() ),Qt::black);
+275     \hyperlink{class_canvas_ae3ad5d92c9a2868b94a6570914b05366}{drawLine}(ls,c);
+276     \hyperlink{class_canvas_ab1413076d90539aea7ac3a06b065afe2}{drawCircle}(cir,c);
+277 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_ac3e9882133dc6c55f8ff3bb119a8ed84}\label{class_canvas_ac3e9882133dc6c55f8ff3bb119a8ed84}} 
+\index{Canvas@{Canvas}!line\+Line\+Test@{line\+Line\+Test}}
+\index{line\+Line\+Test@{line\+Line\+Test}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{line\+Line\+Test()}{lineLineTest()}}
+{\footnotesize\ttfamily void Canvas\+::line\+Line\+Test (\begin{DoxyParamCaption}\item[{\hyperlink{class_line_segment}{Line\+Segment}}]{a,  }\item[{\hyperlink{class_line_segment}{Line\+Segment}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+line\+Line\+Test test to call when two linesegment need to be tested 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & line 1 \\
+\hline
+{\em b} & line 2 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 258 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+259 \{
+260     QColor c = Qt::black;
+261     \textcolor{keywordflow}{if}(\hyperlink{class_intersect_tester_a7710e17ff7d2e229059f23b9429213f5}{IntersectTester::isIntersecting}(a, b))
+262         c = Qt::green;
+263 
+264     \hyperlink{class_canvas_ae3ad5d92c9a2868b94a6570914b05366}{drawLine}(a,c);
+265     \hyperlink{class_canvas_ae3ad5d92c9a2868b94a6570914b05366}{drawLine}(b,c);
+266 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_a2eaf680341aebbab7792cd136c2be950}\label{class_canvas_a2eaf680341aebbab7792cd136c2be950}} 
+\index{Canvas@{Canvas}!line\+Square\+Test@{line\+Square\+Test}}
+\index{line\+Square\+Test@{line\+Square\+Test}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{line\+Square\+Test()}{lineSquareTest()}}
+{\footnotesize\ttfamily void Canvas\+::line\+Square\+Test (\begin{DoxyParamCaption}\item[{\hyperlink{class_line_segment}{Line\+Segment}}]{ls,  }\item[{\hyperlink{class_a_a_b_b}{A\+A\+BB}}]{sq }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+line\+Square\+Test test to call when linesegment and triangle need to be tested 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ls} & linesegment \\
+\hline
+{\em sq} & square \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 289 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+290 \{
+291     QColor c = Qt::black;
+292     \textcolor{keywordflow}{if}(\hyperlink{class_intersect_tester_a7710e17ff7d2e229059f23b9429213f5}{IntersectTester::isIntersecting}(ls, sq))
+293         c = Qt::green;
+294 
+295     \hyperlink{class_canvas_ae3ad5d92c9a2868b94a6570914b05366}{drawLine}(ls,c);
+296     \hyperlink{class_canvas_a78ce810ea0004c4f3fa9ee9d92996875}{drawSquare}(sq,c);
+297 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_a39de2e31ab9a27b918fc4f7e78ee2030}\label{class_canvas_a39de2e31ab9a27b918fc4f7e78ee2030}} 
+\index{Canvas@{Canvas}!line\+Triangle\+Test@{line\+Triangle\+Test}}
+\index{line\+Triangle\+Test@{line\+Triangle\+Test}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{line\+Triangle\+Test()}{lineTriangleTest()}}
+{\footnotesize\ttfamily void Canvas\+::line\+Triangle\+Test (\begin{DoxyParamCaption}\item[{\hyperlink{class_line_segment}{Line\+Segment}}]{ls,  }\item[{\hyperlink{class_triangle}{Triangle}}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+line\+Triangle\+Test test to call when linesegment and triangle need to be tested 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ls} & linesegment \\
+\hline
+{\em t} & triangle \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 279 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+280 \{
+281     QColor c = Qt::black;
+282     \textcolor{keywordflow}{if}(\hyperlink{class_intersect_tester_a7710e17ff7d2e229059f23b9429213f5}{IntersectTester::isIntersecting}(ls, t))
+283         c = Qt::green;
+284 
+285     \hyperlink{class_canvas_ae3ad5d92c9a2868b94a6570914b05366}{drawLine}(ls,c);
+286     \hyperlink{class_canvas_a74dd9cf1e8f3b48e2df2b34886770ac6}{drawTriangle}(t,c);
+287 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}\label{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}} 
+\index{Canvas@{Canvas}!mouse@{mouse}}
+\index{mouse@{mouse}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{mouse()}{mouse()}}
+{\footnotesize\ttfamily \hyperlink{class_point}{Point} Canvas\+::mouse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+mouse getter method for mouse coordinates 
+
+\begin{DoxyReturn}{Returns}
+mouse coordinates 
+\end{DoxyReturn}
+
+
+Definition at line 523 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+524 \{
+525     \textcolor{keywordflow}{return} \hyperlink{class_canvas_a37d2fd203dc21501aee37001e49789b1}{m\_mouse};
+526 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_a9fb4b83a1067ddc2aa04676f51dc5a47}\label{class_canvas_a9fb4b83a1067ddc2aa04676f51dc5a47}} 
+\index{Canvas@{Canvas}!mouse\+Move\+Event@{mouse\+Move\+Event}}
+\index{mouse\+Move\+Event@{mouse\+Move\+Event}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{mouse\+Move\+Event()}{mouseMoveEvent()}}
+{\footnotesize\ttfamily void Canvas\+::mouse\+Move\+Event (\begin{DoxyParamCaption}\item[{Q\+Mouse\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+mouse\+Move\+Event qt method to catch mouse movement events 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & the moust event \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 516 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+517 \{
+518     \hyperlink{class_canvas_a104679999425d8ffdc27454b71e5e1e3}{setMouse}(\hyperlink{class_point}{Point}( \textcolor{keywordtype}{int}(\hyperlink{class_canvas_afddf8ae4dcfb9557ae557b9f998f5d5a}{convertedX}( \textcolor{keywordtype}{float}( event->x() ) ) ),
+519                      \textcolor{keywordtype}{int}(\hyperlink{class_canvas_a12cbc7e3a2cb3bbb6278052d49a90313}{convertedY}( \textcolor{keywordtype}{float}( event->y() ) ) ) ) );
+520     update();
+521 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_a8097ff7e44fb5fecf0dd0997e13e4c32}\label{class_canvas_a8097ff7e44fb5fecf0dd0997e13e4c32}} 
+\index{Canvas@{Canvas}!moving\+State@{moving\+State}}
+\index{moving\+State@{moving\+State}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{moving\+State()}{movingState()}}
+{\footnotesize\ttfamily int Canvas\+::moving\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+moving\+State getter method for state of moving primitive 
+
+\begin{DoxyReturn}{Returns}
+state of moving primitive 
+\end{DoxyReturn}
+
+
+Definition at line 533 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+534 \{
+535     \textcolor{keywordflow}{return} \hyperlink{class_canvas_a0d0f98258b42bd7b40f175baf3f1220a}{m\_movingState};
+536 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_a4e9439400dd404eda24cf42ca5ca9972}\label{class_canvas_a4e9439400dd404eda24cf42ca5ca9972}} 
+\index{Canvas@{Canvas}!paint\+GL@{paint\+GL}}
+\index{paint\+GL@{paint\+GL}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{paint\+G\+L()}{paintGL()}}
+{\footnotesize\ttfamily void Canvas\+::paint\+GL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+paint\+GL method called on Open\+GL window refresh 
+
+
+
+Definition at line 26 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+27 \{
+28     \hyperlink{class_canvas_a0b546aa7d55d00f82b4db59ab4ab9cee}{prepareDraw}();
+29 
+30     \hyperlink{class_canvas_ad9205f4414565884776edc5f421954a8}{drawGridlines}(100, 0.95f);
+31     \hyperlink{class_canvas_ad9205f4414565884776edc5f421954a8}{drawGridlines}(20, 0.8f);
+32     \hyperlink{class_canvas_ad9205f4414565884776edc5f421954a8}{drawGridlines}(2,0.6f);
+33 
+34 
+35     \textcolor{keywordflow}{if}( \hyperlink{class_canvas_a8097ff7e44fb5fecf0dd0997e13e4c32}{movingState}() == \hyperlink{class_canvas_a04b852dd0b2561a20a5e0e9f67a95b64}{POINT} && \hyperlink{class_canvas_a63f657b762d08168f52630bc49efbf71}{staticState}() == 
+      \hyperlink{class_canvas_a04b852dd0b2561a20a5e0e9f67a95b64}{POINT} )
+36     \{
+37         \hyperlink{class_point}{Point} \textcolor{keyword}{set}(0,0);
+38         \hyperlink{class_canvas_a33b608940212192e7e0ff86c2301c2fe}{pointPointTest}(\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}(), \textcolor{keyword}{set});
+39     \}
+40     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( \hyperlink{class_canvas_a8097ff7e44fb5fecf0dd0997e13e4c32}{movingState}() == \hyperlink{class_canvas_a04b852dd0b2561a20a5e0e9f67a95b64}{POINT} && \hyperlink{class_canvas_a63f657b762d08168f52630bc49efbf71}{staticState}() == 
+      \hyperlink{class_canvas_a28b792bd16aaf737eab6d697a211183a}{LINE} )
+41     \{
+42         \hyperlink{class_line_segment}{LineSegment} line(\hyperlink{class_point}{Point}(-50,-40),\hyperlink{class_point}{Point}(80,10));
+43         \hyperlink{class_canvas_ad5681f0cada49f0453158155b42c2fb7}{pointLineTest}(\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}(), line);
+44     \}
+45     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( \hyperlink{class_canvas_a8097ff7e44fb5fecf0dd0997e13e4c32}{movingState}() == \hyperlink{class_canvas_a04b852dd0b2561a20a5e0e9f67a95b64}{POINT} && \hyperlink{class_canvas_a63f657b762d08168f52630bc49efbf71}{staticState}() == 
+      \hyperlink{class_canvas_a6d5c5da10948c78b6481ac831f32106f}{CIRCLE} )
+46     \{
+47         \hyperlink{class_circle}{Circle} circle(\hyperlink{class_point}{Point}(30,30),20);
+48         \hyperlink{class_canvas_a407d5fea40a48519ab368d39739943c4}{pointCircleTest}(\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}(), circle);
+49     \}
+50     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( \hyperlink{class_canvas_a8097ff7e44fb5fecf0dd0997e13e4c32}{movingState}() == \hyperlink{class_canvas_a04b852dd0b2561a20a5e0e9f67a95b64}{POINT} && \hyperlink{class_canvas_a63f657b762d08168f52630bc49efbf71}{staticState}() == 
+      \hyperlink{class_canvas_a7d54031701bd0ddbe165a6d4350ab9d6}{TRIANGLE} )
+51     \{
+52         \hyperlink{class_triangle}{Triangle} t(\hyperlink{class_point}{Point}(-10,-10), \hyperlink{class_point}{Point}(-30,-10), \hyperlink{class_point}{Point}(-20,10));
+53         \hyperlink{class_canvas_a8c35a24d67af6d8a76be14321c08b7cb}{pointTriangleTest}(\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}(), t);
+54     \}
+55     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( \hyperlink{class_canvas_a8097ff7e44fb5fecf0dd0997e13e4c32}{movingState}() == \hyperlink{class_canvas_a04b852dd0b2561a20a5e0e9f67a95b64}{POINT} && \hyperlink{class_canvas_a63f657b762d08168f52630bc49efbf71}{staticState}() == 
+      \hyperlink{class_canvas_a2d0245c75d7fc30adb8abd303844c10f}{SQUARE} )
+56     \{
+57         \hyperlink{class_a_a_b_b}{AABB} box(-20,20,-20,20);
+58         \hyperlink{class_canvas_ac9278bae8055ec5b0f047393d2f140b2}{pointSquareTest}(\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}(), box);
+59     \}
+60     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( \hyperlink{class_canvas_a8097ff7e44fb5fecf0dd0997e13e4c32}{movingState}() == \hyperlink{class_canvas_a28b792bd16aaf737eab6d697a211183a}{LINE} && \hyperlink{class_canvas_a63f657b762d08168f52630bc49efbf71}{staticState}() == 
+      \hyperlink{class_canvas_a04b852dd0b2561a20a5e0e9f67a95b64}{POINT} )
+61     \{
+62         \hyperlink{class_point}{Point} \textcolor{keyword}{set}(0,0);
+63         \hyperlink{class_line_segment}{LineSegment} line(\hyperlink{class_point}{Point}( \hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX()-24, \hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()-18 ),
+64                          \hyperlink{class_point}{Point}( \hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX()+24, \hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()+18 ) );
+65         \hyperlink{class_canvas_ad5681f0cada49f0453158155b42c2fb7}{pointLineTest}(\textcolor{keyword}{set}, line);
+66     \}
+67     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( \hyperlink{class_canvas_a8097ff7e44fb5fecf0dd0997e13e4c32}{movingState}() == \hyperlink{class_canvas_a28b792bd16aaf737eab6d697a211183a}{LINE} && \hyperlink{class_canvas_a63f657b762d08168f52630bc49efbf71}{staticState}() == 
+      \hyperlink{class_canvas_a28b792bd16aaf737eab6d697a211183a}{LINE})
+68     \{
+69         \hyperlink{class_line_segment}{LineSegment} line(\hyperlink{class_point}{Point}( \hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX()-24, \hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()-18 ),
+70                          \hyperlink{class_point}{Point}( \hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX()+24, \hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()+18 ) );
+71         \hyperlink{class_line_segment}{LineSegment} line2(\hyperlink{class_point}{Point}(-50,-40),\hyperlink{class_point}{Point}(80,10));
+72         \hyperlink{class_canvas_ac3e9882133dc6c55f8ff3bb119a8ed84}{lineLineTest}(line, line2);
+73     \}
+74     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( \hyperlink{class_canvas_a8097ff7e44fb5fecf0dd0997e13e4c32}{movingState}() == \hyperlink{class_canvas_a28b792bd16aaf737eab6d697a211183a}{LINE} && \hyperlink{class_canvas_a63f657b762d08168f52630bc49efbf71}{staticState}() == 
+      \hyperlink{class_canvas_a6d5c5da10948c78b6481ac831f32106f}{CIRCLE})
+75     \{
+76         \hyperlink{class_line_segment}{LineSegment} line(\hyperlink{class_point}{Point}( \hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX()-24, \hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()-18 ),
+77                          \hyperlink{class_point}{Point}( \hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX()+24, \hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()+18 ) );
+78         \hyperlink{class_circle}{Circle} circle(\hyperlink{class_point}{Point}(30,30),20);
+79         \hyperlink{class_canvas_a1c17d6af0a8770dc2022986cd27e4de4}{lineCircleTest}(line, circle);
+80     \}
+81     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( \hyperlink{class_canvas_a8097ff7e44fb5fecf0dd0997e13e4c32}{movingState}() == \hyperlink{class_canvas_a28b792bd16aaf737eab6d697a211183a}{LINE} && \hyperlink{class_canvas_a63f657b762d08168f52630bc49efbf71}{staticState}() == 
+      \hyperlink{class_canvas_a7d54031701bd0ddbe165a6d4350ab9d6}{TRIANGLE})
+82     \{
+83         \hyperlink{class_line_segment}{LineSegment} line(\hyperlink{class_point}{Point}( \hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX()-24, \hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()-18 ),
+84                          \hyperlink{class_point}{Point}( \hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX()+24, \hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()+18 ) );
+85         \hyperlink{class_triangle}{Triangle} t(\hyperlink{class_point}{Point}(-10,-10), \hyperlink{class_point}{Point}(-30,-10), \hyperlink{class_point}{Point}(-20,10));
+86         \hyperlink{class_canvas_a39de2e31ab9a27b918fc4f7e78ee2030}{lineTriangleTest}(line, t);
+87     \}
+88     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( \hyperlink{class_canvas_a8097ff7e44fb5fecf0dd0997e13e4c32}{movingState}() == \hyperlink{class_canvas_a28b792bd16aaf737eab6d697a211183a}{LINE} && \hyperlink{class_canvas_a63f657b762d08168f52630bc49efbf71}{staticState}() == 
+      \hyperlink{class_canvas_a2d0245c75d7fc30adb8abd303844c10f}{SQUARE})
+89     \{
+90         \hyperlink{class_line_segment}{LineSegment} line(\hyperlink{class_point}{Point}( \hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX()-24, \hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()-18 ),
+91                          \hyperlink{class_point}{Point}( \hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX()+24, \hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()+18 ) );
+92         \hyperlink{class_a_a_b_b}{AABB} box(-20,20,-20,20);
+93         \hyperlink{class_canvas_a2eaf680341aebbab7792cd136c2be950}{lineSquareTest}(line, box);
+94     \}
+95     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( \hyperlink{class_canvas_a8097ff7e44fb5fecf0dd0997e13e4c32}{movingState}() == \hyperlink{class_canvas_a6d5c5da10948c78b6481ac831f32106f}{CIRCLE} && \hyperlink{class_canvas_a63f657b762d08168f52630bc49efbf71}{staticState}() == 
+      \hyperlink{class_canvas_a04b852dd0b2561a20a5e0e9f67a95b64}{POINT})
+96     \{
+97         \hyperlink{class_circle}{Circle} cir(\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}(), 10 );
+98         \hyperlink{class_point}{Point} \textcolor{keyword}{set}(0,0);
+99         \hyperlink{class_canvas_a407d5fea40a48519ab368d39739943c4}{pointCircleTest}(\textcolor{keyword}{set}, cir);
+100     \}
+101     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( \hyperlink{class_canvas_a8097ff7e44fb5fecf0dd0997e13e4c32}{movingState}() == \hyperlink{class_canvas_a6d5c5da10948c78b6481ac831f32106f}{CIRCLE} && \hyperlink{class_canvas_a63f657b762d08168f52630bc49efbf71}{staticState}() == 
+      \hyperlink{class_canvas_a28b792bd16aaf737eab6d697a211183a}{LINE})
+102     \{
+103         \hyperlink{class_line_segment}{LineSegment} line(\hyperlink{class_point}{Point}(-50,-40),\hyperlink{class_point}{Point}(80,10));
+104         \hyperlink{class_circle}{Circle} cir(\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}(), 10 );
+105         \hyperlink{class_canvas_a1c17d6af0a8770dc2022986cd27e4de4}{lineCircleTest}(line, cir);
+106     \}
+107     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( \hyperlink{class_canvas_a8097ff7e44fb5fecf0dd0997e13e4c32}{movingState}() == \hyperlink{class_canvas_a6d5c5da10948c78b6481ac831f32106f}{CIRCLE} && \hyperlink{class_canvas_a63f657b762d08168f52630bc49efbf71}{staticState}() == 
+      \hyperlink{class_canvas_a6d5c5da10948c78b6481ac831f32106f}{CIRCLE})
+108     \{
+109         \hyperlink{class_circle}{Circle} circle(\hyperlink{class_point}{Point}(30,30),20);
+110         \hyperlink{class_circle}{Circle} cir(\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}(), 10 );
+111         \hyperlink{class_canvas_afefa6855ba41959bd86059c3a243b837}{circleCircleTest}(circle, cir);
+112     \}
+113     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( \hyperlink{class_canvas_a8097ff7e44fb5fecf0dd0997e13e4c32}{movingState}() == \hyperlink{class_canvas_a6d5c5da10948c78b6481ac831f32106f}{CIRCLE} && \hyperlink{class_canvas_a63f657b762d08168f52630bc49efbf71}{staticState}() == 
+      \hyperlink{class_canvas_a7d54031701bd0ddbe165a6d4350ab9d6}{TRIANGLE})
+114     \{
+115         \hyperlink{class_triangle}{Triangle} t(\hyperlink{class_point}{Point}(-10,-10), \hyperlink{class_point}{Point}(-30,-10), \hyperlink{class_point}{Point}(-20,10));
+116         \hyperlink{class_circle}{Circle} cir(\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}(), 10 );
+117         \hyperlink{class_canvas_a528559214b858f9f9cd0a57ca95fb630}{circleTriangleTest}(cir, t);
+118     \}
+119     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( \hyperlink{class_canvas_a8097ff7e44fb5fecf0dd0997e13e4c32}{movingState}() == \hyperlink{class_canvas_a6d5c5da10948c78b6481ac831f32106f}{CIRCLE} && \hyperlink{class_canvas_a63f657b762d08168f52630bc49efbf71}{staticState}() == 
+      \hyperlink{class_canvas_a2d0245c75d7fc30adb8abd303844c10f}{SQUARE})
+120     \{
+121         \hyperlink{class_a_a_b_b}{AABB} box(-20,20,-20,20);
+122         \hyperlink{class_circle}{Circle} cir(\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}(), 10 );
+123         \hyperlink{class_canvas_ad9d725683b22b2dc7a5974fed63c16bb}{circleSquareTest}(cir, box);
+124     \}
+125     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( \hyperlink{class_canvas_a8097ff7e44fb5fecf0dd0997e13e4c32}{movingState}() == \hyperlink{class_canvas_a7d54031701bd0ddbe165a6d4350ab9d6}{TRIANGLE} && \hyperlink{class_canvas_a63f657b762d08168f52630bc49efbf71}{staticState}() == 
+      \hyperlink{class_canvas_a04b852dd0b2561a20a5e0e9f67a95b64}{POINT})
+126     \{
+127         \hyperlink{class_triangle}{Triangle} t(\hyperlink{class_point}{Point}(\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX()-11,\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()-11),
+128                    \hyperlink{class_point}{Point}(\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX()+11,\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()-11),
+129                    \hyperlink{class_point}{Point}(\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX(),\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()+11));
+130         \hyperlink{class_point}{Point} \textcolor{keyword}{set}(0,0);
+131         \hyperlink{class_canvas_a8c35a24d67af6d8a76be14321c08b7cb}{pointTriangleTest}(\textcolor{keyword}{set}, t);
+132     \}
+133     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( \hyperlink{class_canvas_a8097ff7e44fb5fecf0dd0997e13e4c32}{movingState}() == \hyperlink{class_canvas_a7d54031701bd0ddbe165a6d4350ab9d6}{TRIANGLE} && \hyperlink{class_canvas_a63f657b762d08168f52630bc49efbf71}{staticState}() == 
+      \hyperlink{class_canvas_a28b792bd16aaf737eab6d697a211183a}{LINE})
+134     \{
+135         \hyperlink{class_line_segment}{LineSegment} line(\hyperlink{class_point}{Point}(-50,-40),\hyperlink{class_point}{Point}(80,10));
+136         \hyperlink{class_triangle}{Triangle} t(\hyperlink{class_point}{Point}(\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX()-11,\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()-11),
+137                    \hyperlink{class_point}{Point}(\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX()+11,\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()-11),
+138                    \hyperlink{class_point}{Point}(\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX(),\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()+11));
+139         \hyperlink{class_canvas_a39de2e31ab9a27b918fc4f7e78ee2030}{lineTriangleTest}(line, t);
+140     \}
+141     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( \hyperlink{class_canvas_a8097ff7e44fb5fecf0dd0997e13e4c32}{movingState}() == \hyperlink{class_canvas_a7d54031701bd0ddbe165a6d4350ab9d6}{TRIANGLE} && \hyperlink{class_canvas_a63f657b762d08168f52630bc49efbf71}{staticState}() == 
+      \hyperlink{class_canvas_a6d5c5da10948c78b6481ac831f32106f}{CIRCLE})
+142     \{
+143         \hyperlink{class_circle}{Circle} circle(\hyperlink{class_point}{Point}(30,30),20);
+144         \hyperlink{class_triangle}{Triangle} t(\hyperlink{class_point}{Point}(\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX()-11,\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()-11),
+145                    \hyperlink{class_point}{Point}(\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX()+11,\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()-11),
+146                    \hyperlink{class_point}{Point}(\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX(),\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()+11));
+147         \hyperlink{class_canvas_a528559214b858f9f9cd0a57ca95fb630}{circleTriangleTest}(circle, t);
+148     \}
+149     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( \hyperlink{class_canvas_a8097ff7e44fb5fecf0dd0997e13e4c32}{movingState}() == \hyperlink{class_canvas_a7d54031701bd0ddbe165a6d4350ab9d6}{TRIANGLE} && \hyperlink{class_canvas_a63f657b762d08168f52630bc49efbf71}{staticState}() == 
+      \hyperlink{class_canvas_a7d54031701bd0ddbe165a6d4350ab9d6}{TRIANGLE})
+150     \{
+151         \hyperlink{class_triangle}{Triangle} t(\hyperlink{class_point}{Point}(-10,-10), \hyperlink{class_point}{Point}(-30,-10), \hyperlink{class_point}{Point}(-20,10));
+152         \hyperlink{class_triangle}{Triangle} t2(\hyperlink{class_point}{Point}(\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX()-11,\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()-11),
+153                    \hyperlink{class_point}{Point}(\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX()+11,\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()-11),
+154                    \hyperlink{class_point}{Point}(\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX(),\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()+11));
+155         \hyperlink{class_canvas_a03c673b6f4e09524d322a8c00c5a49f2}{triangleTriangleTest}(t, t2);
+156     \}
+157     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( \hyperlink{class_canvas_a8097ff7e44fb5fecf0dd0997e13e4c32}{movingState}() == \hyperlink{class_canvas_a7d54031701bd0ddbe165a6d4350ab9d6}{TRIANGLE} && \hyperlink{class_canvas_a63f657b762d08168f52630bc49efbf71}{staticState}() == 
+      \hyperlink{class_canvas_a2d0245c75d7fc30adb8abd303844c10f}{SQUARE})
+158     \{
+159         \hyperlink{class_a_a_b_b}{AABB} box(-20,20,-20,20);
+160         \hyperlink{class_triangle}{Triangle} t(\hyperlink{class_point}{Point}(\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX()-11,\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()-11),
+161                    \hyperlink{class_point}{Point}(\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX()+11,\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()-11),
+162                    \hyperlink{class_point}{Point}(\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX(),\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()+11));
+163         \hyperlink{class_canvas_a8b0b8a040b3e5628a2ec2a89a3025eae}{triangleSquareTest}(t, box);
+164     \}
+165     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( \hyperlink{class_canvas_a8097ff7e44fb5fecf0dd0997e13e4c32}{movingState}() == \hyperlink{class_canvas_a2d0245c75d7fc30adb8abd303844c10f}{SQUARE} && \hyperlink{class_canvas_a63f657b762d08168f52630bc49efbf71}{staticState}() == 
+      \hyperlink{class_canvas_a04b852dd0b2561a20a5e0e9f67a95b64}{POINT})
+166     \{
+167         \hyperlink{class_a_a_b_b}{AABB} box(\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX()-20,\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX()+20,\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()-10,
+      \hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()+10);
+168         \hyperlink{class_point}{Point} \textcolor{keyword}{set}(0,0);
+169         \hyperlink{class_canvas_ac9278bae8055ec5b0f047393d2f140b2}{pointSquareTest}(\textcolor{keyword}{set}, box);
+170     \}
+171     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( \hyperlink{class_canvas_a8097ff7e44fb5fecf0dd0997e13e4c32}{movingState}() == \hyperlink{class_canvas_a2d0245c75d7fc30adb8abd303844c10f}{SQUARE} && \hyperlink{class_canvas_a63f657b762d08168f52630bc49efbf71}{staticState}() == 
+      \hyperlink{class_canvas_a28b792bd16aaf737eab6d697a211183a}{LINE})
+172     \{
+173         \hyperlink{class_line_segment}{LineSegment} line(\hyperlink{class_point}{Point}(-50,-40),\hyperlink{class_point}{Point}(80,10));
+174         \hyperlink{class_a_a_b_b}{AABB} box(\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX()-20,\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX()+20,\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()-10,
+      \hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()+10);
+175         \hyperlink{class_canvas_a2eaf680341aebbab7792cd136c2be950}{lineSquareTest}(line, box);
+176     \}
+177     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( \hyperlink{class_canvas_a8097ff7e44fb5fecf0dd0997e13e4c32}{movingState}() == \hyperlink{class_canvas_a2d0245c75d7fc30adb8abd303844c10f}{SQUARE} && \hyperlink{class_canvas_a63f657b762d08168f52630bc49efbf71}{staticState}() == 
+      \hyperlink{class_canvas_a6d5c5da10948c78b6481ac831f32106f}{CIRCLE})
+178     \{
+179         \hyperlink{class_circle}{Circle} circle(\hyperlink{class_point}{Point}(30,30),20);
+180         \hyperlink{class_a_a_b_b}{AABB} box(\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX()-20,\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX()+20,\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()-10,
+      \hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()+10);
+181         \hyperlink{class_canvas_ad9d725683b22b2dc7a5974fed63c16bb}{circleSquareTest}(circle, box);
+182     \}
+183     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( \hyperlink{class_canvas_a8097ff7e44fb5fecf0dd0997e13e4c32}{movingState}() == \hyperlink{class_canvas_a2d0245c75d7fc30adb8abd303844c10f}{SQUARE} && \hyperlink{class_canvas_a63f657b762d08168f52630bc49efbf71}{staticState}() == 
+      \hyperlink{class_canvas_a7d54031701bd0ddbe165a6d4350ab9d6}{TRIANGLE})
+184     \{
+185         \hyperlink{class_triangle}{Triangle} t(\hyperlink{class_point}{Point}(-10,-10), \hyperlink{class_point}{Point}(-30,-10), \hyperlink{class_point}{Point}(-20,10));
+186         \hyperlink{class_a_a_b_b}{AABB} box(\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX()-20,\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX()+20,\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()-10,
+      \hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()+10);
+187         \hyperlink{class_canvas_a8b0b8a040b3e5628a2ec2a89a3025eae}{triangleSquareTest}(t, box);
+188     \}
+189     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( \hyperlink{class_canvas_a8097ff7e44fb5fecf0dd0997e13e4c32}{movingState}() == \hyperlink{class_canvas_a2d0245c75d7fc30adb8abd303844c10f}{SQUARE} && \hyperlink{class_canvas_a63f657b762d08168f52630bc49efbf71}{staticState}() == 
+      \hyperlink{class_canvas_a2d0245c75d7fc30adb8abd303844c10f}{SQUARE})
+190     \{
+191         \hyperlink{class_a_a_b_b}{AABB} a(-20,20,-20,20);
+192         \hyperlink{class_a_a_b_b}{AABB} b(\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX()-20,\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getX()+20,\hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()-10,
+      \hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse}().getY()+10);
+193         \hyperlink{class_canvas_a56718ad140b37cabc6b34157903886ee}{squareSquareTest}(a, b);
+194     \}
+195 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_a407d5fea40a48519ab368d39739943c4}\label{class_canvas_a407d5fea40a48519ab368d39739943c4}} 
+\index{Canvas@{Canvas}!point\+Circle\+Test@{point\+Circle\+Test}}
+\index{point\+Circle\+Test@{point\+Circle\+Test}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{point\+Circle\+Test()}{pointCircleTest()}}
+{\footnotesize\ttfamily void Canvas\+::point\+Circle\+Test (\begin{DoxyParamCaption}\item[{\hyperlink{class_point}{Point}}]{p,  }\item[{\hyperlink{class_circle}{Circle}}]{cir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+point\+Circle\+Test test to call when point and cirlce need to be tested 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & point \\
+\hline
+{\em cir} & circle \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 222 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+223 \{
+224     \hyperlink{class_canvas_ad7cf8e6e93765586808ac744d888dbdc}{drawPoint}(p,Qt::red);
+225     QColor c = Qt::black;
+226     \textcolor{keywordflow}{if}(\hyperlink{class_intersect_tester_a7710e17ff7d2e229059f23b9429213f5}{IntersectTester::isIntersecting}(p, cir))
+227     \{
+228         c = Qt::green;
+229         \hyperlink{class_canvas_ad7cf8e6e93765586808ac744d888dbdc}{drawPoint}(p,c);
+230     \}
+231     \hyperlink{class_canvas_ab1413076d90539aea7ac3a06b065afe2}{drawCircle}(cir,c);
+232 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_ad5681f0cada49f0453158155b42c2fb7}\label{class_canvas_ad5681f0cada49f0453158155b42c2fb7}} 
+\index{Canvas@{Canvas}!point\+Line\+Test@{point\+Line\+Test}}
+\index{point\+Line\+Test@{point\+Line\+Test}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{point\+Line\+Test()}{pointLineTest()}}
+{\footnotesize\ttfamily void Canvas\+::point\+Line\+Test (\begin{DoxyParamCaption}\item[{\hyperlink{class_point}{Point}}]{p,  }\item[{\hyperlink{class_line_segment}{Line\+Segment}}]{ls }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+point\+Line\+Test test to call when point and line segment need to be tested 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & point \\
+\hline
+{\em ls} & line segment \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 209 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+210 \{
+211     \hyperlink{class_canvas_ad7cf8e6e93765586808ac744d888dbdc}{drawPoint}(p,Qt::red);
+212     QColor c = Qt::black;
+213     \textcolor{keywordflow}{if}(\hyperlink{class_intersect_tester_a7710e17ff7d2e229059f23b9429213f5}{IntersectTester::isIntersecting}(p, ls))
+214     \{
+215         c = Qt::green;
+216         \hyperlink{class_canvas_ad7cf8e6e93765586808ac744d888dbdc}{drawPoint}(p,c);
+217     \}
+218     \hyperlink{class_canvas_ad7cf8e6e93765586808ac744d888dbdc}{drawPoint}(\hyperlink{class_intersect_tester_a6bb20d4839643fbfd53a5d4506448a92}{IntersectTester::closestPoint}(ls,p), Qt::black);
+219     \hyperlink{class_canvas_ae3ad5d92c9a2868b94a6570914b05366}{drawLine}(ls,c);
+220 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_a33b608940212192e7e0ff86c2301c2fe}\label{class_canvas_a33b608940212192e7e0ff86c2301c2fe}} 
+\index{Canvas@{Canvas}!point\+Point\+Test@{point\+Point\+Test}}
+\index{point\+Point\+Test@{point\+Point\+Test}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{point\+Point\+Test()}{pointPointTest()}}
+{\footnotesize\ttfamily void Canvas\+::point\+Point\+Test (\begin{DoxyParamCaption}\item[{\hyperlink{class_point}{Point}}]{mv,  }\item[{\hyperlink{class_point}{Point}}]{st }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+point\+Point\+Test test to call when two points need to be tested 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mv} & point 1 \\
+\hline
+{\em st} & point 2 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 197 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+198 \{
+199     \hyperlink{class_canvas_ad7cf8e6e93765586808ac744d888dbdc}{drawPoint}(mv,Qt::red);
+200     QColor c = Qt::black;
+201     \textcolor{keywordflow}{if}(\hyperlink{class_intersect_tester_a7710e17ff7d2e229059f23b9429213f5}{IntersectTester::isIntersecting}(mv, st))
+202     \{
+203         c = Qt::green;
+204         \hyperlink{class_canvas_ad7cf8e6e93765586808ac744d888dbdc}{drawPoint}(mv,c);
+205     \}
+206     \hyperlink{class_canvas_ad7cf8e6e93765586808ac744d888dbdc}{drawPoint}(st,c);
+207 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_ac9278bae8055ec5b0f047393d2f140b2}\label{class_canvas_ac9278bae8055ec5b0f047393d2f140b2}} 
+\index{Canvas@{Canvas}!point\+Square\+Test@{point\+Square\+Test}}
+\index{point\+Square\+Test@{point\+Square\+Test}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{point\+Square\+Test()}{pointSquareTest()}}
+{\footnotesize\ttfamily void Canvas\+::point\+Square\+Test (\begin{DoxyParamCaption}\item[{\hyperlink{class_point}{Point}}]{p,  }\item[{\hyperlink{class_a_a_b_b}{A\+A\+BB}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+point\+Square\+Test test to call when point and square need to be tested 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & point \\
+\hline
+{\em b} & square \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 246 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+247 \{
+248     \hyperlink{class_canvas_ad7cf8e6e93765586808ac744d888dbdc}{drawPoint}(p,Qt::red);
+249     QColor c = Qt::black;
+250     \textcolor{keywordflow}{if}(\hyperlink{class_intersect_tester_a7710e17ff7d2e229059f23b9429213f5}{IntersectTester::isIntersecting}(p, b))
+251     \{
+252         c = Qt::green;
+253         \hyperlink{class_canvas_ad7cf8e6e93765586808ac744d888dbdc}{drawPoint}(p,c);
+254     \}
+255     \hyperlink{class_canvas_a78ce810ea0004c4f3fa9ee9d92996875}{drawSquare}(b,c);
+256 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_a8c35a24d67af6d8a76be14321c08b7cb}\label{class_canvas_a8c35a24d67af6d8a76be14321c08b7cb}} 
+\index{Canvas@{Canvas}!point\+Triangle\+Test@{point\+Triangle\+Test}}
+\index{point\+Triangle\+Test@{point\+Triangle\+Test}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{point\+Triangle\+Test()}{pointTriangleTest()}}
+{\footnotesize\ttfamily void Canvas\+::point\+Triangle\+Test (\begin{DoxyParamCaption}\item[{\hyperlink{class_point}{Point}}]{p,  }\item[{\hyperlink{class_triangle}{Triangle}}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+point\+Triangle\+Test test to call when point and triangle need to be tested 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & point \\
+\hline
+{\em t} & triangle \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 234 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+235 \{
+236     \hyperlink{class_canvas_ad7cf8e6e93765586808ac744d888dbdc}{drawPoint}(p,Qt::red);
+237     QColor c = Qt::black;
+238     \textcolor{keywordflow}{if}(\hyperlink{class_intersect_tester_a7710e17ff7d2e229059f23b9429213f5}{IntersectTester::isIntersecting}(p, t))
+239     \{
+240         c = Qt::green;
+241         \hyperlink{class_canvas_ad7cf8e6e93765586808ac744d888dbdc}{drawPoint}(p,c);
+242     \}
+243     \hyperlink{class_canvas_a74dd9cf1e8f3b48e2df2b34886770ac6}{drawTriangle}(t,c);
+244 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_a0b546aa7d55d00f82b4db59ab4ab9cee}\label{class_canvas_a0b546aa7d55d00f82b4db59ab4ab9cee}} 
+\index{Canvas@{Canvas}!prepare\+Draw@{prepare\+Draw}}
+\index{prepare\+Draw@{prepare\+Draw}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{prepare\+Draw()}{prepareDraw()}}
+{\footnotesize\ttfamily void Canvas\+::prepare\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+prepare\+Draw method to intialze canvas options per draw sequence 
+
+
+
+Definition at line 479 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+480 \{
+481     glMatrixMode( GL\_PROJECTION );
+482     glLoadIdentity();
+483     glClearColor( 1,
+484                   1,
+485                   1, 1.0 );
+486     glOrtho(\hyperlink{class_canvas_a7da74603fc4232dfe00be701878d048b}{LEFT},\hyperlink{class_canvas_ab618bb921e1c0ee7c394fe3a83b17271}{RIGHT},\hyperlink{class_canvas_a0630c650c5daea2db5a01ce6c0954457}{BOTTOM},\hyperlink{class_canvas_a3d5a1c71903689cf817cd92ae7a2ebc9}{TOP},1,0);
+487     glClear( GL\_COLOR\_BUFFER\_BIT );
+488     glMatrixMode( GL\_MODELVIEW );
+489     glLoadIdentity();
+490 
+491     glLoadIdentity();
+492     glPointSize( 3 );
+493 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_a104679999425d8ffdc27454b71e5e1e3}\label{class_canvas_a104679999425d8ffdc27454b71e5e1e3}} 
+\index{Canvas@{Canvas}!set\+Mouse@{set\+Mouse}}
+\index{set\+Mouse@{set\+Mouse}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{set\+Mouse()}{setMouse()}}
+{\footnotesize\ttfamily void Canvas\+::set\+Mouse (\begin{DoxyParamCaption}\item[{const \hyperlink{class_point}{Point} \&}]{mouse }\end{DoxyParamCaption})}
+
+
+
+set\+Mouse setter method for mouse coordinates 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mouse} & new mouse coordinates \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 528 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+529 \{
+530     \hyperlink{class_canvas_a37d2fd203dc21501aee37001e49789b1}{m\_mouse} = \hyperlink{class_canvas_a5c78c7a84c0f9d5540caeab66b677299}{mouse};
+531 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_a3ec03d6ae21250fcc0b0a3164f701933}\label{class_canvas_a3ec03d6ae21250fcc0b0a3164f701933}} 
+\index{Canvas@{Canvas}!set\+Moving\+State@{set\+Moving\+State}}
+\index{set\+Moving\+State@{set\+Moving\+State}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{set\+Moving\+State()}{setMovingState()}}
+{\footnotesize\ttfamily void Canvas\+::set\+Moving\+State (\begin{DoxyParamCaption}\item[{int}]{moving\+State }\end{DoxyParamCaption})}
+
+
+
+set\+Moving\+State setter method for state of moving primitive 
+
+
+\begin{DoxyParams}{Parameters}
+{\em moving\+State} & new state of moving primitive \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 538 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+539 \{
+540     \hyperlink{class_canvas_a0d0f98258b42bd7b40f175baf3f1220a}{m\_movingState} = \hyperlink{class_canvas_a8097ff7e44fb5fecf0dd0997e13e4c32}{movingState};
+541 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_a6c42c7c65e5eae64c4fa1839146f0440}\label{class_canvas_a6c42c7c65e5eae64c4fa1839146f0440}} 
+\index{Canvas@{Canvas}!set\+Static\+State@{set\+Static\+State}}
+\index{set\+Static\+State@{set\+Static\+State}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{set\+Static\+State()}{setStaticState()}}
+{\footnotesize\ttfamily void Canvas\+::set\+Static\+State (\begin{DoxyParamCaption}\item[{int}]{static\+State }\end{DoxyParamCaption})}
+
+
+
+set\+Static\+State setter method for state of static primitive 
+
+
+\begin{DoxyParams}{Parameters}
+{\em static\+State} & new state of static primitive \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 548 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+549 \{
+550     \hyperlink{class_canvas_adb29cf13087e13c9d4a1ef04bc53b931}{m\_staticState} = \hyperlink{class_canvas_a63f657b762d08168f52630bc49efbf71}{staticState};
+551 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_a56718ad140b37cabc6b34157903886ee}\label{class_canvas_a56718ad140b37cabc6b34157903886ee}} 
+\index{Canvas@{Canvas}!square\+Square\+Test@{square\+Square\+Test}}
+\index{square\+Square\+Test@{square\+Square\+Test}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{square\+Square\+Test()}{squareSquareTest()}}
+{\footnotesize\ttfamily void Canvas\+::square\+Square\+Test (\begin{DoxyParamCaption}\item[{\hyperlink{class_a_a_b_b}{A\+A\+BB}}]{a,  }\item[{\hyperlink{class_a_a_b_b}{A\+A\+BB}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+square\+Square\+Test test to call when two squares need to be tested 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+{\em b} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 358 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+359 \{
+360     QColor c = Qt::black;
+361     \textcolor{keywordflow}{if}(\hyperlink{class_intersect_tester_a7710e17ff7d2e229059f23b9429213f5}{IntersectTester::isIntersecting}(a, b))
+362         c = Qt::green;
+363 
+364     \hyperlink{class_canvas_a78ce810ea0004c4f3fa9ee9d92996875}{drawSquare}(a,c);
+365     \hyperlink{class_canvas_a78ce810ea0004c4f3fa9ee9d92996875}{drawSquare}(b,c);
+366 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_a63f657b762d08168f52630bc49efbf71}\label{class_canvas_a63f657b762d08168f52630bc49efbf71}} 
+\index{Canvas@{Canvas}!static\+State@{static\+State}}
+\index{static\+State@{static\+State}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{static\+State()}{staticState()}}
+{\footnotesize\ttfamily int Canvas\+::static\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+static\+State getter method for state of static primitive 
+
+\begin{DoxyReturn}{Returns}
+state of static primitive 
+\end{DoxyReturn}
+
+
+Definition at line 543 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+544 \{
+545     \textcolor{keywordflow}{return} \hyperlink{class_canvas_adb29cf13087e13c9d4a1ef04bc53b931}{m\_staticState};
+546 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_a8b0b8a040b3e5628a2ec2a89a3025eae}\label{class_canvas_a8b0b8a040b3e5628a2ec2a89a3025eae}} 
+\index{Canvas@{Canvas}!triangle\+Square\+Test@{triangle\+Square\+Test}}
+\index{triangle\+Square\+Test@{triangle\+Square\+Test}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{triangle\+Square\+Test()}{triangleSquareTest()}}
+{\footnotesize\ttfamily void Canvas\+::triangle\+Square\+Test (\begin{DoxyParamCaption}\item[{\hyperlink{class_triangle}{Triangle}}]{t,  }\item[{\hyperlink{class_a_a_b_b}{A\+A\+BB}}]{sq }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+triangle\+Square\+Test test to call when triangle and circle need to be tested 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & triangle \\
+\hline
+{\em sq} & square \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 348 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+349 \{
+350     QColor c = Qt::black;
+351     \textcolor{keywordflow}{if}(\hyperlink{class_intersect_tester_a7710e17ff7d2e229059f23b9429213f5}{IntersectTester::isIntersecting}(t, sq))
+352         c = Qt::green;
+353 
+354     \hyperlink{class_canvas_a74dd9cf1e8f3b48e2df2b34886770ac6}{drawTriangle}(t,c);
+355     \hyperlink{class_canvas_a78ce810ea0004c4f3fa9ee9d92996875}{drawSquare}(sq,c);
+356 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_canvas_a03c673b6f4e09524d322a8c00c5a49f2}\label{class_canvas_a03c673b6f4e09524d322a8c00c5a49f2}} 
+\index{Canvas@{Canvas}!triangle\+Triangle\+Test@{triangle\+Triangle\+Test}}
+\index{triangle\+Triangle\+Test@{triangle\+Triangle\+Test}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{triangle\+Triangle\+Test()}{triangleTriangleTest()}}
+{\footnotesize\ttfamily void Canvas\+::triangle\+Triangle\+Test (\begin{DoxyParamCaption}\item[{\hyperlink{class_triangle}{Triangle}}]{a,  }\item[{\hyperlink{class_triangle}{Triangle}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+triangle\+Triangle\+Test test to call when two triangles need to be tested 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & triangle \\
+\hline
+{\em b} & triangle \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 338 of file canvas.\+cpp.
+
+
+\begin{DoxyCode}
+339 \{
+340     QColor c = Qt::black;
+341     \textcolor{keywordflow}{if}(\hyperlink{class_intersect_tester_a7710e17ff7d2e229059f23b9429213f5}{IntersectTester::isIntersecting}(a, b))
+342         c = Qt::green;
+343 
+344     \hyperlink{class_canvas_a74dd9cf1e8f3b48e2df2b34886770ac6}{drawTriangle}(a,c);
+345     \hyperlink{class_canvas_a74dd9cf1e8f3b48e2df2b34886770ac6}{drawTriangle}(b,c);
+346 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_canvas_a0630c650c5daea2db5a01ce6c0954457}\label{class_canvas_a0630c650c5daea2db5a01ce6c0954457}} 
+\index{Canvas@{Canvas}!B\+O\+T\+T\+OM@{B\+O\+T\+T\+OM}}
+\index{B\+O\+T\+T\+OM@{B\+O\+T\+T\+OM}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{B\+O\+T\+T\+OM}{BOTTOM}}
+{\footnotesize\ttfamily const int Canvas\+::\+B\+O\+T\+T\+OM = -\/100\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+B\+O\+T\+T\+OM Bottom of the canvas. 
+
+
+
+Definition at line 46 of file canvas.\+h.
+
+\mbox{\Hypertarget{class_canvas_a6d5c5da10948c78b6481ac831f32106f}\label{class_canvas_a6d5c5da10948c78b6481ac831f32106f}} 
+\index{Canvas@{Canvas}!C\+I\+R\+C\+LE@{C\+I\+R\+C\+LE}}
+\index{C\+I\+R\+C\+LE@{C\+I\+R\+C\+LE}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{C\+I\+R\+C\+LE}{CIRCLE}}
+{\footnotesize\ttfamily const int Canvas\+::\+C\+I\+R\+C\+LE = 2\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+C\+I\+R\+C\+LE set primitive to circle. 
+
+
+
+Definition at line 68 of file canvas.\+h.
+
+\mbox{\Hypertarget{class_canvas_a7da74603fc4232dfe00be701878d048b}\label{class_canvas_a7da74603fc4232dfe00be701878d048b}} 
+\index{Canvas@{Canvas}!L\+E\+FT@{L\+E\+FT}}
+\index{L\+E\+FT@{L\+E\+FT}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{L\+E\+FT}{LEFT}}
+{\footnotesize\ttfamily const int Canvas\+::\+L\+E\+FT = -\/100\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+L\+E\+FT Left of the canvas. 
+
+
+
+Definition at line 50 of file canvas.\+h.
+
+\mbox{\Hypertarget{class_canvas_a28b792bd16aaf737eab6d697a211183a}\label{class_canvas_a28b792bd16aaf737eab6d697a211183a}} 
+\index{Canvas@{Canvas}!L\+I\+NE@{L\+I\+NE}}
+\index{L\+I\+NE@{L\+I\+NE}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{L\+I\+NE}{LINE}}
+{\footnotesize\ttfamily const int Canvas\+::\+L\+I\+NE = 1\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+L\+I\+NE set primitive to line segment. 
+
+
+
+Definition at line 64 of file canvas.\+h.
+
+\mbox{\Hypertarget{class_canvas_a37d2fd203dc21501aee37001e49789b1}\label{class_canvas_a37d2fd203dc21501aee37001e49789b1}} 
+\index{Canvas@{Canvas}!m\+\_\+mouse@{m\+\_\+mouse}}
+\index{m\+\_\+mouse@{m\+\_\+mouse}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{m\+\_\+mouse}{m\_mouse}}
+{\footnotesize\ttfamily \hyperlink{class_point}{Point} Canvas\+::m\+\_\+mouse\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 126 of file canvas.\+h.
+
+\mbox{\Hypertarget{class_canvas_a0d0f98258b42bd7b40f175baf3f1220a}\label{class_canvas_a0d0f98258b42bd7b40f175baf3f1220a}} 
+\index{Canvas@{Canvas}!m\+\_\+moving\+State@{m\+\_\+moving\+State}}
+\index{m\+\_\+moving\+State@{m\+\_\+moving\+State}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{m\+\_\+moving\+State}{m\_movingState}}
+{\footnotesize\ttfamily int Canvas\+::m\+\_\+moving\+State = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 128 of file canvas.\+h.
+
+\mbox{\Hypertarget{class_canvas_adb29cf13087e13c9d4a1ef04bc53b931}\label{class_canvas_adb29cf13087e13c9d4a1ef04bc53b931}} 
+\index{Canvas@{Canvas}!m\+\_\+static\+State@{m\+\_\+static\+State}}
+\index{m\+\_\+static\+State@{m\+\_\+static\+State}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{m\+\_\+static\+State}{m\_staticState}}
+{\footnotesize\ttfamily int Canvas\+::m\+\_\+static\+State = 4\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 127 of file canvas.\+h.
+
+\mbox{\Hypertarget{class_canvas_a04b852dd0b2561a20a5e0e9f67a95b64}\label{class_canvas_a04b852dd0b2561a20a5e0e9f67a95b64}} 
+\index{Canvas@{Canvas}!P\+O\+I\+NT@{P\+O\+I\+NT}}
+\index{P\+O\+I\+NT@{P\+O\+I\+NT}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{P\+O\+I\+NT}{POINT}}
+{\footnotesize\ttfamily const int Canvas\+::\+P\+O\+I\+NT = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+P\+O\+I\+NT set primitive to point. 
+
+
+
+Definition at line 60 of file canvas.\+h.
+
+\mbox{\Hypertarget{class_canvas_ab618bb921e1c0ee7c394fe3a83b17271}\label{class_canvas_ab618bb921e1c0ee7c394fe3a83b17271}} 
+\index{Canvas@{Canvas}!R\+I\+G\+HT@{R\+I\+G\+HT}}
+\index{R\+I\+G\+HT@{R\+I\+G\+HT}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{R\+I\+G\+HT}{RIGHT}}
+{\footnotesize\ttfamily const int Canvas\+::\+R\+I\+G\+HT = 100\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+R\+I\+G\+HT Right on the canvas. 
+
+
+
+Definition at line 54 of file canvas.\+h.
+
+\mbox{\Hypertarget{class_canvas_a2d0245c75d7fc30adb8abd303844c10f}\label{class_canvas_a2d0245c75d7fc30adb8abd303844c10f}} 
+\index{Canvas@{Canvas}!S\+Q\+U\+A\+RE@{S\+Q\+U\+A\+RE}}
+\index{S\+Q\+U\+A\+RE@{S\+Q\+U\+A\+RE}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{S\+Q\+U\+A\+RE}{SQUARE}}
+{\footnotesize\ttfamily const int Canvas\+::\+S\+Q\+U\+A\+RE = 4\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+S\+Q\+U\+A\+RE set primitive to square. 
+
+
+
+Definition at line 76 of file canvas.\+h.
+
+\mbox{\Hypertarget{class_canvas_a3d5a1c71903689cf817cd92ae7a2ebc9}\label{class_canvas_a3d5a1c71903689cf817cd92ae7a2ebc9}} 
+\index{Canvas@{Canvas}!T\+OP@{T\+OP}}
+\index{T\+OP@{T\+OP}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{T\+OP}{TOP}}
+{\footnotesize\ttfamily const int Canvas\+::\+T\+OP = 100\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+T\+OP Top of the canvas. 
+
+
+
+Definition at line 42 of file canvas.\+h.
+
+\mbox{\Hypertarget{class_canvas_a7d54031701bd0ddbe165a6d4350ab9d6}\label{class_canvas_a7d54031701bd0ddbe165a6d4350ab9d6}} 
+\index{Canvas@{Canvas}!T\+R\+I\+A\+N\+G\+LE@{T\+R\+I\+A\+N\+G\+LE}}
+\index{T\+R\+I\+A\+N\+G\+LE@{T\+R\+I\+A\+N\+G\+LE}!Canvas@{Canvas}}
+\subsubsection{\texorpdfstring{T\+R\+I\+A\+N\+G\+LE}{TRIANGLE}}
+{\footnotesize\ttfamily const int Canvas\+::\+T\+R\+I\+A\+N\+G\+LE = 3\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+T\+R\+I\+A\+N\+G\+LE set primitive to triangle. 
+
+
+
+Definition at line 72 of file canvas.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/liam/\+Projects/\+Intersection\+Tester\+G\+U\+I/\hyperlink{canvas_8h}{canvas.\+h}\item 
+/home/liam/\+Projects/\+Intersection\+Tester\+G\+U\+I/\hyperlink{canvas_8cpp}{canvas.\+cpp}\end{DoxyCompactItemize}

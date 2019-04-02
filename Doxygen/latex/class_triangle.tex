@@ -1,0 +1,180 @@
+\hypertarget{class_triangle}{}\section{Triangle Class Reference}
+\label{class_triangle}\index{Triangle@{Triangle}}
+
+
+{\ttfamily \#include $<$Intersect\+Tester.\+h$>$}
+
+
+
+Collaboration diagram for Triangle\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=131pt]{class_triangle__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_triangle_a07f457e0c5ff143c4cabb39174859a1e}{Triangle} (\hyperlink{class_point}{Point} x, \hyperlink{class_point}{Point} y, \hyperlink{class_point}{Point} z)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_triangle}{Triangle} Default consructor for triangle. \end{DoxyCompactList}\item 
+\hyperlink{class_point}{Point} \hyperlink{class_triangle_a88a35d0b66c9636a9be88adc88d003aa}{get\+Vertex\+One} () const
+\begin{DoxyCompactList}\small\item\em get\+Vertex\+One getter method for the first vertex \end{DoxyCompactList}\item 
+\hyperlink{class_point}{Point} \hyperlink{class_triangle_ac1ae7463f829bcf377fd926b1ad10cac}{get\+Vertex\+Two} () const
+\begin{DoxyCompactList}\small\item\em get\+Vertex\+Two getter method for the second vertex \end{DoxyCompactList}\item 
+\hyperlink{class_point}{Point} \hyperlink{class_triangle_aed6ceca804b35da95d3d3c930de41e91}{get\+Vertex\+Three} () const
+\begin{DoxyCompactList}\small\item\em get\+Vertex\+Three getter method for the third vertex \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_point}{Point} \hyperlink{class_triangle_a64531c5c908b4ba8aca8b619b97a17bc}{v1}
+\item 
+\hyperlink{class_point}{Point} \hyperlink{class_triangle_a23721a1b58e5e427c1ac65e311e2828d}{v2}
+\item 
+\hyperlink{class_point}{Point} \hyperlink{class_triangle_a9ffab42f55ebdbaa549cb1cc592b1c76}{v3}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 139 of file Intersect\+Tester.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_triangle_a07f457e0c5ff143c4cabb39174859a1e}\label{class_triangle_a07f457e0c5ff143c4cabb39174859a1e}} 
+\index{Triangle@{Triangle}!Triangle@{Triangle}}
+\index{Triangle@{Triangle}!Triangle@{Triangle}}
+\subsubsection{\texorpdfstring{Triangle()}{Triangle()}}
+{\footnotesize\ttfamily Triangle\+::\+Triangle (\begin{DoxyParamCaption}\item[{\hyperlink{class_point}{Point}}]{x,  }\item[{\hyperlink{class_point}{Point}}]{y,  }\item[{\hyperlink{class_point}{Point}}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\hyperlink{class_triangle}{Triangle} Default consructor for triangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & vertex one \\
+\hline
+{\em y} & vertex two \\
+\hline
+{\em z} & vertex three \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 148 of file Intersect\+Tester.\+h.
+
+
+\begin{DoxyCode}
+149         \{
+150              \hyperlink{class_triangle_a64531c5c908b4ba8aca8b619b97a17bc}{v1} = \hyperlink{class_point}{Point}(x.\hyperlink{class_point_a29c44ec7c7279e02629645a06cdaf7d5}{getX}(), x.\hyperlink{class_point_a2371ffadbe245d12a8f556d0a976521b}{getY}(), x.\hyperlink{class_point_a9bb9987e32b7dd8dec81ead5d428446c}{getZ}());
+151              \hyperlink{class_triangle_a23721a1b58e5e427c1ac65e311e2828d}{v2} = \hyperlink{class_point}{Point}(y.\hyperlink{class_point_a29c44ec7c7279e02629645a06cdaf7d5}{getX}(), y.\hyperlink{class_point_a2371ffadbe245d12a8f556d0a976521b}{getY}(), y.\hyperlink{class_point_a9bb9987e32b7dd8dec81ead5d428446c}{getZ}());
+152              \hyperlink{class_triangle_a9ffab42f55ebdbaa549cb1cc592b1c76}{v3} = \hyperlink{class_point}{Point}(z.\hyperlink{class_point_a29c44ec7c7279e02629645a06cdaf7d5}{getX}(), z.\hyperlink{class_point_a2371ffadbe245d12a8f556d0a976521b}{getY}(), z.\hyperlink{class_point_a9bb9987e32b7dd8dec81ead5d428446c}{getZ}());
+153         \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_triangle_a88a35d0b66c9636a9be88adc88d003aa}\label{class_triangle_a88a35d0b66c9636a9be88adc88d003aa}} 
+\index{Triangle@{Triangle}!get\+Vertex\+One@{get\+Vertex\+One}}
+\index{get\+Vertex\+One@{get\+Vertex\+One}!Triangle@{Triangle}}
+\subsubsection{\texorpdfstring{get\+Vertex\+One()}{getVertexOne()}}
+{\footnotesize\ttfamily \hyperlink{class_point}{Point} Triangle\+::get\+Vertex\+One (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Vertex\+One getter method for the first vertex 
+
+\begin{DoxyReturn}{Returns}
+vertex one 
+\end{DoxyReturn}
+
+
+Definition at line 158 of file Intersect\+Tester.\+h.
+
+
+\begin{DoxyCode}
+158 \{ \textcolor{keywordflow}{return} \hyperlink{class_triangle_a64531c5c908b4ba8aca8b619b97a17bc}{v1}; \} 
+\end{DoxyCode}
+\mbox{\Hypertarget{class_triangle_aed6ceca804b35da95d3d3c930de41e91}\label{class_triangle_aed6ceca804b35da95d3d3c930de41e91}} 
+\index{Triangle@{Triangle}!get\+Vertex\+Three@{get\+Vertex\+Three}}
+\index{get\+Vertex\+Three@{get\+Vertex\+Three}!Triangle@{Triangle}}
+\subsubsection{\texorpdfstring{get\+Vertex\+Three()}{getVertexThree()}}
+{\footnotesize\ttfamily \hyperlink{class_point}{Point} Triangle\+::get\+Vertex\+Three (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Vertex\+Three getter method for the third vertex 
+
+\begin{DoxyReturn}{Returns}
+vertex three 
+\end{DoxyReturn}
+
+
+Definition at line 168 of file Intersect\+Tester.\+h.
+
+
+\begin{DoxyCode}
+168 \{ \textcolor{keywordflow}{return} \hyperlink{class_triangle_a9ffab42f55ebdbaa549cb1cc592b1c76}{v3}; \} 
+\end{DoxyCode}
+\mbox{\Hypertarget{class_triangle_ac1ae7463f829bcf377fd926b1ad10cac}\label{class_triangle_ac1ae7463f829bcf377fd926b1ad10cac}} 
+\index{Triangle@{Triangle}!get\+Vertex\+Two@{get\+Vertex\+Two}}
+\index{get\+Vertex\+Two@{get\+Vertex\+Two}!Triangle@{Triangle}}
+\subsubsection{\texorpdfstring{get\+Vertex\+Two()}{getVertexTwo()}}
+{\footnotesize\ttfamily \hyperlink{class_point}{Point} Triangle\+::get\+Vertex\+Two (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Vertex\+Two getter method for the second vertex 
+
+\begin{DoxyReturn}{Returns}
+vertex two 
+\end{DoxyReturn}
+
+
+Definition at line 163 of file Intersect\+Tester.\+h.
+
+
+\begin{DoxyCode}
+163 \{ \textcolor{keywordflow}{return} \hyperlink{class_triangle_a23721a1b58e5e427c1ac65e311e2828d}{v2}; \} 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_triangle_a64531c5c908b4ba8aca8b619b97a17bc}\label{class_triangle_a64531c5c908b4ba8aca8b619b97a17bc}} 
+\index{Triangle@{Triangle}!v1@{v1}}
+\index{v1@{v1}!Triangle@{Triangle}}
+\subsubsection{\texorpdfstring{v1}{v1}}
+{\footnotesize\ttfamily \hyperlink{class_point}{Point} Triangle\+::v1}
+
+
+
+Definition at line 141 of file Intersect\+Tester.\+h.
+
+\mbox{\Hypertarget{class_triangle_a23721a1b58e5e427c1ac65e311e2828d}\label{class_triangle_a23721a1b58e5e427c1ac65e311e2828d}} 
+\index{Triangle@{Triangle}!v2@{v2}}
+\index{v2@{v2}!Triangle@{Triangle}}
+\subsubsection{\texorpdfstring{v2}{v2}}
+{\footnotesize\ttfamily \hyperlink{class_point}{Point} Triangle\+::v2}
+
+
+
+Definition at line 141 of file Intersect\+Tester.\+h.
+
+\mbox{\Hypertarget{class_triangle_a9ffab42f55ebdbaa549cb1cc592b1c76}\label{class_triangle_a9ffab42f55ebdbaa549cb1cc592b1c76}} 
+\index{Triangle@{Triangle}!v3@{v3}}
+\index{v3@{v3}!Triangle@{Triangle}}
+\subsubsection{\texorpdfstring{v3}{v3}}
+{\footnotesize\ttfamily \hyperlink{class_point}{Point} Triangle\+::v3}
+
+
+
+Definition at line 141 of file Intersect\+Tester.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/liam/\+Projects/\+Intersection\+Tester\+G\+U\+I/\+Intersect\+Tester/\hyperlink{_intersect_tester_8h}{Intersect\+Tester.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,142 @@
+\hypertarget{class_circle}{}\section{Circle Class Reference}
+\label{class_circle}\index{Circle@{Circle}}
+
+
+{\ttfamily \#include $<$Intersect\+Tester.\+h$>$}
+
+
+
+Collaboration diagram for Circle\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{class_circle__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_circle_a7a761c34c5a913be8bc0b05ea0dc327c}{Circle} (\hyperlink{class_point}{Point} \hyperlink{class_circle_a8c4026a5a34d2df1527f019dd456317b}{center}, float \hyperlink{class_circle_a47644132ec8bec0f3a4e8d0e15bcd5d3}{radius})
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_circle}{Circle} Default constructor for circle. \end{DoxyCompactList}\item 
+\hyperlink{class_point}{Point} \hyperlink{class_circle_a9818ca0bbac64ff447945a8e51ff9319}{get\+Center} () const
+\begin{DoxyCompactList}\small\item\em get\+Center getter method for center point \end{DoxyCompactList}\item 
+float \hyperlink{class_circle_a95b7dc25d2e9b1e40a189cd83386a12e}{get\+Radius} () const
+\begin{DoxyCompactList}\small\item\em get\+Radius getter method for radius of circle \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_point}{Point} \hyperlink{class_circle_a8c4026a5a34d2df1527f019dd456317b}{center}
+\item 
+float \hyperlink{class_circle_a47644132ec8bec0f3a4e8d0e15bcd5d3}{radius}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 171 of file Intersect\+Tester.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_circle_a7a761c34c5a913be8bc0b05ea0dc327c}\label{class_circle_a7a761c34c5a913be8bc0b05ea0dc327c}} 
+\index{Circle@{Circle}!Circle@{Circle}}
+\index{Circle@{Circle}!Circle@{Circle}}
+\subsubsection{\texorpdfstring{Circle()}{Circle()}}
+{\footnotesize\ttfamily Circle\+::\+Circle (\begin{DoxyParamCaption}\item[{\hyperlink{class_point}{Point}}]{center,  }\item[{float}]{radius }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\hyperlink{class_circle}{Circle} Default constructor for circle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em center} & center point of the circle \\
+\hline
+{\em radius} & the radius of the circle (distance from center to edge) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 180 of file Intersect\+Tester.\+h.
+
+
+\begin{DoxyCode}
+181     \{
+182         this->center = \hyperlink{class_circle_a8c4026a5a34d2df1527f019dd456317b}{center};
+183         this->\hyperlink{class_circle_a47644132ec8bec0f3a4e8d0e15bcd5d3}{radius} = \hyperlink{class_circle_a47644132ec8bec0f3a4e8d0e15bcd5d3}{radius};
+184     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_circle_a9818ca0bbac64ff447945a8e51ff9319}\label{class_circle_a9818ca0bbac64ff447945a8e51ff9319}} 
+\index{Circle@{Circle}!get\+Center@{get\+Center}}
+\index{get\+Center@{get\+Center}!Circle@{Circle}}
+\subsubsection{\texorpdfstring{get\+Center()}{getCenter()}}
+{\footnotesize\ttfamily \hyperlink{class_point}{Point} Circle\+::get\+Center (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Center getter method for center point 
+
+\begin{DoxyReturn}{Returns}
+center 
+\end{DoxyReturn}
+
+
+Definition at line 189 of file Intersect\+Tester.\+h.
+
+
+\begin{DoxyCode}
+189 \{ \textcolor{keywordflow}{return} \hyperlink{class_circle_a8c4026a5a34d2df1527f019dd456317b}{center}; \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_circle_a95b7dc25d2e9b1e40a189cd83386a12e}\label{class_circle_a95b7dc25d2e9b1e40a189cd83386a12e}} 
+\index{Circle@{Circle}!get\+Radius@{get\+Radius}}
+\index{get\+Radius@{get\+Radius}!Circle@{Circle}}
+\subsubsection{\texorpdfstring{get\+Radius()}{getRadius()}}
+{\footnotesize\ttfamily float Circle\+::get\+Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Radius getter method for radius of circle 
+
+\begin{DoxyReturn}{Returns}
+radius 
+\end{DoxyReturn}
+
+
+Definition at line 194 of file Intersect\+Tester.\+h.
+
+
+\begin{DoxyCode}
+194 \{ \textcolor{keywordflow}{return} \hyperlink{class_circle_a47644132ec8bec0f3a4e8d0e15bcd5d3}{radius}; \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_circle_a8c4026a5a34d2df1527f019dd456317b}\label{class_circle_a8c4026a5a34d2df1527f019dd456317b}} 
+\index{Circle@{Circle}!center@{center}}
+\index{center@{center}!Circle@{Circle}}
+\subsubsection{\texorpdfstring{center}{center}}
+{\footnotesize\ttfamily \hyperlink{class_point}{Point} Circle\+::center}
+
+
+
+Definition at line 173 of file Intersect\+Tester.\+h.
+
+\mbox{\Hypertarget{class_circle_a47644132ec8bec0f3a4e8d0e15bcd5d3}\label{class_circle_a47644132ec8bec0f3a4e8d0e15bcd5d3}} 
+\index{Circle@{Circle}!radius@{radius}}
+\index{radius@{radius}!Circle@{Circle}}
+\subsubsection{\texorpdfstring{radius}{radius}}
+{\footnotesize\ttfamily float Circle\+::radius}
+
+
+
+Definition at line 174 of file Intersect\+Tester.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/liam/\+Projects/\+Intersection\+Tester\+G\+U\+I/\+Intersect\+Tester/\hyperlink{_intersect_tester_8h}{Intersect\+Tester.\+h}\end{DoxyCompactItemize}
